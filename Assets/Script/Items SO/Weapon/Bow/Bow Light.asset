@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006e335df81b1f94c9c3b7efc6e2b309, type: 3}
+  m_Name: Bow Light
+  m_EditorClassIdentifier: 
+  itemName: BowLight
+  icon: {fileID: 1339832992, guid: d607c81d3b01f434eba92f12dbe2c262, type: 3}
+  damage: 12
+  attackSpeed: 1
+  attackSound: {fileID: 8300000, guid: 636aaddb505ba1248ac890a914e63b96, type: 3}
+  attackTypeTags:
+  - {fileID: 11400000, guid: ded5790e23738484ba3b06a2d30335d3, type: 2}

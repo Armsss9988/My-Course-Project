@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff9a242d501dea4fba427a58dd9b9bc, type: 3}
+  m_Name: Bomb Thrower
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  damage: 2
+  detectRange: 6
+  undetectRange: 8
+  minAttackZone: 3
+  maxAttackZone: 4
+  speed: 0.5
+  attackSpeed: 2
+  attackSound: {fileID: 8300000, guid: 5285f5ea5e313b147b91c508d925650c, type: 3}
+  beingHitSound: {fileID: 8300000, guid: 91bce8af1ed1c74449483949f126d810, type: 3}
+  deadSound: {fileID: 8300000, guid: 71e2095b5a76ab846b979e95a28535d8, type: 3}
+  bullet: {fileID: 5725479537759045491, guid: 21fb7ba408e3ce447b7b8f58c267a1fd, type: 3}

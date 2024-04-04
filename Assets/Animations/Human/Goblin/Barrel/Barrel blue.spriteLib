@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Barrel_Blue_0
+      m_Hash: 651693482
+      m_Sprite: {fileID: -245169671, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -245169671, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: Detect
+    m_Hash: 119579301
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Barrel_Blue_1
+      m_Hash: 299842876
+      m_Sprite: {fileID: 1906357089, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1906357089, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_2
+      m_Hash: 148270214
+      m_Sprite: {fileID: 553604140, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 553604140, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_3
+      m_Hash: 1070685200
+      m_Sprite: {fileID: 1715273512, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1715273512, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_4
+      m_Hash: 565561779
+      m_Sprite: {fileID: 1285726376, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1285726376, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_5
+      m_Hash: 380827941
+      m_Sprite: {fileID: -979922084, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -979922084, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_6
+      m_Hash: 263956639
+      m_Sprite: {fileID: 1041141153, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1041141153, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_7
+      m_Hash: 951883785
+      m_Sprite: {fileID: -1030265507, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1030265507, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 7
+  - m_Name: Run
+    m_Hash: 675013152
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Barrel_Blue_14
+      m_Hash: 482916482
+      m_Sprite: {fileID: 780421405, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 780421405, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_15
+      m_Hash: 735021076
+      m_Sprite: {fileID: -2087816848, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2087816848, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_16
+      m_Hash: 851892654
+      m_Sprite: {fileID: 312701749, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 312701749, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: Explode
+    m_Hash: 466490641
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Barrel_Blue_17
+      m_Hash: 96594232
+      m_Sprite: {fileID: -817495274, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -817495274, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_18
+      m_Hash: 360641705
+      m_Sprite: {fileID: -1287560219, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1287560219, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_19
+      m_Hash: 578405439
+      m_Sprite: {fileID: -746820408, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -746820408, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: Undetect
+    m_Hash: 304288579
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Barrel_Blue_7
+      m_Hash: 951883785
+      m_Sprite: {fileID: -1030265507, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1030265507, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_8
+      m_Hash: 671319448
+      m_Sprite: {fileID: 1827475267, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1827475267, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_9
+      m_Hash: 520402190
+      m_Sprite: {fileID: 653195260, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 653195260, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_10
+      m_Hash: 463830171
+      m_Sprite: {fileID: 393973003, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 393973003, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_11
+      m_Hash: 748833805
+      m_Sprite: {fileID: -1975600601, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1975600601, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_12
+      m_Hash: 900406711
+      m_Sprite: {fileID: -1576411703, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1576411703, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    - m_Name: Barrel_Blue_13
+      m_Hash: 44838177
+      m_Sprite: {fileID: 234289011, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 234289011, guid: 3997ba3a30201de4887128d5d2562d84, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 7
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638435298556886482
+  m_Version: 1

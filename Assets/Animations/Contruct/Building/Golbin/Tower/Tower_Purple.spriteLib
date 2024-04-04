@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Wood_Tower_Blue_0
+      m_Hash: 728871047
+      m_Sprite: {fileID: -1346436196, guid: 43abb68b4a8b26345a3efd03b7f52e2a, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2055976202, guid: 6d94cd31a31c0e54685549ba070688c0, type: 3}
+    - m_Name: Wood_Tower_Blue_1
+      m_Hash: 477528081
+      m_Sprite: {fileID: 826798859, guid: 43abb68b4a8b26345a3efd03b7f52e2a, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1162678785, guid: 6d94cd31a31c0e54685549ba070688c0, type: 3}
+    - m_Name: Wood_Tower_Blue_2
+      m_Hash: 92262827
+      m_Sprite: {fileID: 995481496, guid: 43abb68b4a8b26345a3efd03b7f52e2a, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1059224386, guid: 6d94cd31a31c0e54685549ba070688c0, type: 3}
+    - m_Name: Wood_Tower_Blue_3
+      m_Hash: 846782781
+      m_Sprite: {fileID: -3634155, guid: 43abb68b4a8b26345a3efd03b7f52e2a, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 784770230, guid: 6d94cd31a31c0e54685549ba070688c0, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 4
+  m_PrimaryLibraryGUID: 831add8ae72b52c4f959322784aac8ce
+  m_ModificationHash: 638435336523926869
+  m_Version: 1
