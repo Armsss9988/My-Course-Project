@@ -83,7 +83,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1346436196, guid: 43abb68b4a8b26345a3efd03b7f52e2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -434,7 +434,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1887874702, guid: 158b245c232431a45888fbcd4cd56a86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -518,7 +518,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1887874702, guid: 158b245c232431a45888fbcd4cd56a86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -623,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116991048124585046, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4116991048124585046, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_SortingLayerID
@@ -631,7 +631,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536998974522953665, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: delay
-      value: 5
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536998974522953665, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
+      propertyPath: maxEnemies
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -763,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116991048124585046, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4116991048124585046, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_SortingLayerID
@@ -771,7 +775,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536998974522953665, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: delay
-      value: 5
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536998974522953665, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
+      propertyPath: maxEnemies
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

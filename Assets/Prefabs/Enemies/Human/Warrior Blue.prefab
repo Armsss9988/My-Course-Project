@@ -91,7 +91,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 445211578, guid: 2f0f8496717365e4eb220e4ee3fa9775, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -172,10 +172,10 @@ MonoBehaviour:
   currentHealth: 230
   maxHealth: 230
   damage: 10
-  checkingRange: 5
+  checkingRange: 4
   detectRange: 4
-  minAttackZone: 0.01
-  maxAttackZone: 0.6
+  minAttackZone: 0.3
+  maxAttackZone: 1
   speed: 1
   attackSpeed: 4
   attackSound: {fileID: 8300000, guid: a0bf1c1a062717b488d294dedd74f793, type: 3}
@@ -187,6 +187,7 @@ MonoBehaviour:
   timeInvincible: 1
   isInvincible: 0
   target: {fileID: 0}
+  targetColliderOffset: 0.5
 --- !u!114 &2485886265072421289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,10 +493,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 86ec0a0a3743a744fb3593744956a9b6, type: 2}
   - {fileID: 11400000, guid: f6db894831dc2944c98fc881e02671cb, type: 2}
   - {fileID: 11400000, guid: ca53f1800ca9e074098c287f450c8943, type: 2}
+  - {fileID: 11400000, guid: 4f22531e4efb466468aa14346d2876cf, type: 2}
   attackTypeTags: []
   factionTags:
   - {fileID: 11400000, guid: f40d6b459ac4e424fafb79de835f5bbd, type: 2}
   - {fileID: 11400000, guid: 6bc30ebfa7c6dfa42957ece4b4797f8a, type: 2}
+  - {fileID: 11400000, guid: a2767d021f4f6ce4c973531c7667635d, type: 2}
   damageableTypeTags:
   - {fileID: 11400000, guid: d122fad1748cc3b46abe36da87c10ae4, type: 2}
 --- !u!114 &5027206101553203776
@@ -511,6 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 4125676313054382069}
+  isAbleToAttack: 1
 --- !u!1 &4125676313054382069
 GameObject:
   m_ObjectHideFlags: 0

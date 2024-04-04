@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour, IDamageable, IAttackable
     float invincibleTimer;
     [HideInInspector]
     public GameObject target;
+    public float targetColliderOffset = 0.5f;
     void Awake()
     {
         enemyAction = GetComponent<EnemyAction>();

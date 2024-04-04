@@ -30,23 +30,20 @@ public class EnemyMeleeAttack : MonoBehaviour
         if (enemy.target != null)
         {
             direction = (enemy.target.transform.position - hitbox.transform.position).normalized;
-            RaycastHit2D hit = Physics2D.Raycast((Vector2)enemy.transform.position, direction, 1f);
-            Debug.DrawRay((Vector2)enemy.transform.position, direction, Color.red, 0.2f);
             if (!enemyMovement.canMove)
             {
                 CheckAttackFlipx();
                 hitbox.transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
             }
-            if (hit.collider != null)
+
+            if (this.GetComponent<EnemyRangeDetect>().IsInAttackRange())
             {
-                if (GetComponent<EnemyRangeDetect>().IsInAttackRange() || (hit.collider.gameObject == enemy.target))
+                if (isAbleToAttack)
                 {
-                    if (isAbleToAttack)
-                    {
-                        Attack();
-                    }
+                    Attack();
                 }
             }
+
 
         }
     }
@@ -75,5 +72,17 @@ public class EnemyMeleeAttack : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (enemy.target != null)
+        {
+            if ((collision.gameObject == enemy.target) && isAbleToAttack)
+            {
+
+                Attack();
+            }
+        }
+
     }
 }

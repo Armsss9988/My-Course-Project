@@ -3,10 +3,10 @@
 public class EnemyRangeDetect : MonoBehaviour
 {
     Enemy enemy;
+    bool isTargetInCheckingRange = false;
     bool inAttackRange = false;
     bool detectCheck = false;
     private Collider2D[] objectsChecking;
-    private float targetDistance;
     void Start()
     {
         enemy = GetComponent<Enemy>();
@@ -15,47 +15,63 @@ public class EnemyRangeDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (enemy.target != null)
         {
-
-            Debug.Log("checking range");
-            CheckTargetRanges();
             if (enemy.target.TryGetComponent<IDamageable>(out var damageable) && !damageable.IsDamageable())
             {
                 enemy.target = null;
             }
+            else
+            {
+                if (isTargetInCheckingRange)
+                {
+                    DetectPlayer();
+                    CheckRangeAttack();
+                }
+            }
         }
         else
         {
-            Debug.Log("objectsChecking");
-            CheckForNewTarget();
+            CheckIsTargetInRange();
         }
+
     }
     public bool IsInAttackRange()
     {
         return inAttackRange;
     }
-    public bool IsInDetectRange()
+    public bool IsInDetectRange() { return detectCheck; }
+
+
+    public void DetectPlayer()
     {
-        return detectCheck;
-    }
 
-
-    private void CheckTargetRanges()
-    {
-        targetDistance = Vector3.Distance(transform.position, enemy.target.transform.position);
-        bool isWithinDetectRange = targetDistance <= enemy.detectRange;
-        bool isWithinAttackZone = targetDistance > enemy.minAttackZone && targetDistance < enemy.maxAttackZone;
-        inAttackRange = isWithinAttackZone;
-        detectCheck = isWithinDetectRange;
-
-        if (!isWithinDetectRange)
+        if ((enemy.target.transform.position - this.transform.position).magnitude <= Mathf.Abs(enemy.detectRange))
         {
-            enemy.target = null;  // Reset target for re-detection
+            detectCheck = true;
+        }
+        else if ((enemy.target.transform.position - transform.position).magnitude >= Mathf.Abs(enemy.checkingRange))
+        {
+            detectCheck = false;
+            enemy.target = null;
+            isTargetInCheckingRange = false;
         }
     }
-    public void CheckForNewTarget()
+    public void CheckRangeAttack()
+    {
+        if (enemy.target != null
+            && (enemy.target.gameObject.layer == this.gameObject.layer)
+            && (enemy.target.transform.position - transform.position).magnitude > Mathf.Abs(enemy.minAttackZone)
+            && (enemy.target.transform.position - transform.position).magnitude < Mathf.Abs(enemy.maxAttackZone))
+        {
+            inAttackRange = true;
+        }
+        else
+        {
+            inAttackRange = false;
+        }
+    }
+    public void CheckIsTargetInRange()
     {
         objectsChecking = Physics2D.OverlapCircleAll(this.transform.position, enemy.checkingRange);
         Collider2D nearestObject = GetNearestObjectWithTag(objectsChecking);
@@ -63,6 +79,11 @@ public class EnemyRangeDetect : MonoBehaviour
         if (nearestObject != null)
         {
             enemy.target = nearestObject.gameObject;
+            isTargetInCheckingRange = true;
+        }
+        else
+        {
+            isTargetInCheckingRange = false;
         }
     }
     private Collider2D GetNearestObjectWithTag(Collider2D[] objects)

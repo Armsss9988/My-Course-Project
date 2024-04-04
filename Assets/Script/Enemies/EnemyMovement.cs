@@ -67,18 +67,38 @@ public class EnemyMovement : MonoBehaviour
         else if (enemyRangeDetect.IsInDetectRange() && enemy.target != null)
         {
             Vector2 targetPos = enemy.target.GetComponent<Rigidbody2D>().position;
-            float distanceToPlayer = Vector2.Distance(transform.position, targetPos);
-            if (distanceToPlayer > enemy.maxAttackZone)
+            float distanceToTarget = Vector2.Distance(transform.position, targetPos);
+            if (distanceToTarget > enemy.maxAttackZone)
             {
 
                 if (!isMoving)
                 {
-                    rb2d.MovePosition(Vector2.MoveTowards(rb2d.position, targetPos, Time.deltaTime * enemy.speed));
+                    RaycastHit2D hit = Physics2D.Raycast(rb2d.position + (targetPos - rb2d.position).normalized * enemy.targetColliderOffset, targetPos - rb2d.position, enemy.checkingRange);
+                    Debug.DrawRay(rb2d.position + (targetPos - rb2d.position).normalized * enemy.targetColliderOffset, targetPos - rb2d.position, Color.red, enemy.checkingRange);
+                    if (hit.collider != null && hit.collider.gameObject != enemy.target)
+                    {
+                        if (hit.collider.gameObject == this.gameObject)
+                        {
+                            Debug.DrawRay(rb2d.position, targetPos - rb2d.position, Color.red, Vector2.Distance(targetPos, rb2d.position));
+                        }
+                        Debug.Log("target hit: " + hit.collider.gameObject.name);
+                        Vector2 contactPoint = hit.point;
+                        Vector2 newDirection = Vector2.Perpendicular(hit.normal).normalized;
+                        newDirection += new Vector2(Random.value * 0.1f, Random.value * 0.1f);
+                        target = contactPoint + newDirection * (targetPos - rb2d.position).magnitude;
+
+                    }
+                    else
+                    {
+                        target = targetPos;
+                    }
+                    StartCoroutine(RandomRunningTarget(target));
                 }
+                rb2d.MovePosition(Vector2.MoveTowards(transform.position, target, Time.deltaTime * enemy.speed * 1.5f));
                 animator.SetFloat("Speed", (targetPos - rb2d.position).magnitude);
                 CheckFlipx(targetPos);
             }
-            else if (distanceToPlayer <= enemy.minAttackZone)
+            else if (distanceToTarget <= enemy.minAttackZone)
             {
                 if (!isMoving)
                 {
@@ -86,7 +106,9 @@ public class EnemyMovement : MonoBehaviour
                 }
 
                 rb2d.MovePosition(Vector2.MoveTowards(transform.position, target, Time.deltaTime * enemy.speed * 1.5f));
+
                 animator.SetFloat("Speed", (target - (Vector2)transform.position).magnitude);
+
                 CheckFlipx(target);
             }
             else
@@ -115,38 +137,53 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector2 randomDir = Random.insideUnitCircle.normalized;
         Vector2 escapePos = playerPos - randomDir * escapeRadius;
-        return escapePos;
+
+        // Check for obstacles on the path
+        RaycastHit2D hit = Physics2D.Raycast(rb2d.position + (escapePos - rb2d.position).normalized * enemy.targetColliderOffset, escapePos - rb2d.position, Vector2.Distance(rb2d.position, escapePos));
+        if (escapeRadius < 0.05f)
+        {
+            return enemy.transform.position;
+        }
+        if (hit.collider == null) // No obstacle
+        {
+            return escapePos;
+        }
+        else
+        {
+
+            return GetRandomEscapePosition(playerPos, escapeRadius * 0.9f);
+        }
     }
 
     Vector2 GetRandomPositionInAttackZone()
     {
         Vector2 targetPos = enemy.target.transform.position;
         float attackZoneRadius = (enemy.maxAttackZone + enemy.minAttackZone) / 2f;
-
-
         float minDistanceFromPlayer = enemy.minAttackZone;
 
         for (int i = 0; i < 10; i++)
         {
-
             float randomAngle = Random.Range(0f, 2f * Mathf.PI);
             Vector2 playerDir = targetPos - (Vector2)transform.position;
             float angleOffset = Mathf.Sign(Vector2.Dot(playerDir, Vector2.up)) * Mathf.PI;
             float adjustedAngle = randomAngle + angleOffset;
 
             Vector2 randomOffset = new Vector2(Mathf.Cos(adjustedAngle), Mathf.Sin(adjustedAngle)) * attackZoneRadius;
-
-
             Vector2 target = randomOffset + targetPos;
+            // Check for obstacles on the path
+            RaycastHit2D hit = Physics2D.Raycast(rb2d.position + (target - rb2d.position).normalized * enemy.targetColliderOffset, target - rb2d.position, Vector2.Distance(rb2d.position, target));
 
-
-            if (Vector2.Distance(target, targetPos) >= minDistanceFromPlayer)
+            if (hit.collider == null)
             {
-
-                return target;
+                if (Vector2.Distance(target, targetPos) >= minDistanceFromPlayer)
+                {
+                    return target;
+                }
             }
         }
-        return targetPos + Random.insideUnitCircle.normalized * (attackZoneRadius / 2f);
+
+        // No suitable position found, try a random point within a smaller radius near the target
+        return targetPos + Random.insideUnitCircle.normalized * (attackZoneRadius / 4f);
     }
 
     public void CheckFlipx(Vector3 target)

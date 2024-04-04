@@ -3,11 +3,10 @@ using UnityEngine;
 public class HitCollider : MonoBehaviour
 {
     MeleeWeaponData meleeWeaponData;
-    CharacterSound playerSound;
-    GameObject player;
+    GameObject atttacker;
     void Awake()
     {
-        playerSound = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterSound>();
+        atttacker = this.transform.parent.gameObject;
     }
     public void SetWeaponData(MeleeWeaponData weaponData)
     {
@@ -21,17 +20,16 @@ public class HitCollider : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (this.transform.parent.gameObject.IsTargetThisObject(collision.gameObject))
+        if (this.transform.parent.gameObject.IsTargetThisObject(collision.gameObject) && collision.gameObject != atttacker)
         {
             if (collision.TryGetComponent<IDamageable>(out var target))
             {
-                playerSound.AttackHitSound();
                 target.Force(collision.transform.position - this.transform.position, 50);
                 target.ChangeHealth(-meleeWeaponData.damage);
             }
             if (collision.TryGetComponent<IAttackable>(out var targetAtackable))
             {
-                targetAtackable.SetTarget(player.gameObject);
+                targetAtackable.SetTarget(atttacker);
             }
         }
 
