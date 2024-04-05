@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Elevation 2
   - Floor 3
   - Bridge
-  - 
+  - Ground 1
   - 
   - 
   - 
@@ -41,11 +42,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground 1
+    uniqueID: 2611060935
+    locked: 0
   - name: Floor 1
     uniqueID: 1938749797
     locked: 0
+  - name: Ground 2
+    uniqueID: 3165036383
+    locked: 0
   - name: Floor 2
     uniqueID: 2827582325
+    locked: 0
+  - name: Ground 3
+    uniqueID: 3120432899
     locked: 0
   - name: Floor 3
     uniqueID: 3769214375

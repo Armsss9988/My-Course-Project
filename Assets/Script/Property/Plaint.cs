@@ -47,7 +47,13 @@ public class Plaint : MonoBehaviour, IDamageable
         }
         if (currentHealth <= 0)
         {
-            animator.SetTrigger("Regrowth");
+            animator.SetBool("Regrowth", true);
+            animator.SetBool("Growth", false);
+            animator.SetBool("Fruit", false);
+            if (currentState == ObjectState.Fruit)
+            {
+                Harvert();
+            }
             currentState = ObjectState.Regrowth;
             isDamagebale = false;
         }
@@ -71,7 +77,9 @@ public class Plaint : MonoBehaviour, IDamageable
                 isDamagebale = true;
                 this.currentHealth = maxHealth / 2;
                 currentState = ObjectState.Growth;
-                animator.SetTrigger("Growth");
+                animator.SetBool("Regrowth", false);
+                animator.SetBool("Growth", true);
+                animator.SetBool("Fruit", false);
                 currentGrowthTime = growthTimer;
             }
         }
@@ -83,7 +91,9 @@ public class Plaint : MonoBehaviour, IDamageable
                 isDamagebale = true;
                 this.currentHealth = maxHealth;
                 currentState = ObjectState.Fruit;
-                animator.SetTrigger("Fruit");
+                animator.SetBool("Regrowth", false);
+                animator.SetBool("Growth", false);
+                animator.SetBool("Fruit", true);
                 currentFruitTime = fruitTimer;
             }
         }

@@ -31,7 +31,7 @@ public class CharacterAction : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
 
-            if (playerSelectedItem.GetSelectedItem() != null)
+            if (playerSelectedItem.GetSelectedItem() != null && (playerSelectedItem.GetSelectedItem().data is WeaponData))
             {
                 Attack();
             }
