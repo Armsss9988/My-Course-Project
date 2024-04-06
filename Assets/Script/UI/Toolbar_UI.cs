@@ -7,7 +7,7 @@ public class Toolbar_UI : MonoBehaviour
     [SerializeField] private List<Slot_UI> toolbarSlots = new List<Slot_UI>();
     public Slot_UI selectedSlot;
     Character player;
-    private KeyCode[] keyCodes = {
+    private readonly KeyCode[] keyCodes = {
         KeyCode.Alpha1,
         KeyCode.Alpha2,
         KeyCode.Alpha3,
@@ -75,6 +75,10 @@ public class Toolbar_UI : MonoBehaviour
         }
         else
         {
+            if (selectedSlot != null)
+            {
+                selectedSlot.SetHighlight(false);
+            }
             selectedSlot = null;
             player.GetComponent<CharacterSelectedItem>().HandleItemChange(null);
         }

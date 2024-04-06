@@ -132,7 +132,7 @@ MonoBehaviour:
   growthTimer: 5
   currentGrowthTime: 0
   currentState: 1
-  fruit: {fileID: 6792451765434646147, guid: 3558fd2c70e878045886223688406903, type: 3}
+  fruit: {fileID: 6792451765434646147, guid: 0ad27144f0592544f98f2766d0947fa1, type: 3}
 --- !u!114 &-5542217252091315875
 MonoBehaviour:
   m_ObjectHideFlags: 0

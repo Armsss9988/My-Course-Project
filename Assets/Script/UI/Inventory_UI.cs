@@ -18,7 +18,6 @@ public class Inventory_UI : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
         Refresh();
-        canvas = FindObjectOfType<Canvas>();
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);

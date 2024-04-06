@@ -20,8 +20,11 @@ public class Character : MonoBehaviour, IDamageable
         characterSound = GetComponent<CharacterSound>();
         characterAction = GetComponent<CharacterAction>();
         currentHealth = maxHealth;
-        PlayerHealthText.instance.SetText(currentHealth, maxHealth);
 
+    }
+    void Start()
+    {
+        PlayerHealthText.instance.SetText(currentHealth, maxHealth);
     }
     private void Update()
     {

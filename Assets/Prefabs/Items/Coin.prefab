@@ -14,9 +14,7 @@ GameObject:
   - component: {fileID: 1468674354297602303}
   - component: {fileID: 5754845298465931752}
   - component: {fileID: 1163270652299330255}
-  - component: {fileID: 7373446489529078942}
   - component: {fileID: 3839632480131237955}
-  - component: {fileID: 4357687405147794403}
   m_Layer: 6
   m_Name: Coin
   m_TagString: Untagged
@@ -78,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fb2dd4e1337814744a9f60e323de2c1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,45 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4137f8f990307447a6558098b6bec43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCollectable: 1
-  isHasDelaytime: 0
+  isCollectable: 0
+  isHasDelaytime: 1
   timeDelay: 1
 --- !u!58 &1163270652299330255
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6792451765434646147}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.026878357, y: -0.1165905}
-  serializedVersion: 2
-  m_Radius: 0.12905693
---- !u!58 &7373446489529078942
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,18 +201,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4357687405147794403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6792451765434646147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4137f8f990307447a6558098b6bec43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCollectable: 1
-  isHasDelaytime: 1
-  timeDelay: 2
