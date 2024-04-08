@@ -1,18 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class GlovesData : MonoBehaviour
+[CreateAssetMenu(fileName = "Shoes Data", menuName = "Item Data/Armor Data/Shoes Data", order = 1)]
+public class ShoesData : ArmorData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

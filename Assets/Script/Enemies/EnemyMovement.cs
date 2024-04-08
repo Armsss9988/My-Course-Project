@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     public bool canMove = true;
     Vector2 target;
     public bool isRandomMove = true;
+    public bool isFourDirection = false;
     void Start()
     {
         enemy = GetComponent<Enemy>();
@@ -60,7 +61,25 @@ public class EnemyMovement : MonoBehaviour
                 animator.SetFloat("Speed", (target - rb2d.position).magnitude);
 
                 rb2d.MovePosition(Vector2.MoveTowards(rb2d.position, target, Time.deltaTime * enemy.speed));
-                CheckFlipx(target);
+                if (isFourDirection)
+                {
+                    Vector2 direction = target - rb2d.position;
+                    Vector2 lookDirection = new();
+                    if (!Mathf.Approximately(direction.x, 0.0f) || !Mathf.Approximately(direction.y, 0.0f))
+                    {
+                        lookDirection.Set(direction.x, direction.y);
+                        lookDirection.Normalize();
+                        animator.SetFloat("Look X", lookDirection.x);
+                        animator.SetFloat("Look Y", lookDirection.y);
+                        animator.SetFloat("Attack Speed", 1f);
+                        animator.SetFloat("Movement Speed", 1f);
+                    }
+                }
+                else
+                {
+                    CheckFlipx(target);
+                }
+
             }
         }
 
@@ -70,7 +89,6 @@ public class EnemyMovement : MonoBehaviour
             float distanceToTarget = Vector2.Distance(transform.position, targetPos);
             if (distanceToTarget > enemy.maxAttackZone)
             {
-
                 if (!isMoving)
                 {
                     RaycastHit2D hit = Physics2D.Raycast(rb2d.position + (targetPos - rb2d.position).normalized * enemy.targetColliderOffset, targetPos - rb2d.position, enemy.checkingRange);
@@ -81,12 +99,10 @@ public class EnemyMovement : MonoBehaviour
                         {
                             Debug.DrawRay(rb2d.position, targetPos - rb2d.position, Color.red, Vector2.Distance(targetPos, rb2d.position));
                         }
-                        Debug.Log("target hit: " + hit.collider.gameObject.name);
                         Vector2 contactPoint = hit.point;
                         Vector2 newDirection = Vector2.Perpendicular(hit.normal).normalized;
                         newDirection += new Vector2(Random.value * 0.1f, Random.value * 0.1f);
                         target = contactPoint + newDirection * (targetPos - rb2d.position).magnitude;
-
                     }
                     else
                     {
@@ -96,7 +112,24 @@ public class EnemyMovement : MonoBehaviour
                 }
                 rb2d.MovePosition(Vector2.MoveTowards(transform.position, target, Time.deltaTime * enemy.speed * 1.5f));
                 animator.SetFloat("Speed", (targetPos - rb2d.position).magnitude);
-                CheckFlipx(targetPos);
+                if (isFourDirection)
+                {
+                    Vector2 direction = target - rb2d.position;
+                    Vector2 lookDirection = new();
+                    if (!Mathf.Approximately(direction.x, 0.0f) || !Mathf.Approximately(direction.y, 0.0f))
+                    {
+                        lookDirection.Set(direction.x, direction.y);
+                        lookDirection.Normalize();
+                        animator.SetFloat("Look X", lookDirection.x);
+                        animator.SetFloat("Look Y", lookDirection.y);
+                        animator.SetFloat("Attack Speed", 1f);
+                        animator.SetFloat("Movement Speed", 1f);
+                    }
+                }
+                else
+                {
+                    CheckFlipx(targetPos);
+                }
             }
             else if (distanceToTarget <= enemy.minAttackZone)
             {
@@ -104,12 +137,27 @@ public class EnemyMovement : MonoBehaviour
                 {
                     StartCoroutine(RandomRunningTarget(GetRandomEscapePosition(targetPos, enemy.maxAttackZone)));
                 }
-
                 rb2d.MovePosition(Vector2.MoveTowards(transform.position, target, Time.deltaTime * enemy.speed * 1.5f));
 
                 animator.SetFloat("Speed", (target - (Vector2)transform.position).magnitude);
-
-                CheckFlipx(target);
+                if (isFourDirection)
+                {
+                    Vector2 direction = target - rb2d.position;
+                    Vector2 lookDirection = new();
+                    if (!Mathf.Approximately(direction.x, 0.0f) || !Mathf.Approximately(direction.y, 0.0f))
+                    {
+                        lookDirection.Set(direction.x, direction.y);
+                        lookDirection.Normalize();
+                        animator.SetFloat("Look X", lookDirection.x);
+                        animator.SetFloat("Look Y", lookDirection.y);
+                        animator.SetFloat("Attack Speed", 1f);
+                        animator.SetFloat("Movement Speed", 1f);
+                    }
+                }
+                else
+                {
+                    CheckFlipx(target);
+                }
             }
             else
             {
@@ -117,10 +165,26 @@ public class EnemyMovement : MonoBehaviour
                 {
                     StartCoroutine(RandomRunningTarget(GetRandomPositionInAttackZone()));
                 }
-
                 rb2d.MovePosition(Vector2.MoveTowards(transform.position, target, Time.deltaTime * enemy.speed));
                 animator.SetFloat("Speed", (target - (Vector2)transform.position).magnitude);
-                CheckFlipx(target);
+                if (isFourDirection)
+                {
+                    Vector2 direction = target - rb2d.position;
+                    Vector2 lookDirection = new();
+                    if (!Mathf.Approximately(direction.x, 0.0f) || !Mathf.Approximately(direction.y, 0.0f))
+                    {
+                        lookDirection.Set(direction.x, direction.y);
+                        lookDirection.Normalize();
+                        animator.SetFloat("Look X", lookDirection.x);
+                        animator.SetFloat("Look Y", lookDirection.y);
+                        animator.SetFloat("Attack Speed", 1f);
+                        animator.SetFloat("Movement Speed", 1f);
+                    }
+                }
+                else
+                {
+                    CheckFlipx(target);
+                }
             }
         }
     }
@@ -167,10 +231,8 @@ public class EnemyMovement : MonoBehaviour
             Vector2 playerDir = targetPos - (Vector2)transform.position;
             float angleOffset = Mathf.Sign(Vector2.Dot(playerDir, Vector2.up)) * Mathf.PI;
             float adjustedAngle = randomAngle + angleOffset;
-
             Vector2 randomOffset = new Vector2(Mathf.Cos(adjustedAngle), Mathf.Sin(adjustedAngle)) * attackZoneRadius;
             Vector2 target = randomOffset + targetPos;
-            // Check for obstacles on the path
             RaycastHit2D hit = Physics2D.Raycast(rb2d.position + (target - rb2d.position).normalized * enemy.targetColliderOffset, target - rb2d.position, Vector2.Distance(rb2d.position, target));
 
             if (hit.collider == null)
@@ -181,11 +243,8 @@ public class EnemyMovement : MonoBehaviour
                 }
             }
         }
-
-        // No suitable position found, try a random point within a smaller radius near the target
         return targetPos + Random.insideUnitCircle.normalized * (attackZoneRadius / 4f);
     }
-
     public void CheckFlipx(Vector3 target)
     {
         if ((target.x - GetComponent<Rigidbody2D>().position.x) > 0)

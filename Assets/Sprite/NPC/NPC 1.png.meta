@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4d7015699416e684fb55946629263751
+guid: 89110cdf16e897141a867766c6446497
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,7 +44,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boot Black_0
+      name: NPC 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88b7c635681534c468ed1ffd2c27b894
-      internalID: -702198254
+      spriteID: 5b58f1c6f4804894594bed913748edb4
+      internalID: 1793366052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_1
+      name: NPC 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bb08984e4cda004ea80a84461922cbe
-      internalID: -488315504
+      spriteID: 60aab6c5b177ee246997d9c3b73676bc
+      internalID: -1753534624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_2
+      name: NPC 1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26a14a3c6445a104fbd64c4775a99b3f
-      internalID: 812938816
+      spriteID: daa168a03f0a4f14f83507bc6119ff79
+      internalID: -937375665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_3
+      name: NPC 1_3
       rect:
         serializedVersion: 2
         x: 192
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c690b023bf9d5e40b14b32afd1ad133
-      internalID: -1264308240
+      spriteID: 87742c0a40a911b4586fd63f5071fd5a
+      internalID: 1856829008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_4
+      name: NPC 1_4
       rect:
         serializedVersion: 2
         x: 256
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13fef183922fb3c49b455f13277aec2c
-      internalID: -1726380373
+      spriteID: 40cdb8a6ac7a015499beff5de2599c12
+      internalID: 881759453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_5
+      name: NPC 1_5
       rect:
         serializedVersion: 2
         x: 320
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8485f222e595b4e4caafe333292ca734
-      internalID: 1169492024
+      spriteID: f2ea11aca86dcd14ca414cc013a84ecd
+      internalID: -1354855532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_6
+      name: NPC 1_6
       rect:
         serializedVersion: 2
         x: 384
@@ -263,14 +263,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 086b873b9fd3fad4cb0c521172ebfc31
-      internalID: -1980483358
+      spriteID: 47685caf7e6484a4fa7859925a60d8ae
+      internalID: -2127805747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_7
+      name: NPC 1_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70c13158faf4384585cabb696c5e103
+      internalID: -989391903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC 1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -284,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d0eb7c8e6e274c49a35bdace64097c9
-      internalID: 161140773
+      spriteID: 25d086e7732549145b1fab040047998e
+      internalID: -1287705380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_8
+      name: NPC 1_9
       rect:
         serializedVersion: 2
         x: 64
@@ -305,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46851279f00819a4fa45123e660a2b12
-      internalID: -542625322
+      spriteID: b30dcadf5b74fac43ba36cff4dae02da
+      internalID: -34041239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_9
+      name: NPC 1_10
       rect:
         serializedVersion: 2
         x: 128
@@ -326,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85f9d8b71439f1d41b87388833a8ac3a
-      internalID: -1722569993
+      spriteID: 5d2b2fe811191fe40bf1ce6a7df62fe2
+      internalID: 201841895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_10
+      name: NPC 1_11
       rect:
         serializedVersion: 2
         x: 192
@@ -347,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f42dcfb1e3f388c46a8f4c8e80f09845
-      internalID: -1637483717
+      spriteID: b49d9082deec1fb49b17eb3fcd1b1f1f
+      internalID: 1371252731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_11
+      name: NPC 1_12
       rect:
         serializedVersion: 2
         x: 256
@@ -368,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c18cf6a741427d4dbd2fe0110fff58c
-      internalID: 895410933
+      spriteID: f92af016d44ab4b4085cd3fad8d6258b
+      internalID: 2019595651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_12
+      name: NPC 1_13
       rect:
         serializedVersion: 2
         x: 320
@@ -389,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe41d800dbd1b5546b905feeac5222a4
-      internalID: 1365404602
+      spriteID: 0e361dd6167e4ee4288e981a5a448fa5
+      internalID: 2037677542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_13
+      name: NPC 1_14
       rect:
         serializedVersion: 2
         x: 384
@@ -410,14 +431,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36ea6b874d36e3e42b32457f81b53373
-      internalID: 233169369
+      spriteID: ef4d5f52882941a469ea6f513b25b584
+      internalID: -1823644237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_14
+      name: NPC 1_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d9cefcdf74fe040833e80d1d785bd5
+      internalID: 1348943009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC 1_16
       rect:
         serializedVersion: 2
         x: 0
@@ -431,14 +473,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd6343ca536511b489766ef91aa5c022
-      internalID: -2043393515
+      spriteID: 879625df83861ac4f8542ae3d9cd42e5
+      internalID: 324731262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_15
+      name: NPC 1_17
       rect:
         serializedVersion: 2
         x: 64
@@ -452,14 +494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cae2fdb374b0a3548bd4f388d89b666e
-      internalID: 1907265494
+      spriteID: d7821a1d34bd54b48a34e8b0432fcf90
+      internalID: 599911942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_16
+      name: NPC 1_18
       rect:
         serializedVersion: 2
         x: 128
@@ -473,14 +515,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75ab0ae681c195540b93539112798739
-      internalID: 389236634
+      spriteID: 259571f9e99b31645a1b905c18857d91
+      internalID: 463539596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_17
+      name: NPC 1_19
       rect:
         serializedVersion: 2
         x: 192
@@ -494,14 +536,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7af78d358baf2174b8cf41da7b356e3c
-      internalID: 737826507
+      spriteID: 1ec17e506ac28e845a8f680c6871ecd0
+      internalID: -705524380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_18
+      name: NPC 1_20
       rect:
         serializedVersion: 2
         x: 256
@@ -515,14 +557,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8954d34fe54f362459b9cfd74eee07d8
-      internalID: -948643685
+      spriteID: a1d0722b643b38645ae0133036472084
+      internalID: 1136152782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_19
+      name: NPC 1_21
       rect:
         serializedVersion: 2
         x: 320
@@ -536,14 +578,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8afcd5b38bed674a922b27dc57d20fd
-      internalID: 633545847
+      spriteID: 29196394059cd9a4e911d714962f3af8
+      internalID: 898287381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_20
+      name: NPC 1_22
       rect:
         serializedVersion: 2
         x: 384
@@ -557,14 +599,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffed58fbf517ef345955c8f6a6d955d9
-      internalID: -1986486657
+      spriteID: c73847853568bc74c83b6f73dbecf09c
+      internalID: 1861976622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_21
+      name: NPC 1_23
       rect:
         serializedVersion: 2
         x: 0
@@ -578,14 +620,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 115bc88a3737ee3408b3df2fe6405f85
-      internalID: 1214028720
+      spriteID: 2e81b081cdbcdff488ae00efe7364e50
+      internalID: 1473026000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_22
+      name: NPC 1_24
       rect:
         serializedVersion: 2
         x: 64
@@ -599,14 +641,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30e3eaceb4cf42849b2d616a2bac1dd4
-      internalID: 483097267
+      spriteID: 4d127a9807048f548b7ca32ce5b081c0
+      internalID: -1383415886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_23
+      name: NPC 1_25
       rect:
         serializedVersion: 2
         x: 128
@@ -620,14 +662,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c39fa2b2625203d40823e3ff18f529c0
-      internalID: -882250053
+      spriteID: b052b3de5be49484a8d462bf5d898cc2
+      internalID: 955807053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_24
+      name: NPC 1_26
       rect:
         serializedVersion: 2
         x: 192
@@ -641,14 +683,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba0ae44b9603d5c47838f92253dc8e3e
-      internalID: 1711463104
+      spriteID: b8d426a226436bd43b6c8f61448c7b1b
+      internalID: -164388170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_25
+      name: NPC 1_27
       rect:
         serializedVersion: 2
         x: 256
@@ -662,14 +704,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5659b2ad4eb5a74fa23cdb62f1e8a1e
-      internalID: -1576378434
+      spriteID: 2c001c649884cd6499869a95294d344b
+      internalID: -83834940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_26
+      name: NPC 1_28
       rect:
         serializedVersion: 2
         x: 320
@@ -683,14 +725,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 188a4b1b5daf04647a328c3865a5cf2c
-      internalID: -467365883
+      spriteID: dda6e1e93819ae44783b739ab8b85d2d
+      internalID: -1118149126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_27
+      name: NPC 1_29
       rect:
         serializedVersion: 2
         x: 384
@@ -704,14 +746,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca6dac6f3431c4b4ba09137833295f50
-      internalID: 500986571
+      spriteID: c3b80f55ae549ce43806f814c29d0626
+      internalID: -1374563355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_28
+      name: NPC 1_30
       rect:
         serializedVersion: 2
         x: 0
@@ -725,14 +767,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06b9507b107b6c64684eaedc9f2939ba
-      internalID: -805840106
+      spriteID: 0103bf8c8c39e3e448582de27fdb29e4
+      internalID: -1747546757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_29
+      name: NPC 1_31
       rect:
         serializedVersion: 2
         x: 64
@@ -746,14 +788,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfd7bb190830eed46bb17803b43b1b58
-      internalID: 1612078940
+      spriteID: 7fdec096e97e41e4e9e6a134d8a239dc
+      internalID: -611361970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_30
+      name: NPC 1_32
       rect:
         serializedVersion: 2
         x: 128
@@ -767,14 +809,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4058aa9782345cf4a84bb4773c870bfd
-      internalID: 1988733805
+      spriteID: fdc5395d8cbcfef4c9cd3b5aeec7ee92
+      internalID: -1478348279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_31
+      name: NPC 1_33
       rect:
         serializedVersion: 2
         x: 192
@@ -788,14 +830,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 357fef86240cd4c4b8710aef9b172225
-      internalID: 1764886411
+      spriteID: dbc814036af05ab4fa4414ab1c580654
+      internalID: -1531115987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_32
+      name: NPC 1_34
       rect:
         serializedVersion: 2
         x: 256
@@ -809,14 +851,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c819dafe5ae6f9b4da4f6d584468f483
-      internalID: 1116106732
+      spriteID: 746f8a8910c5b3f4fb378639ed35bda7
+      internalID: 1176571223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_33
+      name: NPC 1_35
       rect:
         serializedVersion: 2
         x: 320
@@ -830,14 +872,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00a7f0a539e6f72408c0b20090c2b351
-      internalID: -1159990398
+      spriteID: 18aac4877aa4d4945a254df75ae6cd84
+      internalID: 1672385918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_34
+      name: NPC 1_36
       rect:
         serializedVersion: 2
         x: 384
@@ -851,14 +893,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c871a1f12775ab146aa2df9c7813bc3d
-      internalID: -758503177
+      spriteID: 8f9bc99e7480c3743b292743dd6c9273
+      internalID: 596967997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_35
+      name: NPC 1_37
       rect:
         serializedVersion: 2
         x: 448
@@ -872,14 +914,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 626faf5adc4d9154cbac75ca07d1aa5b
-      internalID: 753893455
+      spriteID: c6ba6c1690e553243b2a904b258ba02d
+      internalID: 1729914760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_36
+      name: NPC 1_38
       rect:
         serializedVersion: 2
         x: 0
@@ -893,14 +935,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cf8ed7415aabd74795b6553c240582f
-      internalID: -321199747
+      spriteID: c3c2b2d594a30b14cbb8336be7eeab11
+      internalID: 1529996391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_37
+      name: NPC 1_39
       rect:
         serializedVersion: 2
         x: 64
@@ -914,14 +956,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27de9b550d2fa9548ab4ae02faf64248
-      internalID: 1488216093
+      spriteID: 14e13d71fa8cac74b8f275eba04348d9
+      internalID: 977477943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_38
+      name: NPC 1_40
       rect:
         serializedVersion: 2
         x: 128
@@ -935,14 +977,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60884b5679d7a2348a4eaf4fe4689b18
-      internalID: 1965468551
+      spriteID: 3c3868ae5a3b2d34f99a83cd4e1a4dc8
+      internalID: 272065509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_39
+      name: NPC 1_41
       rect:
         serializedVersion: 2
         x: 192
@@ -956,14 +998,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d6ea5375bff04e43aa0aa6fc5669ee6
-      internalID: 1120171287
+      spriteID: d15c23a36fea2d64eab6a5d05849b67b
+      internalID: -1843833844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_40
+      name: NPC 1_42
       rect:
         serializedVersion: 2
         x: 256
@@ -977,14 +1019,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b49b560df2aee124293232a0ac9f37c5
-      internalID: -1619795712
+      spriteID: 9dd79ec74caad38439ec9ce6fa578979
+      internalID: -837490839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_41
+      name: NPC 1_43
       rect:
         serializedVersion: 2
         x: 320
@@ -998,14 +1040,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5c7843ed32f70e4389f64336b6de1c4
-      internalID: -1289606531
+      spriteID: c494e991aef01b546b4e739b55d8e3a5
+      internalID: -2053566147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_42
+      name: NPC 1_44
       rect:
         serializedVersion: 2
         x: 384
@@ -1019,14 +1061,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae62e6f74b6ec2447bb71bff280845f2
-      internalID: -396494377
+      spriteID: d3a060e953d4a404f9e8cafe9f35fd32
+      internalID: -343556930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_43
+      name: NPC 1_45
       rect:
         serializedVersion: 2
         x: 448
@@ -1040,14 +1082,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f577e2b9f032c4f4596ffeafd2161cba
-      internalID: -493349816
+      spriteID: 3fe21922ade639f428dba6fa1b6c594e
+      internalID: -619399010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_44
+      name: NPC 1_46
       rect:
         serializedVersion: 2
         x: 0
@@ -1061,14 +1103,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4a69179a93c3c04ea09f93fc7d10d1a
-      internalID: 868198291
+      spriteID: 0a243eda4dfac67478b53edcb57c510d
+      internalID: 520195932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_45
+      name: NPC 1_47
       rect:
         serializedVersion: 2
         x: 64
@@ -1082,14 +1124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86e237bdfe32da04fb26ea83b3490f79
-      internalID: -964417201
+      spriteID: 7ac59d1c2d7aefa4fae23abde94a6783
+      internalID: 1235816300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_46
+      name: NPC 1_48
       rect:
         serializedVersion: 2
         x: 128
@@ -1103,14 +1145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ea16c05b81472c4f8251d17c20dd8db
-      internalID: -1732313690
+      spriteID: b74dcb338ccd61942bab2cc4891eaac4
+      internalID: -872043011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_47
+      name: NPC 1_49
       rect:
         serializedVersion: 2
         x: 192
@@ -1124,14 +1166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 027daa1acd44ba247a672cd75c0965ca
-      internalID: -962891094
+      spriteID: b82939a2fa5d75d41802d20337c50377
+      internalID: 949885022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_48
+      name: NPC 1_50
       rect:
         serializedVersion: 2
         x: 256
@@ -1145,14 +1187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e4d1035cb53fad47bfbb2abcef6ca46
-      internalID: 275549078
+      spriteID: 7421039c6b832a54b9cbada34f3ac2f3
+      internalID: 1280767582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_49
+      name: NPC 1_51
       rect:
         serializedVersion: 2
         x: 320
@@ -1166,14 +1208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc5ee972b75ae6c418b44b9bea70a7d2
-      internalID: -394129124
+      spriteID: 2082194d376c93b45aef3a927b8db843
+      internalID: -1285634553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_50
+      name: NPC 1_52
       rect:
         serializedVersion: 2
         x: 384
@@ -1187,14 +1229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b919a8c3d2a2d4498967b79c00747e4
-      internalID: 1402377622
+      spriteID: 6e96af5590ba6734e8b61764f87db034
+      internalID: -698464258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_51
+      name: NPC 1_53
       rect:
         serializedVersion: 2
         x: 448
@@ -1208,14 +1250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc8f695a06c5b394e8715eb177c46c91
-      internalID: 1033812610
+      spriteID: cc73b796957025e46879a325801573fa
+      internalID: 1385131795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_52
+      name: NPC 1_54
       rect:
         serializedVersion: 2
         x: 0
@@ -1229,14 +1271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9070843668e1a240a927572a20de0a3
-      internalID: -447080789
+      spriteID: 4ad8245d23ca70b48abf410409f53b6c
+      internalID: 888828510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_53
+      name: NPC 1_55
       rect:
         serializedVersion: 2
         x: 64
@@ -1250,14 +1292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3174ecb4e1c6ec644b5874f2e49d8085
-      internalID: -1230388189
+      spriteID: 668ec479525af8845bcf5da4aef72133
+      internalID: 449293208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_54
+      name: NPC 1_56
       rect:
         serializedVersion: 2
         x: 128
@@ -1271,14 +1313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb2da4121bdaade4aaa6a09a3efe457e
-      internalID: 1086457167
+      spriteID: ec8e47ae018cfdd46b5d4cafc411f1f4
+      internalID: -1597448460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_55
+      name: NPC 1_57
       rect:
         serializedVersion: 2
         x: 192
@@ -1292,14 +1334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a41a2b3b40a26a4aae3aa305227f884
-      internalID: 111256153
+      spriteID: f4b2ba26ae386654e9263bc6a8293e11
+      internalID: 328069317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_56
+      name: NPC 1_58
       rect:
         serializedVersion: 2
         x: 256
@@ -1313,14 +1355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e89fc66ccadf93d4eaae1b3d548237ea
-      internalID: -165414903
+      spriteID: cdaef947c05706d4885ae79e67fe5196
+      internalID: -1011385474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_57
+      name: NPC 1_59
       rect:
         serializedVersion: 2
         x: 320
@@ -1334,14 +1376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec0846512d80fbe4394a2d56d51db1c9
-      internalID: -1438651194
+      spriteID: 9f7bf2de2125b8f4da18a8b995241c5e
+      internalID: 777714679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_58
+      name: NPC 1_60
       rect:
         serializedVersion: 2
         x: 384
@@ -1355,14 +1397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e07c8e5eb9c03e84dbf393ba105d98fd
-      internalID: -1237508891
+      spriteID: 4d6a69cc681b35b4aaea6b3b54427647
+      internalID: -1998638219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_59
+      name: NPC 1_61
       rect:
         serializedVersion: 2
         x: 448
@@ -1376,14 +1418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78738d5464f257e468434bd16015442e
-      internalID: 1806638837
+      spriteID: ad6def4413a7e2d45ae4f0f193a89889
+      internalID: 1017517635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_60
+      name: NPC 1_62
       rect:
         serializedVersion: 2
         x: 0
@@ -1397,14 +1439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e85003b5c48e98749b6d10e6f1bb0265
-      internalID: -1167338352
+      spriteID: 3a3ab5ec57016b149a7e9d70620872c1
+      internalID: 436549857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_61
+      name: NPC 1_63
       rect:
         serializedVersion: 2
         x: 64
@@ -1418,14 +1460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d95e4a1c46f8d2741b15f8c1c2c01f4c
-      internalID: -2005299836
+      spriteID: 3c196f85d0594da48a6383d5609a8b3a
+      internalID: -90665916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_62
+      name: NPC 1_64
       rect:
         serializedVersion: 2
         x: 128
@@ -1439,14 +1481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28c0e49fa3d42ea4a9c96ff5051d36d3
-      internalID: -1861690078
+      spriteID: 26c2f39d9bdb9b2499f11e4601cf2df5
+      internalID: 620675446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_63
+      name: NPC 1_65
       rect:
         serializedVersion: 2
         x: 192
@@ -1460,14 +1502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 259ab663a4ce7d64c823854c1c37c2dd
-      internalID: 689823421
+      spriteID: 5db48eac1ce068347b3166e498b2517e
+      internalID: -649002830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_64
+      name: NPC 1_66
       rect:
         serializedVersion: 2
         x: 256
@@ -1481,14 +1523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c80e25d2146f424ebb70df808d97214
-      internalID: 1432600705
+      spriteID: a436eabeb24f8484d90f7f93b7f3a0c2
+      internalID: -933359789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_65
+      name: NPC 1_67
       rect:
         serializedVersion: 2
         x: 320
@@ -1502,14 +1544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31c7b6f154aa54e4bb63fcfa4930e626
-      internalID: 821225065
+      spriteID: 36513efa4fb5e214da9d2f11d530fbc5
+      internalID: 2099725039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_66
+      name: NPC 1_68
       rect:
         serializedVersion: 2
         x: 384
@@ -1523,14 +1565,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b1dcdc18b1e92a44a7bded704e2f2d4
-      internalID: -1768761310
+      spriteID: 54b24f0d6d0a7b34fbea4690f769e558
+      internalID: -2022558789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_67
+      name: NPC 1_69
       rect:
         serializedVersion: 2
         x: 448
@@ -1544,14 +1586,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bababc314064c846b3609cb59c765b7
-      internalID: 930832305
+      spriteID: 495ad8b0adee3b8408a708a4f815ee84
+      internalID: 1792942593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_68
+      name: NPC 1_70
       rect:
         serializedVersion: 2
         x: 512
@@ -1565,14 +1607,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d26b88f995d568a4ca5520ab9e766832
-      internalID: -1015787227
+      spriteID: 0257ad00ac7e0334f8147195c3597dba
+      internalID: 1929877173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_69
+      name: NPC 1_71
       rect:
         serializedVersion: 2
         x: 0
@@ -1586,14 +1628,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31830c08e24d9fb439d0dbbf6fb0b5e1
-      internalID: -448048792
+      spriteID: 793c208c6d142a546a9a8900544a6250
+      internalID: -302846922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_70
+      name: NPC 1_72
       rect:
         serializedVersion: 2
         x: 64
@@ -1607,14 +1649,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fceda47f89617b9408e590d89dca3cc2
-      internalID: 1990917130
+      spriteID: dc9857524b8342046880e6f206938bb4
+      internalID: -1473395885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_71
+      name: NPC 1_73
       rect:
         serializedVersion: 2
         x: 128
@@ -1628,14 +1670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7058bbf65da81345a20300115cc9d2b
-      internalID: 1655730785
+      spriteID: 51b882c46333ff0498797729b9f26593
+      internalID: -125076911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_72
+      name: NPC 1_74
       rect:
         serializedVersion: 2
         x: 192
@@ -1649,14 +1691,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef41e9c1603f17a449cbf5d0a90cc451
-      internalID: -423652354
+      spriteID: 46ba99294b7c6a947998979d50acf5c2
+      internalID: -737777202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_73
+      name: NPC 1_75
       rect:
         serializedVersion: 2
         x: 256
@@ -1670,14 +1712,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e13b6610c21b96c4587a32484671e9ea
-      internalID: -201781473
+      spriteID: e259940f59ca7bf4091ace17f957cb3f
+      internalID: 358802324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_74
+      name: NPC 1_76
       rect:
         serializedVersion: 2
         x: 320
@@ -1691,14 +1733,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be426a22280b92143a840bf2dc61df22
-      internalID: 1775352559
+      spriteID: 99cdbf241c644124ba0466114832ae85
+      internalID: -188440425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_75
+      name: NPC 1_77
       rect:
         serializedVersion: 2
         x: 384
@@ -1712,14 +1754,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31c94ef68f6ef1648a763ab41000aaa3
-      internalID: -1947213586
+      spriteID: ef2afc48897affb4db9f84348d8eb5d4
+      internalID: 623132999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_76
+      name: NPC 1_78
       rect:
         serializedVersion: 2
         x: 448
@@ -1733,14 +1775,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93af99ba26495e24a95a7871dcfba314
-      internalID: -1620203008
+      spriteID: 8ae1d66348546364b855e8835234c236
+      internalID: 405020814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_77
+      name: NPC 1_79
       rect:
         serializedVersion: 2
         x: 512
@@ -1754,14 +1796,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f62a5be3fe2efa43919f87eee7bbd7f
-      internalID: -231128953
+      spriteID: 95cbba73630f2b44f9620e850d1526aa
+      internalID: -1330438088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_78
+      name: NPC 1_80
       rect:
         serializedVersion: 2
         x: 0
@@ -1775,14 +1817,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43aab8b19f7978a478f61426a7c2c5cc
-      internalID: -1278361380
+      spriteID: 2b96ce801833e414483ca657ea1463af
+      internalID: 859075233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_79
+      name: NPC 1_81
       rect:
         serializedVersion: 2
         x: 64
@@ -1796,14 +1838,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c50fcacb2d6501840babfeedfb11bb7e
-      internalID: -1204594335
+      spriteID: 5e40b3abfa94c49419c461503e21e647
+      internalID: 1044023832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_80
+      name: NPC 1_82
       rect:
         serializedVersion: 2
         x: 128
@@ -1817,14 +1859,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 593e6743194609c4b8dbec90ae709eee
-      internalID: 1638303205
+      spriteID: d78d0f15f4046014ebd2e9164910e704
+      internalID: -351154124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_81
+      name: NPC 1_83
       rect:
         serializedVersion: 2
         x: 192
@@ -1838,14 +1880,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2fad2aaac5af2b458d6f487b4bc6dbd
-      internalID: 365980830
+      spriteID: adb9f57f1c8ed6b499e57be3f2b9a22e
+      internalID: 1047358713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_82
+      name: NPC 1_84
       rect:
         serializedVersion: 2
         x: 256
@@ -1859,14 +1901,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dc81fb50ed25d1479168b1025ef73c0
-      internalID: 1484091684
+      spriteID: 37c70fd712f5b4d4797730789c35c049
+      internalID: -253889252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_83
+      name: NPC 1_85
       rect:
         serializedVersion: 2
         x: 320
@@ -1880,14 +1922,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 053152691d030d84bae609a054dba7f3
-      internalID: 1340313067
+      spriteID: cc84eb361efaa78419ab64b6896a76f3
+      internalID: 2087513712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_84
+      name: NPC 1_86
       rect:
         serializedVersion: 2
         x: 384
@@ -1901,14 +1943,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1d201055de20df40a9150b6d66d608a
-      internalID: -26396457
+      spriteID: c63222663a9f5044a8e69b5f18366854
+      internalID: -427716732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_85
+      name: NPC 1_87
       rect:
         serializedVersion: 2
         x: 448
@@ -1922,14 +1964,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbe581b3977718242b6c4d0b6399baa3
-      internalID: 1708946310
+      spriteID: f5ea433ab1b1719419dfa282dcd455df
+      internalID: 853344680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_86
+      name: NPC 1_88
       rect:
         serializedVersion: 2
         x: 512
@@ -1943,14 +1985,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0a4c1c5af008784381d0534097424d1
-      internalID: 1276522430
+      spriteID: b296a4ba00e6dc2409bb2b62538765b4
+      internalID: 801162210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_87
+      name: NPC 1_89
       rect:
         serializedVersion: 2
         x: 0
@@ -1964,14 +2006,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 914c81909b3933549b433bd9bb476d27
-      internalID: -1765245878
+      spriteID: fec8893c00186c3469f3a16ee164f87b
+      internalID: 654392195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_88
+      name: NPC 1_90
       rect:
         serializedVersion: 2
         x: 64
@@ -1985,14 +2027,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f2d6e4027d7e24a9729c175f8b5930
-      internalID: -776207259
+      spriteID: 0b35b7aa8a0184b408823d1be9894252
+      internalID: -2136504570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_89
+      name: NPC 1_91
       rect:
         serializedVersion: 2
         x: 128
@@ -2006,14 +2048,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d334bc3fda57e664cab6eddbe2e1a8c4
-      internalID: 1953244486
+      spriteID: 870222dd50242b94ba21b8e281dc21a4
+      internalID: 780513330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_90
+      name: NPC 1_92
       rect:
         serializedVersion: 2
         x: 192
@@ -2027,14 +2069,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddaea9a3ed6e84d4ab9b83b18e528423
-      internalID: -1720940443
+      spriteID: c8d466984e23ee949a83caff71f4cfe4
+      internalID: -1866990358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_91
+      name: NPC 1_93
       rect:
         serializedVersion: 2
         x: 256
@@ -2048,14 +2090,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e247e97768d27f040a57bdb8880a66dc
-      internalID: 1552796664
+      spriteID: b6fbe65805da7d44b8afe4cbbd81eef1
+      internalID: 1123400835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_92
+      name: NPC 1_94
       rect:
         serializedVersion: 2
         x: 320
@@ -2069,14 +2111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 854524d537e9e8040a34144205ebb21c
-      internalID: -1482122957
+      spriteID: 47d523ba63be92d43be6c300651594e2
+      internalID: 1304776083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_93
+      name: NPC 1_95
       rect:
         serializedVersion: 2
         x: 384
@@ -2090,14 +2132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55207644487858b4e849f65e76fc3a0a
-      internalID: 1412345652
+      spriteID: ff1c803c1eb268643bf965f2a48fab3e
+      internalID: -640170289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_94
+      name: NPC 1_96
       rect:
         serializedVersion: 2
         x: 448
@@ -2111,14 +2153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4681ffa628d97440b74cfa2acf0ee96
-      internalID: 778795882
+      spriteID: e08a4d9310a99404c9c25cbf463753d6
+      internalID: -734073969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_95
+      name: NPC 1_97
       rect:
         serializedVersion: 2
         x: 512
@@ -2132,14 +2174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a251fcd0a70d9624f9056250643ae895
-      internalID: 233902973
+      spriteID: 4e2e4669e9270744f92abe2d283de386
+      internalID: 979577211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_96
+      name: NPC 1_98
       rect:
         serializedVersion: 2
         x: 0
@@ -2153,14 +2195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23a94922ed530d7489d20a90f6d079c3
-      internalID: 1053476675
+      spriteID: 374e786e533412a4f92d529244544df8
+      internalID: 422042597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_97
+      name: NPC 1_99
       rect:
         serializedVersion: 2
         x: 64
@@ -2174,14 +2216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86c0b73b6c1670b4b94f9b43fe3a01ae
-      internalID: -187237466
+      spriteID: 250f879e06f759245bfa84f5ca2732da
+      internalID: 544109351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_98
+      name: NPC 1_100
       rect:
         serializedVersion: 2
         x: 128
@@ -2195,14 +2237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 337fe74be38cd884581f39cca811aaa5
-      internalID: -1882750630
+      spriteID: 610635d0efee4fd479897264d079111e
+      internalID: -1900866298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_99
+      name: NPC 1_101
       rect:
         serializedVersion: 2
         x: 192
@@ -2216,14 +2258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4f6d72151439d142b12eab0a78ec8de
-      internalID: 2058206364
+      spriteID: df3a967b43641a04db6e91b0f08fba04
+      internalID: 363058987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_100
+      name: NPC 1_102
       rect:
         serializedVersion: 2
         x: 256
@@ -2237,14 +2279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59183b25c8c99d449b5538dc89bc15da
-      internalID: -2083294120
+      spriteID: ca3be33b4ef6f974b8280cdae754e47d
+      internalID: -931036759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_101
+      name: NPC 1_103
       rect:
         serializedVersion: 2
         x: 320
@@ -2258,14 +2300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66fbeb44ebec9614ea912c4f51101212
-      internalID: 1994652147
+      spriteID: a1846eeb7bfbb204cb73f00eb4f962c8
+      internalID: 251785010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_102
+      name: NPC 1_104
       rect:
         serializedVersion: 2
         x: 0
@@ -2279,14 +2321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ad4fbb98e53cc946a7a7fc4626654ba
-      internalID: 65404328
+      spriteID: 139a521d6b25c3d40a24edb9f7af6373
+      internalID: -1105722148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_103
+      name: NPC 1_105
       rect:
         serializedVersion: 2
         x: 64
@@ -2300,14 +2342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3376862b8ecd6548bbd27a140c666da
-      internalID: -1520426456
+      spriteID: bd81c86966205af438064e9155ca1c81
+      internalID: 1905164347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_104
+      name: NPC 1_106
       rect:
         serializedVersion: 2
         x: 128
@@ -2321,14 +2363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59742fead5ac2924e9fb02b2b0c18afe
-      internalID: -1793180591
+      spriteID: 4a756b419b97d5f45b58d55aef9878c3
+      internalID: 1365034738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_105
+      name: NPC 1_107
       rect:
         serializedVersion: 2
         x: 192
@@ -2342,14 +2384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9373a098807714f49880bd53e4f883a5
-      internalID: 1553066190
+      spriteID: 3bc3c0afc84ad254da89eb1f1c5cdaaa
+      internalID: -562086133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_106
+      name: NPC 1_108
       rect:
         serializedVersion: 2
         x: 256
@@ -2363,14 +2405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 651ada4f7cc90584e89857e78e6897cf
-      internalID: 836401703
+      spriteID: ed87c1482d5daa24d8c0dcb1da693210
+      internalID: 1399773528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_107
+      name: NPC 1_109
       rect:
         serializedVersion: 2
         x: 320
@@ -2384,14 +2426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c911f49a0affdc341a4328a17e545a3e
-      internalID: -215512514
+      spriteID: 1b08e2a65919ba64abda5a4dc3a7f0fd
+      internalID: -387641866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_108
+      name: NPC 1_110
       rect:
         serializedVersion: 2
         x: 0
@@ -2405,14 +2447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccfb00b73b068734a9fbedb5f9d329c0
-      internalID: 342681594
+      spriteID: 30747001fbc72d341aff8e535604011d
+      internalID: 1128391712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_109
+      name: NPC 1_111
       rect:
         serializedVersion: 2
         x: 64
@@ -2426,14 +2468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12c097381cd04de4c831e13dc53502be
-      internalID: -1584291092
+      spriteID: e117dd9cc36522d4ba95704eb41ab020
+      internalID: -1841229362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_110
+      name: NPC 1_112
       rect:
         serializedVersion: 2
         x: 128
@@ -2447,14 +2489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9414d6a05af5eae438b598c469900692
-      internalID: -1710556255
+      spriteID: 887399d8f704e574c93c3e1e11c28c56
+      internalID: 684808154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_111
+      name: NPC 1_113
       rect:
         serializedVersion: 2
         x: 192
@@ -2468,14 +2510,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6e3203e5f2a04b45b5618b13b12f62a
-      internalID: -1634094477
+      spriteID: be34491a1f7803e4094d269b10f37a4d
+      internalID: -97595745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_112
+      name: NPC 1_114
       rect:
         serializedVersion: 2
         x: 256
@@ -2489,14 +2531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58a77c451d6c0d949b76113bc49ef464
-      internalID: -604798439
+      spriteID: 820f1ddf2be4ca14793cdf570edd08b4
+      internalID: -1941645375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_113
+      name: NPC 1_115
       rect:
         serializedVersion: 2
         x: 320
@@ -2510,14 +2552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd194a0c65fec59469a5f652bb9532bd
-      internalID: 1090544623
+      spriteID: 559f135a4c5db334e8a2668f73cdd3ea
+      internalID: -1094468828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_114
+      name: NPC 1_116
       rect:
         serializedVersion: 2
         x: 0
@@ -2531,14 +2573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02dfd987b2c7ac046b76c60b466b3337
-      internalID: -1219931135
+      spriteID: 81783a31dd6eb7642aad64533ee07db2
+      internalID: 84022468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_115
+      name: NPC 1_117
       rect:
         serializedVersion: 2
         x: 64
@@ -2552,14 +2594,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be333ec4262211e4ea5be3fc536254ce
-      internalID: 1541182318
+      spriteID: 8d219143c2e524744986714e1d610d20
+      internalID: 124196033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_116
+      name: NPC 1_118
       rect:
         serializedVersion: 2
         x: 128
@@ -2573,14 +2615,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af3dca9151fbc21498fa9d40ddea0c88
-      internalID: -1298300393
+      spriteID: e571e63f89dd85842b9cb9766db35098
+      internalID: 1157449010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_117
+      name: NPC 1_119
       rect:
         serializedVersion: 2
         x: 192
@@ -2594,14 +2636,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2db46f9783348cb43bfffaa86eb986ad
-      internalID: 1114095971
+      spriteID: 98762848462b1774d986809a91cb417a
+      internalID: 371291353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_118
+      name: NPC 1_120
       rect:
         serializedVersion: 2
         x: 256
@@ -2615,14 +2657,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d14080541e3161649a6b6386d02549bd
-      internalID: 781349072
+      spriteID: 69676c124d7c84d4e8b7aa176de1958b
+      internalID: -633792758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_119
+      name: NPC 1_121
       rect:
         serializedVersion: 2
         x: 320
@@ -2636,14 +2678,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2094981bc2296a94fa28c288f8210b8b
-      internalID: 303544274
+      spriteID: bef2f11bc118a194f83b09b5fc641820
+      internalID: -1321080009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_120
+      name: NPC 1_122
       rect:
         serializedVersion: 2
         x: 0
@@ -2657,14 +2699,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 311482cb9705b7c41bebb63dcb659150
-      internalID: 543242599
+      spriteID: 1fd7ddb0eda94ce4da0e813ba9e8712f
+      internalID: -1021455176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_121
+      name: NPC 1_123
       rect:
         serializedVersion: 2
         x: 64
@@ -2678,14 +2720,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a0d6539ddeede34a849c9e45ea3081f
-      internalID: -504284206
+      spriteID: 9d638b8cce494bb4e80424d7d4df71a3
+      internalID: -1478964142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_122
+      name: NPC 1_124
       rect:
         serializedVersion: 2
         x: 128
@@ -2699,14 +2741,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1f09e9e859806541b32209e4793f75b
-      internalID: 371494783
+      spriteID: 631db7d2283611b4785cb72ca0edd9a6
+      internalID: 251325061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_123
+      name: NPC 1_125
       rect:
         serializedVersion: 2
         x: 192
@@ -2720,14 +2762,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c942803fe99baf84e9f35eb3c760ea5f
-      internalID: 1767370552
+      spriteID: 06dfd2bd1a043564ab1811f3121982a3
+      internalID: 245851562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_124
+      name: NPC 1_126
       rect:
         serializedVersion: 2
         x: 256
@@ -2741,14 +2783,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d148a1a24bc816429dd9ce1c1bf523c
-      internalID: -2137370758
+      spriteID: 5e87b75dab8815e41be1c75e65929f64
+      internalID: 1617747776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_125
+      name: NPC 1_127
       rect:
         serializedVersion: 2
         x: 320
@@ -2762,14 +2804,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 135d0cc969f53144595d90743697c283
-      internalID: -158975151
+      spriteID: 6bda8726af85eb349805f5078f56608e
+      internalID: 18399777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_126
+      name: NPC 1_128
       rect:
         serializedVersion: 2
         x: 384
@@ -2783,14 +2825,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63bd1d10fc360ad498b143080490f01f
-      internalID: 954420068
+      spriteID: 19d5de4ce9a90a048b1c913d8c43ecc6
+      internalID: 1249976987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_127
+      name: NPC 1_129
       rect:
         serializedVersion: 2
         x: 448
@@ -2804,14 +2846,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5ba7d23392246a4ebfae1f02059813e
-      internalID: -2002934229
+      spriteID: cd9aa6e641c569848b5df8f9b78491c4
+      internalID: 97167771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_128
+      name: NPC 1_130
       rect:
         serializedVersion: 2
         x: 512
@@ -2825,14 +2867,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d440f85c951833499650f061f953f97
-      internalID: 342340440
+      spriteID: f135fb004e4d06649a987496c92e16ed
+      internalID: -1819218778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_129
+      name: NPC 1_131
       rect:
         serializedVersion: 2
         x: 576
@@ -2846,14 +2888,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ddd311586b1906498759c10e61f8d1a
-      internalID: -807414282
+      spriteID: f3039c6f2ac6cc247bc8695f5d955e42
+      internalID: -97598409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_130
+      name: NPC 1_132
       rect:
         serializedVersion: 2
         x: 640
@@ -2867,14 +2909,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e0919958e0a3dd4982381cbd392c0fa
-      internalID: 60973105
+      spriteID: ec2fc84946cfdfc429d509d8800060ae
+      internalID: -1013917936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_131
+      name: NPC 1_133
       rect:
         serializedVersion: 2
         x: 704
@@ -2888,14 +2930,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5749f20248eb4614db65e17d3816395b
-      internalID: -686517153
+      spriteID: b5815bfff97c6c940b4d840e01d9c3fa
+      internalID: 1972597600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_132
+      name: NPC 1_134
       rect:
         serializedVersion: 2
         x: 768
@@ -2909,14 +2951,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f80118d93557f44ebeb04db49cd7948
-      internalID: -2049017538
+      spriteID: f3854379e7a7b2644a08e9ef2d1be4e6
+      internalID: 2074516155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_133
+      name: NPC 1_135
       rect:
         serializedVersion: 2
         x: 0
@@ -2930,14 +2972,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08e724817a82cfc489584f1922060833
-      internalID: -622776027
+      spriteID: 3fbe18519c726f64ebbaaba0a2ca0e33
+      internalID: 1413413874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_134
+      name: NPC 1_136
       rect:
         serializedVersion: 2
         x: 64
@@ -2951,14 +2993,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b944b595ecbd6df4082ff3b60a84816b
-      internalID: -514050663
+      spriteID: 929509f0a3454c34f86947d16f44d22e
+      internalID: -657660406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_135
+      name: NPC 1_137
       rect:
         serializedVersion: 2
         x: 128
@@ -2972,14 +3014,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70951441749a5814381425b259b5eba5
-      internalID: 1907059126
+      spriteID: 3d9a147797d616943a3bddb0df8b2322
+      internalID: -1830737620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_136
+      name: NPC 1_138
       rect:
         serializedVersion: 2
         x: 192
@@ -2993,14 +3035,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe3421eca3aa2514db32d8f783216b1b
-      internalID: 1749068192
+      spriteID: 26cf3aca8ccc38449a23106c6900e883
+      internalID: -1000288047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_137
+      name: NPC 1_139
       rect:
         serializedVersion: 2
         x: 256
@@ -3014,14 +3056,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d5af921feedc924fbca40c3c97b822f
-      internalID: -781684187
+      spriteID: 7f3092bd159b69b48aeb019196a73012
+      internalID: -546634853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_138
+      name: NPC 1_140
       rect:
         serializedVersion: 2
         x: 320
@@ -3035,14 +3077,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a733a6b799eeb340acd3f1cedeb1752
-      internalID: -753771532
+      spriteID: e794f46b35a7ed340995b0b51d142588
+      internalID: 1932258172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_139
+      name: NPC 1_141
       rect:
         serializedVersion: 2
         x: 384
@@ -3056,14 +3098,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47e16c24021338344909511f62adf299
-      internalID: -1823033914
+      spriteID: a6dce4a50b210234d87f5810ccc17b30
+      internalID: -1994914889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_140
+      name: NPC 1_142
       rect:
         serializedVersion: 2
         x: 448
@@ -3077,14 +3119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08f8bf0735a6eb942aaa3039f255babb
-      internalID: -2051396034
+      spriteID: e264bd5db56a1b346bdaff96eb922014
+      internalID: -2083443411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_141
+      name: NPC 1_143
       rect:
         serializedVersion: 2
         x: 512
@@ -3098,14 +3140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 248c2b7b99c7fa04196429ad7674a8d8
-      internalID: 1197270041
+      spriteID: 44707de4e974b3543b32701141209543
+      internalID: 1372521865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_142
+      name: NPC 1_144
       rect:
         serializedVersion: 2
         x: 576
@@ -3119,14 +3161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c42060314c86ce469971531050b77aa
-      internalID: 1546150081
+      spriteID: 4fd5a778b93805646b47d1c39640c3a2
+      internalID: 403566824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_143
+      name: NPC 1_145
       rect:
         serializedVersion: 2
         x: 640
@@ -3140,14 +3182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a769b4e350316ea448f3e5fc22d99061
-      internalID: -913013215
+      spriteID: d3137d716e437064c9ef88deb9c70e50
+      internalID: -1261761096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_144
+      name: NPC 1_146
       rect:
         serializedVersion: 2
         x: 704
@@ -3161,14 +3203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb78289832d7aaa4497645527945f44f
-      internalID: -2010134372
+      spriteID: ada83b97163d4c242924871a5a71d884
+      internalID: 1738187556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_145
+      name: NPC 1_147
       rect:
         serializedVersion: 2
         x: 768
@@ -3182,14 +3224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee935757d09a01646baa2c6b98a8b280
-      internalID: -578786724
+      spriteID: faa73184029a30c42bb27e4d61c3a379
+      internalID: -982938681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_146
+      name: NPC 1_148
       rect:
         serializedVersion: 2
         x: 0
@@ -3203,14 +3245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a45f844cc778920459e301944e0ac8d0
-      internalID: -1449090061
+      spriteID: be83b64d8b02fe844a9f7a894c1945b4
+      internalID: 206006471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_147
+      name: NPC 1_149
       rect:
         serializedVersion: 2
         x: 64
@@ -3224,14 +3266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ba7217dd1b5d104aa97456e34d82cc2
-      internalID: -1956892722
+      spriteID: fb14870e53ebe6f4989cef4ffab55de4
+      internalID: 1034308148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_148
+      name: NPC 1_150
       rect:
         serializedVersion: 2
         x: 128
@@ -3245,14 +3287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be5542eaac1a5124caddf2fd1a75b38a
-      internalID: -1367711032
+      spriteID: 92a5264e5fbd05045b1690b4eabacf3d
+      internalID: -1728207489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_149
+      name: NPC 1_151
       rect:
         serializedVersion: 2
         x: 192
@@ -3266,14 +3308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06ec40378708a604eb167b653bf12a36
-      internalID: 401226493
+      spriteID: 567c6818002139c4ca34ce41500bf0e6
+      internalID: -1185188216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_150
+      name: NPC 1_152
       rect:
         serializedVersion: 2
         x: 256
@@ -3287,14 +3329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f44635d496aba654e96a0bbbbe429c75
-      internalID: 723414183
+      spriteID: 834cbb8c6649c744e8e98d4cd25479a9
+      internalID: 1577635109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_151
+      name: NPC 1_153
       rect:
         serializedVersion: 2
         x: 320
@@ -3308,14 +3350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1569c37ea2ec70b469fabb5cf12fc2fd
-      internalID: 1973945638
+      spriteID: 62fb8bacf16998641afde34b989e2a76
+      internalID: -955911195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_152
+      name: NPC 1_154
       rect:
         serializedVersion: 2
         x: 384
@@ -3329,14 +3371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a613e43528a75e4b84bfd32c15fb1e8
-      internalID: -968338271
+      spriteID: dac2719ebf592b04eb62304a160bdf7b
+      internalID: -1014352315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_153
+      name: NPC 1_155
       rect:
         serializedVersion: 2
         x: 448
@@ -3350,14 +3392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff2724d38c055be4ba52b37eb42363f7
-      internalID: 1529163535
+      spriteID: 700b767dc8f1f1f43b6465acc7d2e1ad
+      internalID: 1317296132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_154
+      name: NPC 1_156
       rect:
         serializedVersion: 2
         x: 512
@@ -3371,14 +3413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ab4ab030877e794dbfc16a69f1dea80
-      internalID: 1818721628
+      spriteID: e7a21f87db808cf4496dd52a3fb3e12b
+      internalID: -377968388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_155
+      name: NPC 1_157
       rect:
         serializedVersion: 2
         x: 576
@@ -3392,14 +3434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8eb4b9ff34b7214594d015a1ca04e26
-      internalID: -1012635541
+      spriteID: efccf15a12fd14448abf54ca19bcfa2c
+      internalID: -1893743738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_156
+      name: NPC 1_158
       rect:
         serializedVersion: 2
         x: 640
@@ -3413,14 +3455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1deaa4dcfb38c549b7d6535e5413e90
-      internalID: 1698878220
+      spriteID: bdf33d1cea508fe4095ff5141859f40d
+      internalID: 301404552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_157
+      name: NPC 1_159
       rect:
         serializedVersion: 2
         x: 704
@@ -3434,14 +3476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc8bafa32bda84a42a2ac660f5d5098f
-      internalID: 2016189766
+      spriteID: 4d62a0bb7558b4c49aaaecc797cf4c28
+      internalID: -448995905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_158
+      name: NPC 1_160
       rect:
         serializedVersion: 2
         x: 768
@@ -3455,14 +3497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 665309b13da21264b874c7e3cb849b7c
-      internalID: -708570346
+      spriteID: ce24cc361ab40324a9b10b555e49491f
+      internalID: -913812702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_159
+      name: NPC 1_161
       rect:
         serializedVersion: 2
         x: 0
@@ -3476,14 +3518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e9b705cb8f493c40b4577c9b30ae054
-      internalID: -266684208
+      spriteID: decba753dc28a3e4b9b821db3f036ec5
+      internalID: 1427604304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_160
+      name: NPC 1_162
       rect:
         serializedVersion: 2
         x: 64
@@ -3497,14 +3539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46e1abf7b8b951b419481da684250ab7
-      internalID: -481186478
+      spriteID: 7c8cd18d117c61b46888cce3b281011b
+      internalID: -510853729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_161
+      name: NPC 1_163
       rect:
         serializedVersion: 2
         x: 128
@@ -3518,14 +3560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1a7cde1396caa2498fb5f4a4abde94f
-      internalID: -976115509
+      spriteID: 59e573e4da23d794087000c8e805a2e3
+      internalID: -1986535662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_162
+      name: NPC 1_164
       rect:
         serializedVersion: 2
         x: 192
@@ -3539,14 +3581,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3480345017e5ed946b097435ce3c3cef
-      internalID: 785304804
+      spriteID: e7440fa782207244ab1cfd656e029062
+      internalID: -355689158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_163
+      name: NPC 1_165
       rect:
         serializedVersion: 2
         x: 256
@@ -3560,14 +3602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d54c47c36e3d199459b2a5d3c6022ca9
-      internalID: -379473950
+      spriteID: a0a6f7c07d98ac14e9839f20cd910f7b
+      internalID: -923936673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_164
+      name: NPC 1_166
       rect:
         serializedVersion: 2
         x: 320
@@ -3581,14 +3623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07310b28a5095b4439fb8d2f866f6c1f
-      internalID: 344545877
+      spriteID: a0c7868205dba1c47b35a0dbedbb66fa
+      internalID: -962595033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_165
+      name: NPC 1_167
       rect:
         serializedVersion: 2
         x: 384
@@ -3602,14 +3644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4c5d084af4dfc84a9457e50e8ca7a18
-      internalID: -1061793219
+      spriteID: 071f8e9f1deb96d4d8b6a64179fc4b0f
+      internalID: 564631543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_166
+      name: NPC 1_168
       rect:
         serializedVersion: 2
         x: 448
@@ -3623,14 +3665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfd5e9ee26ed9cd4b826b271dbf56a7a
-      internalID: -1517971580
+      spriteID: 34d04add8dbf68943b3d0c4e68ef3e51
+      internalID: 1307892102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_167
+      name: NPC 1_169
       rect:
         serializedVersion: 2
         x: 512
@@ -3644,14 +3686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b19a75c28c7b09e41a3b15551ff3451e
-      internalID: 1262911859
+      spriteID: 65c0bf1bf7abcf7479122fec0d44273b
+      internalID: 768144290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_168
+      name: NPC 1_170
       rect:
         serializedVersion: 2
         x: 576
@@ -3665,14 +3707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53f7a3d396316d046bacb6f863886bc0
-      internalID: 725414720
+      spriteID: 1948e956f0bbffc40b7ea411bf19b206
+      internalID: 951499433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_169
+      name: NPC 1_171
       rect:
         serializedVersion: 2
         x: 640
@@ -3686,14 +3728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4737b70719dcf834aa79c61cc6dc4fb8
-      internalID: 408626163
+      spriteID: 5eef81dcb2cd363498b2cb6966e4b20b
+      internalID: -1187287447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_170
+      name: NPC 1_172
       rect:
         serializedVersion: 2
         x: 704
@@ -3707,14 +3749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e308d91c0fe0ef49874b5a2a5af9aed
-      internalID: 346750123
+      spriteID: 06bd31237c1c2144ea88622385604fa0
+      internalID: 1339885065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_171
+      name: NPC 1_173
       rect:
         serializedVersion: 2
         x: 768
@@ -3728,14 +3770,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d9eb733354dca34491393c517218887
-      internalID: 131609995
+      spriteID: a1d4676cad4fd38498aae79abae1d982
+      internalID: 1682769350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_172
+      name: NPC 1_174
       rect:
         serializedVersion: 2
         x: 0
@@ -3749,14 +3791,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 635a8cd60b70e4e4b88ca22b3cd49741
-      internalID: 573947738
+      spriteID: 7469180ac3a3f5a4b95878cddeb2166d
+      internalID: -1995938419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_173
+      name: NPC 1_175
       rect:
         serializedVersion: 2
         x: 64
@@ -3770,14 +3812,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f14ac246eea6bc54eae6961442655e93
-      internalID: -1847133905
+      spriteID: 24133e3ebaa31f54490909b3119a346a
+      internalID: 494897284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_174
+      name: NPC 1_176
       rect:
         serializedVersion: 2
         x: 128
@@ -3791,14 +3833,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01f8074d3b62e654c95d4c12d9d38806
-      internalID: 2097387842
+      spriteID: 4c7367579a56b5240835df0f69cf6e7c
+      internalID: -1790070157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_175
+      name: NPC 1_177
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313e4e78423956449b30c67a5984488e
+      internalID: 2080699683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC 1_178
       rect:
         serializedVersion: 2
         x: 256
@@ -3812,14 +3875,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc3db40cd1c4aae4abcd841b8c356001
-      internalID: -587898600
+      spriteID: 636953ccc1af7dd438a9b0a7a1a259b9
+      internalID: -1466809089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boot Black_176
+      name: NPC 1_179
       rect:
         serializedVersion: 2
         x: 320
@@ -3833,8 +3896,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5e7dbddb6c93ea4a8183fe191749b38
-      internalID: 357605177
+      spriteID: 4b776258f1ba6f14f8b0205f44426ba0
+      internalID: 118863732
       vertices: []
       indices: 
       edges: []
@@ -3850,183 +3913,186 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boot Black_0: -702198254
-      Boot Black_1: -488315504
-      Boot Black_10: -1637483717
-      Boot Black_100: -2083294120
-      Boot Black_101: 1994652147
-      Boot Black_102: 65404328
-      Boot Black_103: -1520426456
-      Boot Black_104: -1793180591
-      Boot Black_105: 1553066190
-      Boot Black_106: 836401703
-      Boot Black_107: -215512514
-      Boot Black_108: 342681594
-      Boot Black_109: -1584291092
-      Boot Black_11: 895410933
-      Boot Black_110: -1710556255
-      Boot Black_111: -1634094477
-      Boot Black_112: -604798439
-      Boot Black_113: 1090544623
-      Boot Black_114: -1219931135
-      Boot Black_115: 1541182318
-      Boot Black_116: -1298300393
-      Boot Black_117: 1114095971
-      Boot Black_118: 781349072
-      Boot Black_119: 303544274
-      Boot Black_12: 1365404602
-      Boot Black_120: 543242599
-      Boot Black_121: -504284206
-      Boot Black_122: 371494783
-      Boot Black_123: 1767370552
-      Boot Black_124: -2137370758
-      Boot Black_125: -158975151
-      Boot Black_126: 954420068
-      Boot Black_127: -2002934229
-      Boot Black_128: 342340440
-      Boot Black_129: -807414282
-      Boot Black_13: 233169369
-      Boot Black_130: 60973105
-      Boot Black_131: -686517153
-      Boot Black_132: -2049017538
-      Boot Black_133: -622776027
-      Boot Black_134: -514050663
-      Boot Black_135: 1907059126
-      Boot Black_136: 1749068192
-      Boot Black_137: -781684187
-      Boot Black_138: -753771532
-      Boot Black_139: -1823033914
-      Boot Black_14: -2043393515
-      Boot Black_140: -2051396034
-      Boot Black_141: 1197270041
-      Boot Black_142: 1546150081
-      Boot Black_143: -913013215
-      Boot Black_144: -2010134372
-      Boot Black_145: -578786724
-      Boot Black_146: -1449090061
-      Boot Black_147: -1956892722
-      Boot Black_148: -1367711032
-      Boot Black_149: 401226493
-      Boot Black_15: 1907265494
-      Boot Black_150: 723414183
-      Boot Black_151: 1973945638
-      Boot Black_152: -968338271
-      Boot Black_153: 1529163535
-      Boot Black_154: 1818721628
-      Boot Black_155: -1012635541
-      Boot Black_156: 1698878220
-      Boot Black_157: 2016189766
-      Boot Black_158: -708570346
-      Boot Black_159: -266684208
-      Boot Black_16: 389236634
-      Boot Black_160: -481186478
-      Boot Black_161: -976115509
-      Boot Black_162: 785304804
-      Boot Black_163: -379473950
-      Boot Black_164: 344545877
-      Boot Black_165: -1061793219
-      Boot Black_166: -1517971580
-      Boot Black_167: 1262911859
-      Boot Black_168: 725414720
-      Boot Black_169: 408626163
-      Boot Black_17: 737826507
-      Boot Black_170: 346750123
-      Boot Black_171: 131609995
-      Boot Black_172: 573947738
-      Boot Black_173: -1847133905
-      Boot Black_174: 2097387842
-      Boot Black_175: -587898600
-      Boot Black_176: 357605177
-      Boot Black_18: -948643685
-      Boot Black_19: 633545847
-      Boot Black_2: 812938816
-      Boot Black_20: -1986486657
-      Boot Black_21: 1214028720
-      Boot Black_22: 483097267
-      Boot Black_23: -882250053
-      Boot Black_24: 1711463104
-      Boot Black_25: -1576378434
-      Boot Black_26: -467365883
-      Boot Black_27: 500986571
-      Boot Black_28: -805840106
-      Boot Black_29: 1612078940
-      Boot Black_3: -1264308240
-      Boot Black_30: 1988733805
-      Boot Black_31: 1764886411
-      Boot Black_32: 1116106732
-      Boot Black_33: -1159990398
-      Boot Black_34: -758503177
-      Boot Black_35: 753893455
-      Boot Black_36: -321199747
-      Boot Black_37: 1488216093
-      Boot Black_38: 1965468551
-      Boot Black_39: 1120171287
-      Boot Black_4: -1726380373
-      Boot Black_40: -1619795712
-      Boot Black_41: -1289606531
-      Boot Black_42: -396494377
-      Boot Black_43: -493349816
-      Boot Black_44: 868198291
-      Boot Black_45: -964417201
-      Boot Black_46: -1732313690
-      Boot Black_47: -962891094
-      Boot Black_48: 275549078
-      Boot Black_49: -394129124
-      Boot Black_5: 1169492024
-      Boot Black_50: 1402377622
-      Boot Black_51: 1033812610
-      Boot Black_52: -447080789
-      Boot Black_53: -1230388189
-      Boot Black_54: 1086457167
-      Boot Black_55: 111256153
-      Boot Black_56: -165414903
-      Boot Black_57: -1438651194
-      Boot Black_58: -1237508891
-      Boot Black_59: 1806638837
-      Boot Black_6: -1980483358
-      Boot Black_60: -1167338352
-      Boot Black_61: -2005299836
-      Boot Black_62: -1861690078
-      Boot Black_63: 689823421
-      Boot Black_64: 1432600705
-      Boot Black_65: 821225065
-      Boot Black_66: -1768761310
-      Boot Black_67: 930832305
-      Boot Black_68: -1015787227
-      Boot Black_69: -448048792
-      Boot Black_7: 161140773
-      Boot Black_70: 1990917130
-      Boot Black_71: 1655730785
-      Boot Black_72: -423652354
-      Boot Black_73: -201781473
-      Boot Black_74: 1775352559
-      Boot Black_75: -1947213586
-      Boot Black_76: -1620203008
-      Boot Black_77: -231128953
-      Boot Black_78: -1278361380
-      Boot Black_79: -1204594335
-      Boot Black_8: -542625322
-      Boot Black_80: 1638303205
-      Boot Black_81: 365980830
-      Boot Black_82: 1484091684
-      Boot Black_83: 1340313067
-      Boot Black_84: -26396457
-      Boot Black_85: 1708946310
-      Boot Black_86: 1276522430
-      Boot Black_87: -1765245878
-      Boot Black_88: -776207259
-      Boot Black_89: 1953244486
-      Boot Black_9: -1722569993
-      Boot Black_90: -1720940443
-      Boot Black_91: 1552796664
-      Boot Black_92: -1482122957
-      Boot Black_93: 1412345652
-      Boot Black_94: 778795882
-      Boot Black_95: 233902973
-      Boot Black_96: 1053476675
-      Boot Black_97: -187237466
-      Boot Black_98: -1882750630
-      Boot Black_99: 2058206364
+      NPC 1_0: 1793366052
+      NPC 1_1: -1753534624
+      NPC 1_10: 201841895
+      NPC 1_100: -1900866298
+      NPC 1_101: 363058987
+      NPC 1_102: -931036759
+      NPC 1_103: 251785010
+      NPC 1_104: -1105722148
+      NPC 1_105: 1905164347
+      NPC 1_106: 1365034738
+      NPC 1_107: -562086133
+      NPC 1_108: 1399773528
+      NPC 1_109: -387641866
+      NPC 1_11: 1371252731
+      NPC 1_110: 1128391712
+      NPC 1_111: -1841229362
+      NPC 1_112: 684808154
+      NPC 1_113: -97595745
+      NPC 1_114: -1941645375
+      NPC 1_115: -1094468828
+      NPC 1_116: 84022468
+      NPC 1_117: 124196033
+      NPC 1_118: 1157449010
+      NPC 1_119: 371291353
+      NPC 1_12: 2019595651
+      NPC 1_120: -633792758
+      NPC 1_121: -1321080009
+      NPC 1_122: -1021455176
+      NPC 1_123: -1478964142
+      NPC 1_124: 251325061
+      NPC 1_125: 245851562
+      NPC 1_126: 1617747776
+      NPC 1_127: 18399777
+      NPC 1_128: 1249976987
+      NPC 1_129: 97167771
+      NPC 1_13: 2037677542
+      NPC 1_130: -1819218778
+      NPC 1_131: -97598409
+      NPC 1_132: -1013917936
+      NPC 1_133: 1972597600
+      NPC 1_134: 2074516155
+      NPC 1_135: 1413413874
+      NPC 1_136: -657660406
+      NPC 1_137: -1830737620
+      NPC 1_138: -1000288047
+      NPC 1_139: -546634853
+      NPC 1_14: -1823644237
+      NPC 1_140: 1932258172
+      NPC 1_141: -1994914889
+      NPC 1_142: -2083443411
+      NPC 1_143: 1372521865
+      NPC 1_144: 403566824
+      NPC 1_145: -1261761096
+      NPC 1_146: 1738187556
+      NPC 1_147: -982938681
+      NPC 1_148: 206006471
+      NPC 1_149: 1034308148
+      NPC 1_15: 1348943009
+      NPC 1_150: -1728207489
+      NPC 1_151: -1185188216
+      NPC 1_152: 1577635109
+      NPC 1_153: -955911195
+      NPC 1_154: -1014352315
+      NPC 1_155: 1317296132
+      NPC 1_156: -377968388
+      NPC 1_157: -1893743738
+      NPC 1_158: 301404552
+      NPC 1_159: -448995905
+      NPC 1_16: 324731262
+      NPC 1_160: -913812702
+      NPC 1_161: 1427604304
+      NPC 1_162: -510853729
+      NPC 1_163: -1986535662
+      NPC 1_164: -355689158
+      NPC 1_165: -923936673
+      NPC 1_166: -962595033
+      NPC 1_167: 564631543
+      NPC 1_168: 1307892102
+      NPC 1_169: 768144290
+      NPC 1_17: 599911942
+      NPC 1_170: 951499433
+      NPC 1_171: -1187287447
+      NPC 1_172: 1339885065
+      NPC 1_173: 1682769350
+      NPC 1_174: -1995938419
+      NPC 1_175: 494897284
+      NPC 1_176: -1790070157
+      NPC 1_177: 2080699683
+      NPC 1_178: -1466809089
+      NPC 1_179: 118863732
+      NPC 1_18: 463539596
+      NPC 1_19: -705524380
+      NPC 1_2: -937375665
+      NPC 1_20: 1136152782
+      NPC 1_21: 898287381
+      NPC 1_22: 1861976622
+      NPC 1_23: 1473026000
+      NPC 1_24: -1383415886
+      NPC 1_25: 955807053
+      NPC 1_26: -164388170
+      NPC 1_27: -83834940
+      NPC 1_28: -1118149126
+      NPC 1_29: -1374563355
+      NPC 1_3: 1856829008
+      NPC 1_30: -1747546757
+      NPC 1_31: -611361970
+      NPC 1_32: -1478348279
+      NPC 1_33: -1531115987
+      NPC 1_34: 1176571223
+      NPC 1_35: 1672385918
+      NPC 1_36: 596967997
+      NPC 1_37: 1729914760
+      NPC 1_38: 1529996391
+      NPC 1_39: 977477943
+      NPC 1_4: 881759453
+      NPC 1_40: 272065509
+      NPC 1_41: -1843833844
+      NPC 1_42: -837490839
+      NPC 1_43: -2053566147
+      NPC 1_44: -343556930
+      NPC 1_45: -619399010
+      NPC 1_46: 520195932
+      NPC 1_47: 1235816300
+      NPC 1_48: -872043011
+      NPC 1_49: 949885022
+      NPC 1_5: -1354855532
+      NPC 1_50: 1280767582
+      NPC 1_51: -1285634553
+      NPC 1_52: -698464258
+      NPC 1_53: 1385131795
+      NPC 1_54: 888828510
+      NPC 1_55: 449293208
+      NPC 1_56: -1597448460
+      NPC 1_57: 328069317
+      NPC 1_58: -1011385474
+      NPC 1_59: 777714679
+      NPC 1_6: -2127805747
+      NPC 1_60: -1998638219
+      NPC 1_61: 1017517635
+      NPC 1_62: 436549857
+      NPC 1_63: -90665916
+      NPC 1_64: 620675446
+      NPC 1_65: -649002830
+      NPC 1_66: -933359789
+      NPC 1_67: 2099725039
+      NPC 1_68: -2022558789
+      NPC 1_69: 1792942593
+      NPC 1_7: -989391903
+      NPC 1_70: 1929877173
+      NPC 1_71: -302846922
+      NPC 1_72: -1473395885
+      NPC 1_73: -125076911
+      NPC 1_74: -737777202
+      NPC 1_75: 358802324
+      NPC 1_76: -188440425
+      NPC 1_77: 623132999
+      NPC 1_78: 405020814
+      NPC 1_79: -1330438088
+      NPC 1_8: -1287705380
+      NPC 1_80: 859075233
+      NPC 1_81: 1044023832
+      NPC 1_82: -351154124
+      NPC 1_83: 1047358713
+      NPC 1_84: -253889252
+      NPC 1_85: 2087513712
+      NPC 1_86: -427716732
+      NPC 1_87: 853344680
+      NPC 1_88: 801162210
+      NPC 1_89: 654392195
+      NPC 1_9: -34041239
+      NPC 1_90: -2136504570
+      NPC 1_91: 780513330
+      NPC 1_92: -1866990358
+      NPC 1_93: 1123400835
+      NPC 1_94: 1304776083
+      NPC 1_95: -640170289
+      NPC 1_96: -734073969
+      NPC 1_97: 979577211
+      NPC 1_98: 422042597
+      NPC 1_99: 544109351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,7 +5,7 @@ public class CharacterAction : MonoBehaviour
 {
 
     public float dropPos;
-    Character player;
+    Character character;
     CharacterSelectedItem playerSelectedItem;
     CharacterMovement characterMovement;
     CharacterAnimation characterAnimation;
@@ -16,13 +16,13 @@ public class CharacterAction : MonoBehaviour
     bool isAbleToAttack = true;
     void Start()
     {
-        player = GetComponent<Character>();
+        character = GetComponent<Character>();
         playerSound = GetComponent<CharacterSound>();
         playerSelectedItem = GetComponent<CharacterSelectedItem>();
         characterMovement = GetComponent<CharacterMovement>();
         characterAnimation = GetComponent<CharacterAnimation>();
-        hand = player.transform.Find("Hand").gameObject;
-        hitbox = player.transform.Find("Hitbox").gameObject;
+        hand = character.transform.Find("Hand").gameObject;
+        hitbox = character.transform.Find("Hitbox").gameObject;
     }
 
     void Update()
@@ -61,14 +61,14 @@ public class CharacterAction : MonoBehaviour
         if (playerSelectedItem.GetSelectedItem() != null && isAbleToAttack)
         {
 
-            playerSelectedItem.GetSelectedItem().data.Use(player);
+            playerSelectedItem.GetSelectedItem().data.Use(character);
             if (playerSelectedItem.GetSelectedItem().data is WeaponData weaponData)
             {
-                float attackSpeed = weaponData.attackSpeed;
+                float attackSpeed = weaponData.attackSpeed * character.maxAttackSpeed;
                 isAbleToAttack = false;
                 if (weaponData is MeleeWeaponData melee)
                 {
-                    CharacterAnimation characterAnimation = player.GetComponent<CharacterAnimation>();
+                    CharacterAnimation characterAnimation = character.GetComponent<CharacterAnimation>();
                     Vector3 lookDirection = characterAnimation.LookDirection() - hand.transform.position;
                     lookDirection.Normalize();
                     hitbox.GetComponent<HitCollider>().SetWeaponData(melee);
@@ -76,15 +76,15 @@ public class CharacterAction : MonoBehaviour
                 }
                 if (weaponData is RangeWeaponData range)
                 {
-                    if (player.IsArrowInInventory())
+                    if (character.IsArrowInInventory())
                     {
                         Vector3 direction = (characterAnimation.LookDirection() - hitbox.transform.position).normalized;
                         ShootArrow(hitbox, direction, range);
-                        player.RemoveArrow(1);
+                        character.RemoveArrow(1);
                     }
 
                 }
-                StartCoroutine(AttackTime(attackSpeed));
+                StartCoroutine(AttackTime(1 / attackSpeed));
             }
 
         }

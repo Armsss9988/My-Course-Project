@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollectable: 1
-  isHasDelaytime: 0
-  timeDelay: 1
+  isHasDelaytime: 1
+  timeDelay: 2
 --- !u!58 &1163270652299330255
 CircleCollider2D:
   m_ObjectHideFlags: 0

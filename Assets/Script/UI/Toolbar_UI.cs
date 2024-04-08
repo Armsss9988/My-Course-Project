@@ -42,7 +42,8 @@ public class Toolbar_UI : MonoBehaviour
         {
             if (player.inventory.slots[i].itemName != "")
             {
-                toolbarSlots[i].SetItem(player.inventory.slots[i]);
+                Item item = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[i].itemName);
+                toolbarSlots[i].SetItem(player.inventory.slots[i], item);
             }
             else
             {

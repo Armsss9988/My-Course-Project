@@ -6,8 +6,21 @@ public class Character : MonoBehaviour, IDamageable
     public int indexSlotArrow;
     CharacterAction characterAction;
     CharacterSound characterSound;
+    CharacterEquipment characterEquipment;
+
     public float currentHealth;
-    public float maxHealth = 100f;
+    public float baseHealth = 100f;
+    public float bonusHealth = 0f;
+    public float maxHealth;
+
+    public float baseSpeed = 1f;
+    public float bonusSpeed = 1f;
+    public float maxSpeed;
+
+    public float baseAttackSpeed = 1f;
+    public float bonusAttackSpeed = 1f;
+    public float maxAttackSpeed;
+
     public float timeInvincible = 1.0f;
     public float damage;
     public bool isInvincible;
@@ -16,10 +29,14 @@ public class Character : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-        inventory = new Inventory(30);
+        inventory = new Inventory(36);
         characterSound = GetComponent<CharacterSound>();
         characterAction = GetComponent<CharacterAction>();
+        characterEquipment = GetComponent<CharacterEquipment>();
+        maxHealth = baseHealth + bonusHealth;
         currentHealth = maxHealth;
+        maxSpeed = baseSpeed * bonusSpeed;
+        maxAttackSpeed = baseAttackSpeed * bonusAttackSpeed;
 
     }
     void Start()
@@ -37,6 +54,43 @@ public class Character : MonoBehaviour, IDamageable
             isInvincible = false;
         }
     }
+    public void HandleEquipmentBonus()
+    {
+        bonusHealth = 0f;
+        bonusAttackSpeed = 1f;
+        bonusSpeed = 1f;
+        if (characterEquipment.torso != null && characterEquipment.torso.data is ArmorData torso)
+        {
+            bonusHealth += torso.healthBonus;
+            bonusSpeed += torso.speedBonus;
+            bonusAttackSpeed += torso.attackspeedBonus;
+
+        }
+        if (characterEquipment.pant != null && characterEquipment.pant.data is ArmorData pant)
+        {
+            bonusHealth += pant.healthBonus;
+            bonusSpeed += pant.speedBonus;
+            bonusAttackSpeed += pant.attackspeedBonus;
+        }
+        if (characterEquipment.shoes != null && characterEquipment.shoes.data is ArmorData shoes)
+        {
+            bonusHealth += shoes.healthBonus;
+            bonusSpeed += shoes.speedBonus;
+            bonusAttackSpeed += shoes.attackspeedBonus;
+        }
+        if (characterEquipment.gloves != null && characterEquipment.gloves.data is ArmorData gloves)
+        {
+            bonusHealth += gloves.healthBonus;
+            bonusSpeed += gloves.speedBonus;
+            bonusAttackSpeed += gloves.attackspeedBonus;
+        }
+        maxHealth = baseHealth + bonusHealth;
+        maxSpeed = baseSpeed * bonusSpeed;
+        maxAttackSpeed = baseAttackSpeed * bonusAttackSpeed;
+        ChangeHealth(0f);
+    }
+
+
 
     public bool IsDamageable()
     {
@@ -74,17 +128,21 @@ public class Character : MonoBehaviour, IDamageable
     {
         foreach (Inventory.Slot slot in inventory.slots)
         {
-            Item item = GameManager.instance.itemManager.GetItemByName(slot.itemName);
-            if (item != null)
+            if (slot.type == Inventory.Slot.Type.Arrow)
             {
-                if (item.data is ArrowData arrow)
+                Item item = GameManager.instance.itemManager.GetItemByName(slot.itemName);
+                if (item != null)
                 {
-                    Debug.Log("Have Arrow");
-                    indexSlotArrow = inventory.slots.IndexOf(slot);
-                    characterAction.SetArrow(item);
-                    return true;
+                    if (item.data is ArrowData arrow)
+                    {
+                        Debug.Log("Have Arrow");
+                        indexSlotArrow = inventory.slots.IndexOf(slot);
+                        characterAction.SetArrow(item);
+                        return true;
+                    }
                 }
             }
+
         }
         Debug.Log("Dont Have Arrow");
         return false;

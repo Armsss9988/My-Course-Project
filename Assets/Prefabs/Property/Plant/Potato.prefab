@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 9060840370836393046}
   - component: {fileID: 349969902270020973}
   - component: {fileID: 4850781989231885618}
-  - component: {fileID: 4314278300976697003}
+  - component: {fileID: 7931127918658788427}
   m_Layer: 6
   m_Name: Potato
   m_TagString: Untagged
@@ -306,8 +306,8 @@ MonoBehaviour:
   m_labelHash: 7.4927845e-19
   m_SpriteKey: 0
   m_SpriteHash: 881960632
---- !u!60 &4314278300976697003
-PolygonCollider2D:
+--- !u!70 &7931127918658788427
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -338,30 +338,6 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.44637614, y: 0.15657179}
-    oldSize: {x: 0.436, y: 0.496}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.24138002, y: -0.013659608}
-    - - {x: -0.16639209, y: 0.14090878}
-      - {x: -0.22095776, y: 0.097417414}
-      - {x: -0.26602796, y: 0.0649834}
-      - {x: -0.32182935, y: 0.015578836}
-      - {x: -0.36102465, y: -0.028366014}
-      - {x: -0.10359129, y: -0.1303713}
-      - {x: 0.019958496, y: -0.12921143}
-      - {x: 0.17025757, y: -0.10683823}
-      - {x: 0.3488922, y: -0.06927681}
-      - {x: 0.24971008, y: 0.06564522}
-      - {x: 0.15306385, y: 0.12547089}
-      - {x: 0.02106446, y: 0.12844533}
-      - {x: -0.16478759, y: 0.14087564}
-  m_UseDelaunayMesh: 0
+  m_Offset: {x: 0.013116902, y: 0.03348421}
+  m_Size: {x: 0.4754743, y: 0.19772553}
+  m_Direction: 1

@@ -63,7 +63,8 @@ public class Inventory_UI : MonoBehaviour
             {
                 if (player.inventory.slots[i].itemName != "")
                 {
-                    slots[i].SetItem(player.inventory.slots[i]);
+                    Item item = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[i].itemName);
+                    slots[i].SetItem(player.inventory.slots[i], item);
                 }
                 else
                 {
@@ -119,10 +120,25 @@ public class Inventory_UI : MonoBehaviour
     }
     public void SlotDrop(Slot_UI slotUI)
     {
+
         Item itemToMove = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[draggedSlot.slot_ID].itemName);
         int quantiyFromDraggedSlot = player.inventory.slots[draggedSlot.slot_ID].count;
         Item itemFromSlotDrop = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[slotUI.slot_ID].itemName);
         int quantittyFromSlotDrop = player.inventory.slots[slotUI.slot_ID].count;
+        HandleEquipmentChange(draggedSlot, null);
+
+        if (slotUI.type != draggedSlot.type)
+        {
+            if (itemToMove != null)
+            {
+                if (!HandleEquipmentChange(slotUI, itemToMove))
+                {
+                    return;
+                }
+
+            }
+        }
+
         if (itemToMove)
         {
             if (player.inventory.slots[slotUI.slot_ID].itemName == "" || player.inventory.slots[slotUI.slot_ID].itemName == player.inventory.slots[draggedSlot.slot_ID].itemName)
@@ -171,5 +187,122 @@ public class Inventory_UI : MonoBehaviour
             RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition, null, out position);
             toMove.transform.position = canvas.transform.TransformPoint(position);
         }
+    }
+    bool HandleEquipmentChange(Slot_UI slotUI, Item item)
+    {
+        CharacterEquipment characterEquipment = player.GetComponent<CharacterEquipment>();
+
+        if (slotUI.type == Slot_UI.UIType.Torso)
+        {
+            if (item != null && item.data is not TorsoData)
+            {
+                return false;
+            }
+            else
+            {
+                if (item != null)
+                {
+                    characterEquipment.ChangeTorso(item);
+                }
+                else
+                {
+                    characterEquipment.ChangeTorso(null);
+                }
+
+            }
+        }
+        if (slotUI.type == Slot_UI.UIType.Pant)
+        {
+            if (item != null && item.data is not PantData)
+            {
+                return false;
+            }
+            else
+            {
+                if (item != null)
+                {
+                    characterEquipment.ChangePant(item);
+                }
+                else
+                {
+                    characterEquipment.ChangePant(null);
+                }
+            }
+        }
+        if (slotUI.type == Slot_UI.UIType.Shoes)
+        {
+            if (item != null && item.data is not ShoesData)
+            {
+                return false;
+            }
+            else
+            {
+                if (item != null)
+                {
+                    characterEquipment.ChangeShoes(item);
+                }
+                else
+                {
+                    characterEquipment.ChangeShoes(null);
+                }
+            }
+        }
+        if (slotUI.type == Slot_UI.UIType.Gloves)
+        {
+            if (item != null && item.data is not GlovesData)
+            {
+                return false;
+            }
+            else
+            {
+                if (item != null)
+                {
+                    characterEquipment.ChangeGloves(item);
+                }
+                else
+                {
+                    characterEquipment.ChangeGloves(null);
+                }
+            }
+        }
+        if (slotUI.type == Slot_UI.UIType.Shield)
+        {
+            if (item != null && item.data is not WeaponData)
+            {
+                return false;
+            }
+            else
+            {
+                if (item != null)
+                {
+                    characterEquipment.ChangeShield(item);
+                }
+                else
+                {
+                    characterEquipment.ChangeShield(null);
+                }
+
+            }
+        }
+        if (slotUI.type == Slot_UI.UIType.Arrow)
+        {
+            if (item != null && item.data is not ArrowData)
+            {
+                return false;
+            }
+            else
+            {
+                if (item != null)
+                {
+                    characterEquipment.ChangeArrow(item);
+                }
+                else
+                {
+                    characterEquipment.ChangeArrow(null);
+                }
+
+            }
+        }
+        return true;
     }
 }

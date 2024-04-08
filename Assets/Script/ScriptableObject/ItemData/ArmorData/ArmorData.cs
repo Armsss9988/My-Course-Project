@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 
-public class ArmorData : ItemData
+public abstract class ArmorData : ItemData
 {
     public SpriteLibraryAsset libraryAsset;
     public Color color;

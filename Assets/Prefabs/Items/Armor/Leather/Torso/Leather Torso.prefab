@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 1938749797
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1405070394, guid: ba9f00f6d7a177a4abe47be6d9731956, type: 3}
-  m_Color: {r: 0.78431374, g: 0.7058824, b: 0.7058824, a: 1}
+  m_Sprite: {fileID: -995308212, guid: 836eb047b0bb96445918f03318b80031, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bebc1e78ab9014897c245907b4311d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: a2a583eac6fa35b4595d3805eb61e8c1, type: 2}
+  data: {fileID: 11400000, guid: d96b2df59eee18345be5b879869f5507, type: 2}
   rb2d: {fileID: 0}
 --- !u!114 &5754845298465931752
 MonoBehaviour:
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4137f8f990307447a6558098b6bec43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCollectable: 0
+  isCollectable: 1
   isHasDelaytime: 1
   timeDelay: 2
 --- !u!58 &1163270652299330255

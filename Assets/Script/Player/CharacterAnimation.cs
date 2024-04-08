@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CharacterAnimation : MonoBehaviour
 {
+    Character character;
     Animator[] animators;
     GameObject hand;
     HandleInput handleInput;
@@ -9,6 +10,7 @@ public class CharacterAnimation : MonoBehaviour
     public bool isAbleToAnimate = true;
     void Start()
     {
+        character = GetComponent<Character>();
         animators = GetComponentsInChildren<Animator>();
         handleInput = GetComponent<HandleInput>();
         hand = this.transform.Find("Hand").gameObject;
@@ -25,6 +27,7 @@ public class CharacterAnimation : MonoBehaviour
             foreach (Animator animator in animators)
             {
                 InteractDirection();
+                animator.SetFloat("Attack Speed", character.maxAttackSpeed);
                 animator.SetTrigger("Slash");
             }
         }
@@ -36,6 +39,7 @@ public class CharacterAnimation : MonoBehaviour
             foreach (Animator animator in animators)
             {
                 InteractDirection();
+                animator.SetFloat("Attack Speed", character.maxAttackSpeed);
                 animator.SetTrigger("Thrust");
             }
         }
@@ -47,6 +51,7 @@ public class CharacterAnimation : MonoBehaviour
             foreach (Animator animator in animators)
             {
                 InteractDirection();
+                animator.SetFloat("Attack Speed", character.maxAttackSpeed);
                 animator.SetTrigger("Bow");
             }
         }
@@ -54,7 +59,7 @@ public class CharacterAnimation : MonoBehaviour
     public void InteractDirection()
     {
         Vector3 clickPosition = LookDirection();
-        Vector2 fightDirection = new Vector2(1, 0);
+        Vector2 fightDirection = new(1, 0);
         foreach (Animator animator in animators)
         {
             fightDirection.Set(clickPosition.x - transform.position.x, clickPosition.y - transform.position.y);
@@ -64,13 +69,12 @@ public class CharacterAnimation : MonoBehaviour
         }
         float animDirection = Mathf.Abs(fightDirection.y / fightDirection.x);
         hand.transform.localPosition = new Vector3(0, (animDirection >= 1 && fightDirection.y > 0) ? 0.002f : -0.002f);
-
     }
     public void MovementAnimation(float horizontal, float vertical)
     {
         if (isAbleToAnimate)
         {
-            Vector2 move = new Vector2(horizontal, vertical);
+            Vector2 move = new(horizontal, vertical);
             if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
             {
                 lookDirection.Set(move.x, move.y);
@@ -82,10 +86,13 @@ public class CharacterAnimation : MonoBehaviour
                     item.SetFloat("Look X", lookDirection.x);
                     item.SetFloat("Look Y", lookDirection.y);
                     item.SetFloat("Speed", move.magnitude);
+                    item.SetFloat("Movement Speed", character.maxSpeed);
                 }
             }
         }
     }
+
+
     public void ToogleAnimator(bool bol)
     {
         foreach (Animator animator in animators)
