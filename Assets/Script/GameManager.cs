@@ -4,6 +4,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public ItemManager itemManager;
+    public QuestManager questManager;
+    public InteractionManager interactionManager;
+    public UIManager uiManager;
 
     private void Awake()
     {
@@ -16,6 +19,5 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
-        itemManager = GetComponent<ItemManager>();
     }
 }

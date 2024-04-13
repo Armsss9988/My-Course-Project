@@ -256,4 +256,23 @@ public class EnemyMovement : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
+
+    void StopMoving()
+    {
+        canMove = false;
+    }
+    void StartMoving()
+    {
+        canMove = true;
+    }
+    private void OnEnable()
+    {
+        DialogueBoxController.OnDialogueStarted += StopMoving;
+        DialogueBoxController.OnDialogueEnded += StartMoving;
+    }
+    private void OnDisable()
+    {
+        DialogueBoxController.OnDialogueStarted -= StopMoving;
+        DialogueBoxController.OnDialogueEnded -= StartMoving;
+    }
 }

@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1887874702, guid: 158b245c232431a45888fbcd4cd56a86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: -7022138985743218409}
   - component: {fileID: -4931199210021470325}
   - component: {fileID: -4532459989810281813}
+  - component: {fileID: -916689549078981604}
   m_Layer: 6
   m_Name: Wood_Tower_Purple
   m_TagString: Untagged
@@ -201,7 +202,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2055976202, guid: 6d94cd31a31c0e54685549ba070688c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -481,6 +482,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-916689549078981604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830537132555707510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f8c496a1a033343a61cc6dd2dc0b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: Goblin Tower
 --- !u!1 &6819878503335554401
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +566,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1887874702, guid: 158b245c232431a45888fbcd4cd56a86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -689,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116991048124585046, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4116991048124585046, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_SortingLayerID
@@ -771,7 +785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116991048124585046, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4116991048124585046, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_SortingLayerID

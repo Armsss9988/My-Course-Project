@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 7101044154588434093}
   - component: {fileID: 8391153121425596400}
   - component: {fileID: -963480646120377852}
+  - component: {fileID: -9011059305859396277}
   m_Layer: 6
   m_Name: Archer Knight
   m_TagString: Enemy
@@ -90,7 +91,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1370973645, guid: 7e43f2b2ec2c29e47af45a8072a01c07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -186,6 +187,7 @@ MonoBehaviour:
   timeInvincible: 1
   isInvincible: 0
   target: {fileID: 0}
+  targetColliderOffset: 0.5
 --- !u!114 &2485886265072421289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +229,7 @@ MonoBehaviour:
   rb2d: {fileID: 0}
   canMove: 1
   isRandomMove: 1
+  isFourDirection: 0
 --- !u!114 &7731654650698628935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +512,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6bc30ebfa7c6dfa42957ece4b4797f8a, type: 2}
   damageableTypeTags:
   - {fileID: 11400000, guid: ded5790e23738484ba3b06a2d30335d3, type: 2}
+--- !u!114 &-9011059305859396277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286152291929742358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f8c496a1a033343a61cc6dd2dc0b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: Knight Archer
 --- !u!1001 &3674707322654488719
 PrefabInstance:
   m_ObjectHideFlags: 0

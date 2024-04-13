@@ -29,11 +29,6 @@ public class Inventory_UI : MonoBehaviour
     }
     void Update()
     {
-        Toolbar_UI.instance.CheckAlphaNumericKey();
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            ToggleInventory();
-        }
         if (Input.GetKey(KeyCode.LeftShift))
         {
             dragSingle = true;
@@ -42,17 +37,53 @@ public class Inventory_UI : MonoBehaviour
         {
             dragSingle = false;
         }
+        Toolbar_UI.instance.CheckAlphaNumericKey();
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            ToggleInventory();
+        }
     }
+    /*    void OnEnable()
+        {
+            UIManager.OnOpenInventory += OpenInventory;
+            UIManager.OnCloseInventory += CloseInventory;
+            UIManager.OnOpenDialog += CloseInventory;
+            UIManager.OnOpenQuestLog += CloseInventory;
+        }*/
+    public void OpenInventory()
+    {
+
+        inventoryPanel.SetActive(true);
+        Refresh();
+
+
+    }
+    public void CloseInventory()
+    {
+
+        inventoryPanel.SetActive(false);
+
+    }
+    /*public void ToggleInventory()
+    {
+        if (!inventoryPanel.activeSelf)
+        {
+            GameManager.instance.uiManager.OpenInventory();
+        }
+        else
+        {
+            GameManager.instance.uiManager.CloseInventory();
+        }
+    }*/
     public void ToggleInventory()
     {
         if (!inventoryPanel.activeSelf)
         {
-            inventoryPanel.SetActive(true);
-            Refresh();
+            OpenInventory();
         }
         else
         {
-            inventoryPanel.SetActive(false);
+            CloseInventory();
         }
     }
     public void Refresh()

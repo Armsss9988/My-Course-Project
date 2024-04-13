@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 2916220433817108823}
   - component: {fileID: 3932884029376004777}
   - component: {fileID: 1344362587451389085}
+  - component: {fileID: -4849058311196070564}
   m_Layer: 0
   m_Name: Sweider
   m_TagString: Untagged
@@ -382,6 +383,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2767d021f4f6ce4c973531c7667635d, type: 2}
   damageableTypeTags:
   - {fileID: 11400000, guid: d122fad1748cc3b46abe36da87c10ae4, type: 2}
+--- !u!114 &-4849058311196070564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4355280721938426897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f8c496a1a033343a61cc6dd2dc0b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: Sweider
 --- !u!1 &5034797894865700458
 GameObject:
   m_ObjectHideFlags: 0

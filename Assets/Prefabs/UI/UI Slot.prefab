@@ -98,7 +98,7 @@ MonoBehaviour:
   quantityText: {fileID: 8048048203381745779}
   inventoryUI: {fileID: 0}
   highLight: {fileID: 937071873899641735}
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 820787026307914305}
   type: 0
 --- !u!114 &7506921430011151969
 MonoBehaviour:
@@ -502,6 +502,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 856d2b5b3648e7942872a67545998754, type: 3}
+--- !u!1 &820787026307914305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2348424042773833826, guid: 856d2b5b3648e7942872a67545998754, type: 3}
+  m_PrefabInstance: {fileID: 3166947852069925411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6536803719937085871 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8161690289318994828, guid: 856d2b5b3648e7942872a67545998754, type: 3}

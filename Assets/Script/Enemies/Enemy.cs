@@ -102,4 +102,9 @@ public class Enemy : MonoBehaviour, IDamageable, IAttackable
             }
         }
     }
+
+    public void OnDestroy()
+    {
+        GameManager.instance.interactionManager.Enemykilled();
+    }
 }

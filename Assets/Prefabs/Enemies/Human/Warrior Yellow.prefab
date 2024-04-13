@@ -143,7 +143,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: -2272619613974564953}
   - component: {fileID: 3442063722402024886}
   - component: {fileID: 5027206101553203776}
+  - component: {fileID: 2022995171532489438}
   m_Layer: 6
   m_Name: Warrior Yellow
   m_TagString: Enemy
@@ -247,7 +248,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 333289218, guid: 49235c0760deac747a07adb84e5cb2b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -343,6 +344,7 @@ MonoBehaviour:
   timeInvincible: 1
   isInvincible: 0
   target: {fileID: 0}
+  targetColliderOffset: 0.5
 --- !u!114 &2485886265072421289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +386,7 @@ MonoBehaviour:
   rb2d: {fileID: 0}
   canMove: 1
   isRandomMove: 1
+  isFourDirection: 0
 --- !u!114 &3147492137228993637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,6 +670,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 379536063136497352}
+  isAbleToAttack: 1
+--- !u!114 &2022995171532489438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286152291929742358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f8c496a1a033343a61cc6dd2dc0b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: Knight Warrior
 --- !u!1001 &3674707322654488719
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,6 +5,8 @@ public class ItemManager : MonoBehaviour
 {
     public Item[] items;
     private Dictionary<string, Item> nameToItemDict = new();
+
+
     private void Awake()
     {
         foreach (Item item in items)

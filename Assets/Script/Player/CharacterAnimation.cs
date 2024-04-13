@@ -6,7 +6,7 @@ public class CharacterAnimation : MonoBehaviour
     Animator[] animators;
     GameObject hand;
     HandleInput handleInput;
-    Vector2 lookDirection = new Vector2(1, 0);
+    public Vector2 lookDirection;
     public bool isAbleToAnimate = true;
     void Start()
     {

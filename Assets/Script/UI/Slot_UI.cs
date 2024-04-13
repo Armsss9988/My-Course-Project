@@ -27,13 +27,13 @@ public class Slot_UI : MonoBehaviour
     public void Awake()
     {
         infoPanel = this.transform.Find("InfoPanel").gameObject;
-        AddTriggerListener(GetComponentInParent<EventTrigger>(), EventTriggerType.BeginDrag, () => inventoryUI.SlotBeginDrag(this));
-        AddTriggerListener(GetComponentInParent<EventTrigger>(), EventTriggerType.Drag, () => inventoryUI.SlotDrag(this));
-        AddTriggerListener(GetComponentInParent<EventTrigger>(), EventTriggerType.EndDrag, () => inventoryUI.SlotEndDrag(this));
-        AddTriggerListener(GetComponentInParent<EventTrigger>(), EventTriggerType.Drop, () => inventoryUI.SlotDrop(this));
-        AddTriggerListener(GetComponentInParent<EventTrigger>(), EventTriggerType.PointerClick, () => Toolbar_UI.instance.SelectSlot(slot_ID));
-        AddTriggerListener(GetComponentInParent<EventTrigger>(), EventTriggerType.PointerEnter, () => this.ActiveInfoPanel());
-        AddTriggerListener(GetComponentInParent<EventTrigger>(), EventTriggerType.PointerExit, () => this.DeactiveInfoPanel());
+        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.BeginDrag, () => inventoryUI.SlotBeginDrag(this));
+        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.Drag, () => inventoryUI.SlotDrag(this));
+        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.EndDrag, () => inventoryUI.SlotEndDrag(this));
+        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.Drop, () => inventoryUI.SlotDrop(this));
+        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.PointerClick, () => Toolbar_UI.instance.SelectSlot(slot_ID));
+        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.PointerEnter, () => this.ActiveInfoPanel());
+        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.PointerExit, () => this.DeactiveInfoPanel());
     }
     public void AddTriggerListener(EventTrigger trigger, EventTriggerType eventType, Action action)
     {

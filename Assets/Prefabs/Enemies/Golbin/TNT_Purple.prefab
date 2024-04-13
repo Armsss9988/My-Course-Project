@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: -2889375660518961492}
   - component: {fileID: 1365853119073676912}
   - component: {fileID: 656515285432671638}
+  - component: {fileID: 8322602119763679593}
   m_Layer: 6
   m_Name: TNT_Purple
   m_TagString: Enemy
@@ -89,7 +90,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938749797
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1674056308, guid: d5d08547587343b4482a00c217f23494, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -212,6 +213,7 @@ MonoBehaviour:
   timeInvincible: 1
   isInvincible: 0
   target: {fileID: 0}
+  targetColliderOffset: 0.5
 --- !u!114 &372793283075387784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,8 +229,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   rb2d: {fileID: 0}
   canMove: 1
-  redCircle: {fileID: 7244301128708471036, guid: 26f5dd229e0395f45b1cd4703750bdbf, type: 3}
   isRandomMove: 1
+  isFourDirection: 0
 --- !u!70 &4717290769650308384
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -497,8 +499,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f40d6b459ac4e424fafb79de835f5bbd, type: 2}
   - {fileID: 11400000, guid: 74f0e5e70ceabc244aed26c6818621aa, type: 2}
   - {fileID: 11400000, guid: a2767d021f4f6ce4c973531c7667635d, type: 2}
-  damageableTypeTag:
-  - {fileID: 11400000, guid: bdad3e530f7281e47bcf85d48dbf1168, type: 2}
+  damageableTypeTags: []
+--- !u!114 &8322602119763679593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5167333180413852748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f8c496a1a033343a61cc6dd2dc0b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: Goblin Bomber
 --- !u!1001 &2486509870886003687
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ public class Toolbar_UI : MonoBehaviour
             {
                 selectedSlot = toolbarSlots[index];
                 selectedSlot.SetHighlight(true);
-                item = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[Toolbar_UI.instance.selectedSlot.slot_ID].itemName);
+                item = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[instance.selectedSlot.slot_ID].itemName);
             }
             else
             {

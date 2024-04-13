@@ -30,16 +30,17 @@ public class EnemyMeleeAttack : MonoBehaviour
         if (enemy.target != null)
         {
             direction = (enemy.target.transform.position - hitbox.transform.position).normalized;
-            if (!enemyMovement.canMove)
+            if (!enemyMovement.canMove && !enemyMovement.isFourDirection)
             {
                 CheckAttackFlipx();
-                hitbox.transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+
             }
 
             if (this.GetComponent<EnemyRangeDetect>().IsInAttackRange())
             {
                 if (isAbleToAttack)
                 {
+                    hitbox.transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
                     Attack();
                 }
             }

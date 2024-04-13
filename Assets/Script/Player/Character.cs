@@ -163,4 +163,6 @@ public class Character : MonoBehaviour, IDamageable
     {
         GetComponent<Rigidbody2D>().AddForce(direction * amount, ForceMode2D.Impulse);
     }
+
+
 }
