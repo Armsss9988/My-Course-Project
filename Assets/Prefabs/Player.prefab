@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 7547446412340507248}
   - component: {fileID: 442559357402964972}
   - component: {fileID: 6926507763534586293}
+  - component: {fileID: 6449079530815064183}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -497,6 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f162296347444f448b7cd725081d516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookDirection: {x: 1, y: 0}
   isAbleToAnimate: 1
 --- !u!114 &7288023932397744891
 MonoBehaviour:
@@ -678,7 +680,7 @@ MonoBehaviour:
   baseHealth: 100
   bonusHealth: 0
   maxHealth: 100
-  baseSpeed: 1
+  baseSpeed: 0.8
   bonusSpeed: 1
   maxSpeed: 0
   baseAttackSpeed: 1
@@ -730,7 +732,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b9ab976a8ed1ece4aa61f452bb6c6b34, type: 2}
   - {fileID: 11400000, guid: 6bc30ebfa7c6dfa42957ece4b4797f8a, type: 2}
   - {fileID: 11400000, guid: 74f0e5e70ceabc244aed26c6818621aa, type: 2}
-  damageableTypeTags: []
+  damageableTypeTags:
+  - {fileID: 11400000, guid: d122fad1748cc3b46abe36da87c10ae4, type: 2}
 --- !u!114 &6926507763534586293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,6 +752,20 @@ MonoBehaviour:
   gloves: {fileID: 0}
   arrow: {fileID: 0}
   shield: {fileID: 0}
+--- !u!114 &6449079530815064183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5011855572050371811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2588242ee8e7f4191546edc46484a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talkDistance: 0.5
+  targetColliderOffset: 0.2
 --- !u!1 &5294604156177375977
 GameObject:
   m_ObjectHideFlags: 0

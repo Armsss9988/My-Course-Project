@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static event Action<string> OnQuestChoiceClicked;
 
-    // Update is called once per frame
-    void Update()
+
+    public void ChoiceQuest(string questName)
     {
-        
+        OnQuestChoiceClicked?.Invoke(questName);
     }
 }

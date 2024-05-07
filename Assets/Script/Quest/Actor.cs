@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[CreateAssetMenu]
 public class Actor : MonoBehaviour
 {
     [SerializeField] private string actorName;

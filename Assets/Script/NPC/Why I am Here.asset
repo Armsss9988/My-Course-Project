@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfbd8926e4477046bb8d9445861b0e5, type: 3}
+  m_Name: Why I am Here
+  m_EditorClassIdentifier: 
+  question: Why I am here?
+  dialogue:
+  - Everyone I met seemed to come here in different ways
+  - Some people lie on the roof, some people come up from the water...
+  - After a period of research, perhaps a time hole appeared from the factory that
+    brought us here.
+  Choices:
+  - {fileID: 11400000, guid: cd296f90b820f764286957b437bb3266, type: 2}
+  - {fileID: 11400000, guid: 5323fb2f4bb44364a93747defeec9847, type: 2}

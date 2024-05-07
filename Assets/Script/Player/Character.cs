@@ -1,13 +1,15 @@
+using BayatGames.SaveGameFree;
 using UnityEngine;
 
 public class Character : MonoBehaviour, IDamageable
 {
+    public static Character instance;
     public Inventory inventory;
     public int indexSlotArrow;
     CharacterAction characterAction;
     CharacterSound characterSound;
     CharacterEquipment characterEquipment;
-
+    CharacterDataSO characterDataSO;
     public float currentHealth;
     public float baseHealth = 100f;
     public float bonusHealth = 0f;
@@ -26,21 +28,31 @@ public class Character : MonoBehaviour, IDamageable
     public bool isInvincible;
     float invincibleTimer;
     bool isDamagebale = true;
+    Vector3 startPoint;
 
     private void Awake()
     {
-        inventory = new Inventory(36);
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+        startPoint = this.transform.position;
+        indexSlotArrow = 35;
+        characterDataSO = Resources.Load<CharacterDataSO>("PlayerData");
         characterSound = GetComponent<CharacterSound>();
         characterAction = GetComponent<CharacterAction>();
         characterEquipment = GetComponent<CharacterEquipment>();
-        maxHealth = baseHealth + bonusHealth;
-        currentHealth = maxHealth;
-        maxSpeed = baseSpeed * bonusSpeed;
-        maxAttackSpeed = baseAttackSpeed * bonusAttackSpeed;
+        inventory = new Inventory(36);
 
     }
     void Start()
     {
+        LoadPlayerDefault();
+        currentHealth = maxHealth;
         PlayerHealthText.instance.SetText(currentHealth, maxHealth);
     }
     private void Update()
@@ -53,6 +65,19 @@ public class Character : MonoBehaviour, IDamageable
         {
             isInvincible = false;
         }
+
+    }
+    private void OnEnable()
+    {
+        /*GameManager.OnNewGame += ResetGame;*/
+        GameManager.OnSaveGame += OnSaveGame;
+        GameManager.OnLoadGame += OnLoadGame;
+    }
+    private void OnDisable()
+    {
+        /* GameManager.OnNewGame -= ResetGame;*/
+        GameManager.OnSaveGame -= OnSaveGame;
+        GameManager.OnLoadGame -= OnLoadGame;
     }
     public void HandleEquipmentBonus()
     {
@@ -84,6 +109,20 @@ public class Character : MonoBehaviour, IDamageable
             bonusSpeed += gloves.speedBonus;
             bonusAttackSpeed += gloves.attackspeedBonus;
         }
+        RefreshPlayerData();
+    }
+    void LoadPlayerDefault()
+    {
+        baseHealth = characterDataSO.baseHealth;
+        bonusHealth = characterDataSO.bonusHealth;
+        baseAttackSpeed = characterDataSO.baseAttackSpeed;
+        bonusAttackSpeed = characterDataSO.bonusAttackSpeed;
+        baseSpeed = characterDataSO.baseSpeed;
+        bonusSpeed = characterDataSO.bonusSpeed;
+        RefreshPlayerData();
+    }
+    void RefreshPlayerData()
+    {
         maxHealth = baseHealth + bonusHealth;
         maxSpeed = baseSpeed * bonusSpeed;
         maxAttackSpeed = baseAttackSpeed * bonusAttackSpeed;
@@ -123,29 +162,11 @@ public class Character : MonoBehaviour, IDamageable
 
         PlayerHealthBar.instance.SetValue(currentHealth / maxHealth);
         PlayerHealthText.instance.SetText(currentHealth, maxHealth);
+
     }
     public bool IsArrowInInventory()
     {
-        foreach (Inventory.Slot slot in inventory.slots)
-        {
-            if (slot.type == Inventory.Slot.Type.Arrow)
-            {
-                Item item = GameManager.instance.itemManager.GetItemByName(slot.itemName);
-                if (item != null)
-                {
-                    if (item.data is ArrowData arrow)
-                    {
-                        Debug.Log("Have Arrow");
-                        indexSlotArrow = inventory.slots.IndexOf(slot);
-                        characterAction.SetArrow(item);
-                        return true;
-                    }
-                }
-            }
-
-        }
-        Debug.Log("Dont Have Arrow");
-        return false;
+        return inventory.slots[indexSlotArrow].itemName != "";
     }
     public void RemoveArrow(int num)
     {
@@ -163,6 +184,64 @@ public class Character : MonoBehaviour, IDamageable
     {
         GetComponent<Rigidbody2D>().AddForce(direction * amount, ForceMode2D.Impulse);
     }
+    public void ResetGame()
+    {
+        this.transform.position = startPoint;
+        this.currentHealth = baseHealth;
+    }
+    public void OnSaveGame()
+    {
+        Debug.Log("saving char data: ");
+        SaveData saveData = GameManager.instance.saveData;
+
+        saveData.characterData = new CharacterData(this.currentHealth, this.transform.position);
+        saveData.inventoryData = new InventoryData(this.inventory.slots);
+        saveData.equipmentData = new EquipmentData
+        (
+            characterEquipment.torso ? characterEquipment.torso.data.itemName : null,
+            characterEquipment.pant ? characterEquipment.pant.data.itemName : null,
+            characterEquipment.shoes ? characterEquipment.shoes.data.itemName : null,
+            characterEquipment.gloves ? characterEquipment.gloves.data.itemName : null,
+            characterEquipment.shield ? characterEquipment.shield.data.itemName : null,
+            characterEquipment.arrow ? characterEquipment.arrow.data.itemName : null
+        );
+
+    }
+    public void OnLoadGame()
+    {
+        if (SaveGame.Exists("saveData"))
+        {
+
+            SaveData saveData = GameManager.instance.saveData;
+
+            this.currentHealth = saveData.characterData.health;
+            this.transform.position = saveData.characterData.position;
+            this.inventory.slots = saveData.inventoryData.slots;
+
+            foreach (Inventory.Slot slot in inventory.slots)
+            {
+                if (slot.itemName != null)
+                {
+                    Item item = ItemManager.instance.GetItemByName(slot.itemName);
+                    if (item != null)
+                    {
+                        slot.icon = item.data.icon;
+                    }
+
+                }
+            }
+            characterEquipment.ChangeTorso(ItemManager.instance.GetItemByName(saveData.equipmentData.torso));
+            characterEquipment.ChangePant(ItemManager.instance.GetItemByName(saveData.equipmentData.pant));
+            characterEquipment.ChangeShoes(ItemManager.instance.GetItemByName(saveData.equipmentData.shoes));
+            characterEquipment.ChangeGloves(ItemManager.instance.GetItemByName(saveData.equipmentData.gloves));
+            characterEquipment.ChangeShield(ItemManager.instance.GetItemByName(saveData.equipmentData.shield));
+            characterEquipment.ChangeArrow(ItemManager.instance.GetItemByName(saveData.equipmentData.arrow));
+            Toolbar_UI.instance.Refresh();
+            Inventory_UI.instance.Refresh();
+        }
+
+    }
+
 
 
 }

@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 1365853119073676912}
   - component: {fileID: 656515285432671638}
   - component: {fileID: 8322602119763679593}
+  - component: {fileID: 6799915942328812691}
   m_Layer: 6
   m_Name: TNT_Purple
   m_TagString: Enemy
@@ -214,6 +215,8 @@ MonoBehaviour:
   isInvincible: 0
   target: {fileID: 0}
   targetColliderOffset: 0.5
+  uniqueID: 
+  startPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &372793283075387784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,6 +516,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorName: Goblin Bomber
+--- !u!114 &6799915942328812691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5167333180413852748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ec581116699fe4193e6f299ec2640a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
 --- !u!1001 &2486509870886003687
 PrefabInstance:
   m_ObjectHideFlags: 0

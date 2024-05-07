@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6932742594668758925}
   - component: {fileID: 4386974908719355290}
   - component: {fileID: 6973784882519367708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8068581169811396701}
   - component: {fileID: 5054658438477458492}
   - component: {fileID: 856772309130309041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 957187790861002631}
   - component: {fileID: 7653884122532602329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2272536304662259415}
   - component: {fileID: 3874016425755702084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Listener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4809511434809139340}
   - component: {fileID: 5496708989549350670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,7 +7,7 @@ public class Inventory_UI : MonoBehaviour
     public GameObject inventoryPanel;
     public static Inventory_UI instance;
     Character player;
-    public List<Slot_UI> slots = new List<Slot_UI>();
+    public List<Slot_UI> slots = new();
     private Slot_UI draggedSlot;
     public bool dragSingle;
     private Image draggedIcon;
@@ -38,18 +38,18 @@ public class Inventory_UI : MonoBehaviour
             dragSingle = false;
         }
         Toolbar_UI.instance.CheckAlphaNumericKey();
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            ToggleInventory();
-        }
+
     }
-    /*    void OnEnable()
-        {
-            UIManager.OnOpenInventory += OpenInventory;
-            UIManager.OnCloseInventory += CloseInventory;
-            UIManager.OnOpenDialog += CloseInventory;
-            UIManager.OnOpenQuestLog += CloseInventory;
-        }*/
+    void OnEnable()
+    {
+        UIManager.OnOpenInventory += OpenInventory;
+        UIManager.OnCloseInventory += CloseInventory;
+    }
+    void OnDisable()
+    {
+        UIManager.OnOpenInventory -= OpenInventory;
+        UIManager.OnCloseInventory -= CloseInventory;
+    }
     public void OpenInventory()
     {
 
@@ -64,28 +64,28 @@ public class Inventory_UI : MonoBehaviour
         inventoryPanel.SetActive(false);
 
     }
-    /*public void ToggleInventory()
-    {
-        if (!inventoryPanel.activeSelf)
-        {
-            GameManager.instance.uiManager.OpenInventory();
-        }
-        else
-        {
-            GameManager.instance.uiManager.CloseInventory();
-        }
-    }*/
     public void ToggleInventory()
     {
         if (!inventoryPanel.activeSelf)
         {
-            OpenInventory();
+            UIManager.instance.OpenInventory();
         }
         else
         {
-            CloseInventory();
+            UIManager.instance.CloseInventory();
         }
     }
+    /*  public void ToggleInventory()
+      {
+          if (!inventoryPanel.activeSelf)
+          {
+              OpenInventory();
+          }
+          else
+          {
+              CloseInventory();
+          }
+      }*/
     public void Refresh()
     {
         if (slots.Count == player.inventory.slots.Count)
@@ -94,7 +94,7 @@ public class Inventory_UI : MonoBehaviour
             {
                 if (player.inventory.slots[i].itemName != "")
                 {
-                    Item item = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[i].itemName);
+                    Item item = ItemManager.instance.GetItemByName(player.inventory.slots[i].itemName);
                     slots[i].SetItem(player.inventory.slots[i], item);
                 }
                 else
@@ -107,7 +107,7 @@ public class Inventory_UI : MonoBehaviour
     }
     public void Remove()
     {
-        Item itemToDrop = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[draggedSlot.slot_ID].itemName);
+        Item itemToDrop = ItemManager.instance.GetItemByName(player.inventory.slots[draggedSlot.slot_ID].itemName);
         if (itemToDrop != null)
         {
             if (dragSingle)
@@ -152,9 +152,9 @@ public class Inventory_UI : MonoBehaviour
     public void SlotDrop(Slot_UI slotUI)
     {
 
-        Item itemToMove = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[draggedSlot.slot_ID].itemName);
+        Item itemToMove = ItemManager.instance.GetItemByName(player.inventory.slots[draggedSlot.slot_ID].itemName);
         int quantiyFromDraggedSlot = player.inventory.slots[draggedSlot.slot_ID].count;
-        Item itemFromSlotDrop = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[slotUI.slot_ID].itemName);
+        Item itemFromSlotDrop = ItemManager.instance.GetItemByName(player.inventory.slots[slotUI.slot_ID].itemName);
         int quantittyFromSlotDrop = player.inventory.slots[slotUI.slot_ID].count;
         HandleEquipmentChange(draggedSlot, null);
 

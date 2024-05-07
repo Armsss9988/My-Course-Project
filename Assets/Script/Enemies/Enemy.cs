@@ -21,14 +21,18 @@ public class Enemy : MonoBehaviour, IDamageable, IAttackable
     public AudioClip beingHitSound;
     public AudioClip deadSound;
     public GameObject bullet;
-    public float timeInvincible = 1.0f;
+    public float timeInvincible = 0.3f;
     public bool isInvincible;
     float invincibleTimer;
     [HideInInspector]
     public GameObject target;
     public float targetColliderOffset = 0.5f;
+    public Vector3 startPoint;
+
+
     void Awake()
     {
+        startPoint = this.transform.position;
         enemyAction = GetComponent<EnemyAction>();
     }
     private void Start()
@@ -103,8 +107,17 @@ public class Enemy : MonoBehaviour, IDamageable, IAttackable
         }
     }
 
+
     public void OnDestroy()
     {
-        GameManager.instance.interactionManager.Enemykilled();
+        InteractionManager.instance.Enemykilled();
+    }
+    void OnEnable()
+    {
+        WorldManager.instance.AddEnemy(this);
+    }
+    void OnDisable()
+    {
+        WorldManager.instance.RemoveEnemy(this);
     }
 }

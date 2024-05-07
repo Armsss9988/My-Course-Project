@@ -15,16 +15,32 @@ public class Spawner : MonoBehaviour
 
     [SerializeField]
     public bool isSpawning = true;
+    [SerializeField] public string id;
+    [ContextMenu("Generate id")]
+    private void GenerateGUID()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
     public GameObject defaulEnemy;
     public ObjectScale[] randomEnemies;
+    float currentSpawnTimer = 0f;
     public float delay = 5f;
     public int maxEnemies = 10;
     public int currentEnemies = 0;
+    public string ID => id;
 
 
-    void Start()
+    private void Update()
     {
-        InvokeRepeating(nameof(SpawnEnemy), delay, delay);
+        if (isSpawning)
+        {
+            currentSpawnTimer += Time.deltaTime;
+            if (currentSpawnTimer >= delay)
+            {
+                currentSpawnTimer = 0f;
+                SpawnEnemy();
+            }
+        }
     }
 
     void SpawnEnemy()
@@ -38,14 +54,32 @@ public class Spawner : MonoBehaviour
                     GameObject enemy1 = Instantiate(enemyType.objects, transform.position, Quaternion.identity);
                     enemy1.layer = this.gameObject.layer;
                     enemy1.GetComponent<SpriteRenderer>().sortingLayerName = this.GetComponent<SpriteRenderer>().sortingLayerName;
-                    enemy1.AddComponent<Spawned>().spawner = this;
+                    foreach (SpriteRenderer sp in enemy1.GetComponentsInChildren<SpriteRenderer>())
+                    {
+                        sp.sortingLayerName = this.GetComponent<SpriteRenderer>().sortingLayerName;
+                        sp.gameObject.layer = this.gameObject.layer;
+                    }
+                    enemy1.TryGetComponent<Spawned>(out var spawned1); spawned1.spawner = this;
                     currentEnemies++;
                     return;
                 }
             }
             GameObject enemy0 = Instantiate(defaulEnemy, transform.position, Quaternion.identity);
-            enemy0.AddComponent<Spawned>().spawner = this;
+            enemy0.TryGetComponent<Spawned>(out var spawned); spawned.spawner = this;
             currentEnemies++;
         }
+    }
+    void ResetGame()
+    {
+        currentEnemies = 0;
+        currentSpawnTimer = 0f;
+    }
+    private void OnEnable()
+    {
+        WorldManager.instance.AddSpawner(this);
+    }
+    private void OnDisable()
+    {
+        WorldManager.instance.RemoveSpawner(this);
     }
 }

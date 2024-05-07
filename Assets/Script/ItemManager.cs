@@ -5,10 +5,18 @@ public class ItemManager : MonoBehaviour
 {
     public Item[] items;
     private Dictionary<string, Item> nameToItemDict = new();
-
+    public static ItemManager instance;
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
         foreach (Item item in items)
         {
             AddItem(item);
@@ -23,10 +31,14 @@ public class ItemManager : MonoBehaviour
     }
     public Item GetItemByName(string key)
     {
-        if (nameToItemDict.ContainsKey(key))
+        try
         {
-            return nameToItemDict[key];
+            if (nameToItemDict.ContainsKey(key))
+            {
+                return nameToItemDict[key];
+            }
+            return null;
         }
-        return null;
+        catch { return null; }
     }
 }

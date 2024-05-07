@@ -5,14 +5,13 @@ public class CharacterMovement : MonoBehaviour
     Rigidbody2D rigidbody2d;
     Character character;
     public bool canMove = true;
-    // Start is called before the first frame update
+    CharacterSound sound;
     void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         character = GetComponent<Character>();
+        sound = GetComponent<CharacterSound>();
     }
-
-    // Update is called once per frame
 
     public void MovementPosition(float horizontal, float vertical)
     {
@@ -22,6 +21,18 @@ public class CharacterMovement : MonoBehaviour
             position.x += character.maxSpeed * horizontal * Time.deltaTime;
             position.y += character.maxSpeed * vertical * Time.deltaTime;
             rigidbody2d.MovePosition(position);
+            /*            if (Mathf.Abs(horizontal) > 0.1f || Mathf.Abs(vertical) > 0.1f)
+                        {
+                            if (!sound.isPlaying)
+                            {
+                                movementSoundSource.clip = walkSound;
+                                movementSoundSource.Play();
+                            }
+                        }
+                        else
+                        {
+                            movementSoundSource.Stop();
+                        }*/
         }
 
     }
@@ -35,13 +46,13 @@ public class CharacterMovement : MonoBehaviour
     }
     private void OnEnable()
     {
-        DialogueBoxController.OnDialogueStarted += StopMoving;
-        DialogueBoxController.OnDialogueEnded += StartMoving;
+        UIManager.OnOpenDialog += StopMoving;
+        UIManager.OnCloseDialog += StartMoving;
     }
     private void OnDisable()
     {
-        DialogueBoxController.OnDialogueStarted -= StopMoving;
-        DialogueBoxController.OnDialogueEnded -= StartMoving;
+        UIManager.OnOpenDialog -= StopMoving;
+        UIManager.OnCloseDialog -= StartMoving;
     }
 
 

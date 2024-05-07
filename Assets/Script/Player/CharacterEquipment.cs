@@ -3,6 +3,7 @@ using UnityEngine.U2D.Animation;
 
 public class CharacterEquipment : MonoBehaviour
 {
+    CharacterAction characterAction;
     Character character;
     GameObject characterTorso;
     GameObject characterPant;
@@ -17,6 +18,7 @@ public class CharacterEquipment : MonoBehaviour
     void Start()
     {
         character = GetComponent<Character>();
+        characterAction = GetComponent<CharacterAction>();
         characterTorso = this.transform.Find("Torso").gameObject;
         characterPant = this.transform.Find("Pant").gameObject;
         characterShoes = this.transform.Find("Shoes").gameObject;
@@ -54,6 +56,10 @@ public class CharacterEquipment : MonoBehaviour
     public void ChangeArrow(Item arrowChange)
     {
         arrow = arrowChange;
+        if (arrow != null)
+        {
+            characterAction.SetArrow(arrow);
+        }
     }
     void ChangeArmorAsset(Item item, GameObject gameObject)
     {
@@ -76,5 +82,6 @@ public class CharacterEquipment : MonoBehaviour
         }
 
     }
+
 
 }

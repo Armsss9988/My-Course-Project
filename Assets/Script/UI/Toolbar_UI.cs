@@ -4,7 +4,7 @@ using UnityEngine;
 public class Toolbar_UI : MonoBehaviour
 {
     public static Toolbar_UI instance;
-    [SerializeField] private List<Slot_UI> toolbarSlots = new List<Slot_UI>();
+    [SerializeField] private List<Slot_UI> toolbarSlots = new();
     public Slot_UI selectedSlot;
     Character player;
     private readonly KeyCode[] keyCodes = {
@@ -42,7 +42,7 @@ public class Toolbar_UI : MonoBehaviour
         {
             if (player.inventory.slots[i].itemName != "")
             {
-                Item item = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[i].itemName);
+                Item item = ItemManager.instance.GetItemByName(player.inventory.slots[i].itemName);
                 toolbarSlots[i].SetItem(player.inventory.slots[i], item);
             }
             else
@@ -64,7 +64,7 @@ public class Toolbar_UI : MonoBehaviour
             {
                 selectedSlot = toolbarSlots[index];
                 selectedSlot.SetHighlight(true);
-                item = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[instance.selectedSlot.slot_ID].itemName);
+                item = ItemManager.instance.GetItemByName(player.inventory.slots[instance.selectedSlot.slot_ID].itemName);
             }
             else
             {

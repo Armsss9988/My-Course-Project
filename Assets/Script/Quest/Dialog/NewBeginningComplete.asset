@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfbd8926e4477046bb8d9445861b0e5, type: 3}
   m_Name: NewBeginningComplete
   m_EditorClassIdentifier: 
+  question: 
   dialogue:
   - '* You have found Peter'
+  Choices:
+  - {fileID: 0}

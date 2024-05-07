@@ -5,14 +5,13 @@ public class CharacterAnimation : MonoBehaviour
     Character character;
     Animator[] animators;
     GameObject hand;
-    HandleInput handleInput;
+    Vector3 characterLocation;
     public Vector2 lookDirection;
     public bool isAbleToAnimate = true;
     void Start()
     {
         character = GetComponent<Character>();
         animators = GetComponentsInChildren<Animator>();
-        handleInput = GetComponent<HandleInput>();
         hand = this.transform.Find("Hand").gameObject;
     }
     public Vector3 LookDirection()
@@ -72,6 +71,18 @@ public class CharacterAnimation : MonoBehaviour
     }
     public void MovementAnimation(float horizontal, float vertical)
     {
+        if (characterLocation != null)
+        {
+            if (this.transform.position == characterLocation)
+            {
+                foreach (var item in animators)
+                {
+                    item.SetFloat("Speed", 0);
+                }
+            }
+        }
+        characterLocation = this.transform.position;
+
         if (isAbleToAnimate)
         {
             Vector2 move = new(horizontal, vertical);
@@ -86,7 +97,7 @@ public class CharacterAnimation : MonoBehaviour
                     item.SetFloat("Look X", lookDirection.x);
                     item.SetFloat("Look Y", lookDirection.y);
                     item.SetFloat("Speed", move.magnitude);
-                    item.SetFloat("Movement Speed", character.maxSpeed);
+                    item.SetFloat("Movement Speed", character.maxSpeed * 2);
                 }
             }
         }

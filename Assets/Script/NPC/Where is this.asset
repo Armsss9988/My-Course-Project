@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfbd8926e4477046bb8d9445861b0e5, type: 3}
+  m_Name: Where is this
+  m_EditorClassIdentifier: 
+  question: Where is this?
+  dialogue:
+  - Not sure... But the atmosphere here is so comfortable!
+  - In Hanoi, I have never breathed air like this.
+  - This is like another world, the first people who came here built small houses
+  Choices: []

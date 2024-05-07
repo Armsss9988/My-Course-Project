@@ -5,22 +5,25 @@ public class GroupLayer : MonoBehaviour
     SpriteRenderer parentSpriteRenderer;
     SpriteRenderer[] chillSpriteRenderers;
     Canvas[] canvas;
-    void Start()
+    void Awake()
     {
         parentSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         chillSpriteRenderers = this.GetComponentsInChildren<SpriteRenderer>();
         canvas = gameObject.GetComponentsInChildren<Canvas>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        foreach (SpriteRenderer spriteRenderer in chillSpriteRenderers)
+        if (parentSpriteRenderer != null && chillSpriteRenderers != null && chillSpriteRenderers.Length > 0)
         {
-            spriteRenderer.gameObject.layer = this.gameObject.layer;
-            spriteRenderer.sortingLayerName = this.parentSpriteRenderer.sortingLayerName;
-            spriteRenderer.sortingOrder = this.parentSpriteRenderer.sortingOrder;
+            foreach (SpriteRenderer spriteRenderer in chillSpriteRenderers)
+            {
+                spriteRenderer.gameObject.layer = this.gameObject.layer;
+                spriteRenderer.sortingLayerName = this.parentSpriteRenderer.sortingLayerName;
+                spriteRenderer.sortingOrder = this.parentSpriteRenderer.sortingOrder;
+            }
         }
+
         if (canvas != null)
         {
             foreach (Canvas canvasRenderer in canvas)

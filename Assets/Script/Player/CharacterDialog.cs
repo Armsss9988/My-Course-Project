@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterDialog : MonoBehaviour
@@ -7,6 +6,7 @@ public class CharacterDialog : MonoBehaviour
     [SerializeField] float talkDistance = 2;
     public float targetColliderOffset = 0.5f;
     bool inConversation;
+
 
     private void Awake()
     {
@@ -33,27 +33,12 @@ public class CharacterDialog : MonoBehaviour
             if (hit.collider != null)
             {
                 Debug.Log("Finded: " + hit.collider.name);
-                if (hit.collider.gameObject.TryGetComponent(out NPCDialog npc))
-                {
-                    Debug.Log("Finded NPC");
-                    DialogueBoxController.instance.StartDialogue(npc.dialogueAsset);
-                }
                 if (hit.collider.gameObject.TryGetComponent(out Actor actor))
                 {
-                    List<Quest> actorQuests = GameManager.instance.questManager.FindQuestsWithSameActor(GameManager.instance.questManager.ListQuests, actor);
-
-                    if (actorQuests != null && actorQuests.Count > 0)
+                    if (hit.collider.gameObject.TryGetComponent(out NPCDialog dialog))
                     {
-                        foreach (Quest actorQuest in actorQuests)
-                        {
-                            Debug.Log("Actor quest: " + actorQuest);
-                            if (actorQuest != null && actorQuest.questStatus == Quest.QuestStatus.CanStart)
-                            {
-                                Debug.Log("Actor quest can start: " + actorQuest);
-                                DialogueBoxController.instance.StartDialogue(actorQuest.QuestBase.StartDialogue);
-                                GameManager.instance.questManager.StartQuest(actorQuest);
-                            }
-                        }
+                        Debug.Log("Finded NPC");
+                        DialogueBoxController.instance.StartDialogue(actor);
                     }
                 }
             }
@@ -76,15 +61,15 @@ public class CharacterDialog : MonoBehaviour
     {
         Debug.Log("Char dialog Enable");
         InteractionManager.OnInteraction += Interact;
-        DialogueBoxController.OnDialogueStarted += JoinConversation;
-        DialogueBoxController.OnDialogueEnded += LeaveConversation;
+        UIManager.OnOpenDialog += JoinConversation;
+        UIManager.OnCloseDialog += LeaveConversation;
     }
 
     private void OnDisable()
     {
         Debug.Log("Char dialog Disable");
         InteractionManager.OnInteraction -= Interact;
-        DialogueBoxController.OnDialogueStarted -= JoinConversation;
-        DialogueBoxController.OnDialogueEnded -= LeaveConversation;
+        UIManager.OnOpenDialog -= JoinConversation;
+        UIManager.OnCloseDialog -= LeaveConversation;
     }
 }

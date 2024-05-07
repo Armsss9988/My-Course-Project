@@ -26,7 +26,7 @@ public class Collectable : MonoBehaviour
             Item item = GetComponent<Item>();
             if (item != null)
             {
-                GameManager.instance.interactionManager.ItemCollected(item);
+                InteractionManager.instance.ItemCollected(item);
                 player.inventory.Add(item);
                 Destroy(this.gameObject);
                 Inventory_UI.instance.Refresh();
@@ -34,5 +34,6 @@ public class Collectable : MonoBehaviour
             }
         }
     }
+
 }
 

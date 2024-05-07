@@ -5,7 +5,7 @@ public class Quest
     private QuestBase questBase;
     public QuestStatus questStatus;
     public int currentQuestStepIndex;
-    private QuestStepState[] questStepStates;
+    public QuestStepState[] questStepStates;
 
 
 
@@ -50,7 +50,7 @@ public class Quest
 
     public bool CurrentStepExists()
     {
-        return (currentQuestStepIndex < questBase.QuestSteps.Count);
+        return currentQuestStepIndex < questBase.QuestSteps.Count;
     }
 
     public void InstantiateCurrentQuestStep(Transform parentTransform)

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfbd8926e4477046bb8d9445861b0e5, type: 3}
   m_Name: Sweider
   m_EditorClassIdentifier: 
+  question: 
   dialogue:
   - Hello!
   - "What are you doing here?\t"
   - Enemy in Left zone
-  - Good bye
+  Choices:
+  - {fileID: 11400000, guid: 82a7201035c559d4683ddb596b9b4524, type: 2}

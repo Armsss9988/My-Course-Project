@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 8391153121425596400}
   - component: {fileID: -963480646120377852}
   - component: {fileID: -9011059305859396277}
+  - component: {fileID: 911474652976155250}
   m_Layer: 6
   m_Name: Archer Knight
   m_TagString: Enemy
@@ -188,6 +189,8 @@ MonoBehaviour:
   isInvincible: 0
   target: {fileID: 0}
   targetColliderOffset: 0.5
+  uniqueID: 
+  startPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &2485886265072421289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,6 +528,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorName: Knight Archer
+--- !u!114 &911474652976155250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286152291929742358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ec581116699fe4193e6f299ec2640a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
 --- !u!1001 &3674707322654488719
 PrefabInstance:
   m_ObjectHideFlags: 0

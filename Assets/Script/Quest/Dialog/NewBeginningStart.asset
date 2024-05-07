@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfbd8926e4477046bb8d9445861b0e5, type: 3}
   m_Name: NewBeginningStart
   m_EditorClassIdentifier: 
+  question: 
   dialogue:
   - Another person... Are you also the one who was transported here?
   - Hmm.. You need to do something first. You should have an axe.
-  - Hmm.. You need to do something first. You should have an axe.
   - You can ask Peter, He often wanders east from here
+  Choices: []

@@ -26,14 +26,14 @@ public class Slot_UI : MonoBehaviour
     }
     public void Awake()
     {
-        infoPanel = this.transform.Find("InfoPanel").gameObject;
+        /*infoPanel = this.transform.Find("InfoPanel").gameObject;*/
         AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.BeginDrag, () => inventoryUI.SlotBeginDrag(this));
         AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.Drag, () => inventoryUI.SlotDrag(this));
         AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.EndDrag, () => inventoryUI.SlotEndDrag(this));
         AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.Drop, () => inventoryUI.SlotDrop(this));
         AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.PointerClick, () => Toolbar_UI.instance.SelectSlot(slot_ID));
-        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.PointerEnter, () => this.ActiveInfoPanel());
-        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.PointerExit, () => this.DeactiveInfoPanel());
+        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.PointerClick, () => this.SetPanelInfo());
+        /*        AddTriggerListener(GetComponent<EventTrigger>(), EventTriggerType.PointerExit, () => this.DeactiveInfoPanel());*/
     }
     public void AddTriggerListener(EventTrigger trigger, EventTriggerType eventType, Action action)
     {
@@ -50,7 +50,7 @@ public class Slot_UI : MonoBehaviour
             this.item = item;
             itemIcon.color = new Color(1, 1, 1, 1);
             quantityText.text = slot.count.ToString();
-            SetItemInfo(item);
+
         }
     }
     public void SetEmpty()
@@ -64,35 +64,31 @@ public class Slot_UI : MonoBehaviour
     {
         highLight.SetActive(isOn);
     }
-    public void ActiveInfoPanel()
-    {
-        if (this.item != null)
+    /*    public void ActiveInfoPanel()
         {
-            SetItemInfo(item);
-            infoPanel.SetActive(true);
+            if (this.item != null)
+            {
+                SetItemInfo(item);
+                infoPanel.SetActive(true);
+            }
         }
-    }
-    public void DeactiveInfoPanel()
-    {
-        if (this.item != null)
+        public void DeactiveInfoPanel()
         {
-            SetItemInfo(item);
-            infoPanel.SetActive(false);
-        }
+            if (this.item != null)
+            {
+                SetItemInfo(item);
+                infoPanel.SetActive(false);
+            }
 
-    }
+        }*/
     public void SetItemInfo(Item item)
     {
-        // Kích hoạt object bảng thông tin
 
         TMP_Text nameText = infoPanel.transform.Find("Item Name").gameObject.GetComponent<TMP_Text>();
         TMP_Text infoText = infoPanel.transform.Find("Item Info").gameObject.GetComponent<TMP_Text>();
         if (item != null)
         {
-            // Hiển thị tên item
             nameText.text = item.data.itemName;
-
-            // Kiểm tra loại item và hiển thị thông tin đặc biệt
             if (item.data is WeaponData weaponData)
             {
                 infoText.text = "Damage: " + weaponData.damage
@@ -105,6 +101,10 @@ public class Slot_UI : MonoBehaviour
                     + "\nMovement Speed: " + "+ " + armorData.speedBonus + "%";
             }
         }
+    }
+    public void SetPanelInfo()
+    {
+        infoPanel.GetComponent<ItemInfoUI>().PopulateItemInformationUI(this.item);
     }
 
 }

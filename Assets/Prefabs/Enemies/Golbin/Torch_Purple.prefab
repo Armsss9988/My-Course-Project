@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: -8862791343668235834}
   - component: {fileID: 6732474260187647172}
   - component: {fileID: 5598828978647769818}
+  - component: {fileID: 2151544129305466025}
   m_Layer: 6
   m_Name: Torch_Purple
   m_TagString: Enemy
@@ -217,6 +218,8 @@ MonoBehaviour:
   isInvincible: 0
   target: {fileID: 0}
   targetColliderOffset: 0.5
+  uniqueID: 
+  startPoint: {x: 0, y: 0, z: 0}
 --- !u!70 &7804824935398100307
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -550,6 +553,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorName: Goblin Torch
+--- !u!114 &2151544129305466025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2728544147351117186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ec581116699fe4193e6f299ec2640a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
 --- !u!1 &4797157920415519513
 GameObject:
   m_ObjectHideFlags: 0

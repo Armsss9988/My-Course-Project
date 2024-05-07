@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 3442063722402024886}
   - component: {fileID: 5027206101553203776}
   - component: {fileID: 3992719405993139428}
+  - component: {fileID: 4504505388419265666}
   m_Layer: 6
   m_Name: Warrior Blue
   m_TagString: Enemy
@@ -189,6 +190,8 @@ MonoBehaviour:
   isInvincible: 0
   target: {fileID: 0}
   targetColliderOffset: 0.5
+  uniqueID: 
+  startPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &2485886265072421289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +533,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorName: Knight Warrior
+--- !u!114 &4504505388419265666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286152291929742358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ec581116699fe4193e6f299ec2640a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
 --- !u!1 &4125676313054382069
 GameObject:
   m_ObjectHideFlags: 0

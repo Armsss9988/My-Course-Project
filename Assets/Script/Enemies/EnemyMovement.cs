@@ -267,12 +267,12 @@ public class EnemyMovement : MonoBehaviour
     }
     private void OnEnable()
     {
-        DialogueBoxController.OnDialogueStarted += StopMoving;
-        DialogueBoxController.OnDialogueEnded += StartMoving;
+        UIManager.OnOpenDialog += StopMoving;
+        UIManager.OnCloseDialog += StartMoving;
     }
     private void OnDisable()
     {
-        DialogueBoxController.OnDialogueStarted -= StopMoving;
-        DialogueBoxController.OnDialogueEnded -= StartMoving;
+        UIManager.OnOpenDialog -= StopMoving;
+        UIManager.OnCloseDialog -= StartMoving;
     }
 }

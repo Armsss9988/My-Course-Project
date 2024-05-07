@@ -9,7 +9,7 @@ public class QuestManager : MonoBehaviour
     private List<QuestBase> questBases;
     List<Quest> listQuests;
     Character character;
-
+    public GameObject CurrentActiveStepContent;
     public List<Quest> ListQuests => listQuests;
 
     public static event Action<Quest> OnQuestStarted;
@@ -18,12 +18,19 @@ public class QuestManager : MonoBehaviour
 
     public static event Action<Quest> OnQuestStatusChange;
     public static event Action<Quest> OnQuestStepChange;
-    public static event Action<Quest, int, QuestStepState> OnQuestStepStateChange;
-
+    public static event Action<Quest> OnQuestStepStateChange;
+    public static QuestManager instance;
 
     void Awake()
     {
-
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
         character = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
         listQuests = new();
         questBases = Resources.LoadAll<QuestBase>("QuestBase").ToList();
@@ -77,7 +84,7 @@ public class QuestManager : MonoBehaviour
             int requirementQuantity = requirementItem.quantity;
             foreach (Inventory.Slot slot in character.inventory.slots)
             {
-                Item inventoryItem = GameManager.instance.itemManager.GetItemByName(slot.itemName);
+                Item inventoryItem = ItemManager.instance.GetItemByName(slot.itemName);
                 if (inventoryItem == requirementItem.item)
                 {
                     int inventoryItemCount = slot.count;
@@ -100,6 +107,17 @@ public class QuestManager : MonoBehaviour
         }
         return true;
     }
+    public Quest FindQuestByName(string questName)
+    {
+        foreach (Quest quest in listQuests)
+        {
+            if (quest.QuestBase.Name == questName)
+            {
+                return quest;
+            }
+        }
+        return null;
+    }
     private void ChangeQuestStatus(Quest quest, QuestStatus questStatus)
     {
         quest.questStatus = questStatus;
@@ -108,33 +126,43 @@ public class QuestManager : MonoBehaviour
 
     public void StartQuest(Quest quest)
     {
-        OnQuestStarted?.Invoke(quest);
         ChangeQuestStatus(quest, QuestStatus.InProgress);
-        quest.InstantiateCurrentQuestStep(this.transform);
+        OnQuestStarted?.Invoke(quest);
+        quest.InstantiateCurrentQuestStep(CurrentActiveStepContent.transform);
+        QuestNotification.instance.ToggleNotification(quest.QuestBase.Name, "Start quest " + quest.QuestBase.Name);
     }
     public void NextStepQuest(Quest quest)
     {
-        OnQuestNextStep?.Invoke(quest);
         quest.MoveToNextStep();
 
         if (quest.CurrentStepExists())
         {
-            quest.InstantiateCurrentQuestStep(this.transform);
+            Debug.Log("Next step quest ");
+            quest.InstantiateCurrentQuestStep(CurrentActiveStepContent.transform);
+            QuestNotification.instance.ToggleNotification(quest.QuestBase.Name, "Next step " + quest.QuestBase.QuestSteps[quest.currentQuestStepIndex].StepName);
         }
         else
         {
+            Debug.Log("Complete quest " + quest.QuestBase.Name);
             CompletedQuest(quest);
         }
+        OnQuestNextStep?.Invoke(quest);
+
     }
     public void CompletedQuest(Quest quest)
     {
-        OnQuestFinished?.Invoke(quest);
         ChangeQuestStatus(quest, QuestStatus.Completed);
+        OnQuestFinished?.Invoke(quest);
+        QuestNotification.instance.ToggleNotification(quest.QuestBase.Name, "Finish quest " + quest.QuestBase.Name);
+
     }
 
     public void QuestStepStateChange(Quest quest, int stepIndex, QuestStepState questStepState)
     {
-        OnQuestStepStateChange?.Invoke(quest, stepIndex, questStepState);
+
+        quest.StoreQuestStepState(questStepState, stepIndex);
+        OnQuestStepStateChange?.Invoke(quest);
+
     }
 
 }

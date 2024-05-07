@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
 {
+    AudioSource audioSource;
+    public AudioClip pickupSound;
     public static event Action OnInteraction;
 
 
@@ -10,7 +12,19 @@ public class InteractionManager : MonoBehaviour
 
 
     public static event Action<Item> OnItemCollected;
-
+    public static InteractionManager instance;
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+        audioSource = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -29,6 +43,7 @@ public class InteractionManager : MonoBehaviour
     }
     public void ItemCollected(Item item)
     {
+        audioSource.PlayOneShot(pickupSound);
         OnItemCollected?.Invoke(item);
     }
 }

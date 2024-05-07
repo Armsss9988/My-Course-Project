@@ -9,7 +9,10 @@ public class CollectionQuest : QuestStep
     [SerializeField]
     private int required = 5;
 
-
+    private void Start()
+    {
+        UpdateState();
+    }
     private void OnEnable()
     {
         InteractionManager.OnItemCollected += ItemCollected;
@@ -29,6 +32,7 @@ public class CollectionQuest : QuestStep
             if (current < required)
             {
                 current++;
+                UpdateState();
             }
 
             if (current >= required)

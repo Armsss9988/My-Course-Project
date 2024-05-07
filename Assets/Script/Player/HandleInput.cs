@@ -13,6 +13,22 @@ public class HandleInput : MonoBehaviour
         characterAnimation = GetComponent<CharacterAnimation>();
         characterMovement = GetComponent<CharacterMovement>();
     }
+    private void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            QuestLogUI.instance.ToggleQuestLog();
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Inventory_UI.instance.ToggleInventory();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            MenuUI.instance.ToggleMenu();
+        }
+    }
 
     private void FixedUpdate()
     {
