@@ -14,6 +14,8 @@ public class CharacterAction : MonoBehaviour
     GameObject hitbox;
     Item projectile;
     bool isAbleToAttack = true;
+    bool isAbleToHeal = true;
+    ParticleSystem healing;
     void Start()
     {
         character = GetComponent<Character>();
@@ -23,6 +25,7 @@ public class CharacterAction : MonoBehaviour
         characterAnimation = GetComponent<CharacterAnimation>();
         hand = character.transform.Find("Hand").gameObject;
         hitbox = character.transform.Find("Hitbox").gameObject;
+        healing = GetComponentInChildren<ParticleSystem>();
     }
 
     void Update()
@@ -35,10 +38,30 @@ public class CharacterAction : MonoBehaviour
             {
                 Attack();
             }
+            if (playerSelectedItem.GetSelectedItem() != null && (playerSelectedItem.GetSelectedItem().data is FoodData))
+            {
+                Heal();
+            }
         }
     }
 
-
+    void Heal()
+    {
+        if (isAbleToHeal)
+        {
+            isAbleToHeal = false;
+            playerSelectedItem.GetSelectedItem().data.Use(character);
+            character.inventory.Remove(Toolbar_UI.instance.selectedSlot.slot_ID);
+            healing.Play();
+            playerSound.HealingSound();
+            StartCoroutine(HealTime());
+        }
+    }
+    IEnumerator HealTime()
+    {
+        yield return new WaitForSeconds(2f);
+        isAbleToHeal = true;
+    }
     public void DropItem(Item item)
     {
         Vector2 spawnLocation = transform.position;
@@ -49,6 +72,8 @@ public class CharacterAction : MonoBehaviour
         StartCoroutine(DropTime(droppedItem));
         droppedItem.rb2d.AddForce(spawnOffset * dropPos, ForceMode2D.Impulse);
     }
+
+
     IEnumerator DropTime(Item item)
 
     {

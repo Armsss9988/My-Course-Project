@@ -2,6 +2,12 @@ using UnityEngine;
 [System.Serializable]
 public class Tower : MonoBehaviour, IDamageable
 {
+    [SerializeField] public string id;
+    [ContextMenu("Generate id")]
+    private void GenerateGUID()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
     [SerializeField]
     float maxHealth = 100;
     [SerializeField]
@@ -16,6 +22,9 @@ public class Tower : MonoBehaviour, IDamageable
     Spawner[] spawners;
     GameObject burningEffect;
     bool isDamagebale = true;
+
+
+    public string ID => id;
     void Awake()
     {
         currentHealth = maxHealth;
@@ -127,5 +136,28 @@ public class Tower : MonoBehaviour, IDamageable
                 spawner.isSpawning = true;
             }
         }
+    }
+    public void LoadData(TowerData towerData)
+    {
+        this.currentHealth = towerData.currentHealth;
+        this.currentTimeRespawn = towerData.currentTimeRespawn;
+        this.currentTimeConstruct = towerData.currentTimeConstruct;
+        this.currentTimeRespawn = towerData.currentTimeRespawn;
+        this.isDestroyed = towerData.isDestroyed;
+        this.isInConstruct = towerData.isInConstruct;
+        this.isDamagebale = towerData.isDamagebale;
+        ChangeHealth(0f);
+    }
+    public TowerData SaveData()
+    {
+        return new TowerData(this.id, this.currentHealth, this.currentTimeConstruct, this.currentTimeRespawn, this.isDestroyed, this.isInConstruct, this.isDamagebale);
+    }
+    private void OnEnable()
+    {
+        WorldManager.instance.AddTower(this);
+    }
+    private void OnDisable()
+    {
+        WorldManager.instance.RemoveTower(this);
     }
 }

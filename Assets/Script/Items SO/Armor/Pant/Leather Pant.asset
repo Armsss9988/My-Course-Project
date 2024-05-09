@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Leather Pant
   icon: {fileID: -1794844797, guid: 3440993928c90c54ab330f087f9910aa, type: 3}
+  description: Supple leather leggings, treated with oils to repel moisture and resist
+    wear. They offer a balance between protection and flexibility, allowing for unrestricted
+    movement during combat. Leather knee guards add further defense to vulnerable
+    joints.
   libraryAsset: {fileID: 7108339969198208228, guid: a0c7adddbc4d22c4f923c9d90945b484, type: 3}
   color: {r: 0.78431374, g: 0.7058824, b: 0.7058824, a: 1}
   healthBonus: 50

@@ -2,6 +2,12 @@ using UnityEngine;
 [System.Serializable]
 public class Tree : MonoBehaviour, IDamageable
 {
+    [SerializeField] public string id;
+    [ContextMenu("Generate id")]
+    private void GenerateGUID()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
     [SerializeField]
     float maxHealth = 100;
     [SerializeField]
@@ -11,6 +17,8 @@ public class Tree : MonoBehaviour, IDamageable
     float currentTimeRespawn;
     bool isDestroyed = false;
     public bool isDamagebale = true;
+
+    public string ID => id;
     void Awake()
     {
         currentHealth = maxHealth;
@@ -64,5 +72,23 @@ public class Tree : MonoBehaviour, IDamageable
     public void Force(Vector2 direction, int amount)
     {
         GetComponent<Rigidbody2D>().AddForce(direction * amount, ForceMode2D.Impulse);
+    }
+    public void LoadData(TreeData treeData)
+    {
+        this.currentHealth = treeData.currentHealth;
+        this.currentTimeRespawn = treeData.currentTimeRespawn;
+        ChangeHealth(0f);
+    }
+    public TreeData SaveData()
+    {
+        return new TreeData(this.id, this.currentHealth, this.currentTimeRespawn);
+    }
+    private void OnEnable()
+    {
+        WorldManager.instance.AddTree(this);
+    }
+    private void OnDisable()
+    {
+        WorldManager.instance.RemoveTree(this);
     }
 }

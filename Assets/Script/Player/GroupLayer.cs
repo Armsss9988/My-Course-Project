@@ -5,11 +5,13 @@ public class GroupLayer : MonoBehaviour
     SpriteRenderer parentSpriteRenderer;
     SpriteRenderer[] chillSpriteRenderers;
     Canvas[] canvas;
+
     void Awake()
     {
         parentSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         chillSpriteRenderers = this.GetComponentsInChildren<SpriteRenderer>();
         canvas = gameObject.GetComponentsInChildren<Canvas>();
+
     }
 
     void Start()
@@ -33,5 +35,6 @@ public class GroupLayer : MonoBehaviour
                 canvasRenderer.sortingOrder = this.parentSpriteRenderer.sortingOrder;
             }
         }
+
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class QuestUI : MonoBehaviour
 {
     public string questName;
+    public Quest.QuestStatus questStatus;
     public TMP_Text questNameText;
     public TMP_Text questDescriptionText;
     public TMP_Text questStatusText;
@@ -16,6 +17,7 @@ public class QuestUI : MonoBehaviour
     public void SetQuestInfo(Quest quest)
     {
         this.questName = quest.QuestBase.Name;
+        this.questStatus = quest.questStatus;
         questNameText.text = quest.QuestBase.Name;
         questDescriptionText.text = quest.QuestBase.Description;
         questStatusText.text = (quest.questStatus == Quest.QuestStatus.InProgress) ? "Activating" : "Completed";

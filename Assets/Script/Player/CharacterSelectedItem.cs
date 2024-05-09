@@ -38,12 +38,14 @@ public class CharacterSelectedItem : MonoBehaviour
             selectedItem = item;
             if (selectedItem.data is WeaponData weaponData)
             {
+                hand.transform.localPosition = new Vector3(0, -0.01f);
                 hand.GetComponent<SpriteLibrary>().spriteLibraryAsset = selectedItem.GetComponent<SpriteLibrary>().spriteLibraryAsset;
                 character.GetComponent<TargetTags>().damageableTypeTags = weaponData.attackTypeTags;
                 character.damage += weaponData.damage;
             }
             else
             {
+                hand.transform.localPosition = new Vector3(0, 0.6f);
                 character.GetComponent<TargetTags>().attackTypeTags = null;
                 hand.GetComponent<SpriteLibrary>().spriteLibraryAsset = null;
                 hand.GetComponent<SpriteRenderer>().sprite = selectedItem.GetComponent<SpriteRenderer>().sprite;

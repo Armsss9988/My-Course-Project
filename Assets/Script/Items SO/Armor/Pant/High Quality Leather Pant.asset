@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: High Quality Leather Pant
   icon: {fileID: -1693605043, guid: 6e62a353922fc0e4ebe142e7d08bf0e3, type: 3}
+  description: Masterfully crafted leather leggings, treated with special oils and
+    imbued with protective enchantments. The leather is incredibly light yet remarkably
+    durable, providing excellent freedom of movement while offering superior defense
+    against both bladed and piercing attacks. Enchanted greaves seamlessly integrate
+    with the leggings, further enhancing leg protection.
   libraryAsset: {fileID: 7108339969198208228, guid: a0c7adddbc4d22c4f923c9d90945b484, type: 3}
   color: {r: 0.078431375, g: 0.23529412, b: 0.11764706, a: 1}
   healthBonus: 100

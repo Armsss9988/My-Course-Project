@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Wood
   icon: {fileID: 610139531, guid: 0b8d9cd2ddf35744d9e0fe34a6366f4b, type: 3}
+  description: A sturdy log, hewn from the towering trees of the Whispering Woods.
+    Its rough bark and sturdy heart hold the promise of crafting tools, weapons,
+    and shelter.

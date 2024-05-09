@@ -218,7 +218,6 @@ MonoBehaviour:
   isInvincible: 0
   target: {fileID: 0}
   targetColliderOffset: 0.5
-  uniqueID: 
   startPoint: {x: 0, y: 0, z: 0}
 --- !u!70 &7804824935398100307
 CapsuleCollider2D:
@@ -769,7 +768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142718594538976581, guid: b0df11f2ace780a418ecc25979140e15, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.0532618
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8142718594538976581, guid: b0df11f2ace780a418ecc25979140e15, type: 3}
       propertyPath: m_LocalRotation.w

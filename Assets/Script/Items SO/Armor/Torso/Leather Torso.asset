@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Leather Torso
   icon: {fileID: -995308212, guid: 836eb047b0bb96445918f03318b80031, type: 3}
+  description: A sturdy leather jerkin, crafted from the hide of a boar or bear.
+    Its thickness provides moderate protection against slashes and blows, but offers
+    limited resistance to piercing attacks. Metal rivets reinforce the shoulders
+    and chest, offering additional protection for vital areas.
   libraryAsset: {fileID: 7108339969198208228, guid: 5d1d1282e6749654197857202b6677f1, type: 3}
   color: {r: 0.78431374, g: 0.7058824, b: 0.7058824, a: 1}
   healthBonus: 50

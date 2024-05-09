@@ -5,10 +5,11 @@ public class InteractionManager : MonoBehaviour
 {
     AudioSource audioSource;
     public AudioClip pickupSound;
+    public AudioClip healSound;
     public static event Action OnInteraction;
 
-
-    public static event Action OnKill;
+    public static event Action OnHealing;
+    public static event Action<string> OnPlayerKill;
 
 
     public static event Action<Item> OnItemCollected;
@@ -37,13 +38,18 @@ public class InteractionManager : MonoBehaviour
     {
         OnInteraction?.Invoke();
     }
-    public void Enemykilled()
+    public void Enemykilled(string actorName)
     {
-        OnKill?.Invoke();
+        OnPlayerKill?.Invoke(actorName);
     }
     public void ItemCollected(Item item)
     {
         audioSource.PlayOneShot(pickupSound);
         OnItemCollected?.Invoke(item);
+    }
+    public void PlayerHeal()
+    {
+        audioSource.PlayOneShot(healSound);
+        OnHealing?.Invoke();
     }
 }

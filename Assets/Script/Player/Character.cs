@@ -30,6 +30,7 @@ public class Character : MonoBehaviour, IDamageable
     bool isDamagebale = true;
     Vector3 startPoint;
 
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -173,6 +174,18 @@ public class Character : MonoBehaviour, IDamageable
         inventory.Remove(indexSlotArrow, num);
         Toolbar_UI.instance.Refresh();
         Inventory_UI.instance.Refresh();
+    }
+    public int GetItemCount(Item item)
+    {
+        int itemQuantity = 0;
+        foreach (Inventory.Slot slot in inventory.slots)
+        {
+            if (slot.itemName == item.data.itemName)
+            {
+                itemQuantity += slot.count;
+            }
+        }
+        return itemQuantity;
     }
 
     public void SourceAttackSound(AudioClip sourceAttackSound)

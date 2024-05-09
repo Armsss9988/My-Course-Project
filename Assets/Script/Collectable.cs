@@ -34,6 +34,25 @@ public class Collectable : MonoBehaviour
             }
         }
     }
+    public CollectableData SaveData()
+    {
+        return new CollectableData(this.GetComponent<Item>().data.itemName, this.transform.position, this.isCollectable, this.isHasDelaytime, this.delayTimer);
+    }
+    public void LoadData(CollectableData collectableData)
+    {
+        this.gameObject.transform.position = collectableData.position;
+        this.isCollectable = collectableData.isCollectable;
+        this.isHasDelaytime = collectableData.isHasDelaytime;
+        this.delayTimer = collectableData.delayTimer;
+    }
+    private void OnEnable()
+    {
+        WorldManager.instance.AddItem(this.GetComponent<Item>());
+    }
+    private void OnDisable()
+    {
+        WorldManager.instance.RemoveItem(this.GetComponent<Item>());
+    }
 
 }
 

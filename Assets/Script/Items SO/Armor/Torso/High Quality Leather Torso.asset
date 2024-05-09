@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: High Quality Leather Torso
   icon: {fileID: 617689383, guid: e3a3e02758d4e6d4fbf1240674015ba3, type: 3}
+  description: A masterfully crafted leather breastplate, imbued with subtle magical
+    enchantments to enhance its defensive capabilities. The leather is of the highest
+    quality, incredibly tough and flexible. Runes etched into the metal plates further
+    bolster the enchantments, offering exceptional protection against all forms of
+    attack.
   libraryAsset: {fileID: 7108339969198208228, guid: 5d1d1282e6749654197857202b6677f1, type: 3}
   color: {r: 0.078431375, g: 0.23529412, b: 0.11764706, a: 1}
   healthBonus: 120

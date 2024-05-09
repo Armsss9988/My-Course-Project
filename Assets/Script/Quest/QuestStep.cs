@@ -23,10 +23,14 @@ public abstract class QuestStep : MonoBehaviour
 
 
 
-    public void InitializeQuestStep(Quest quest, int stepIndex)
+    public void InitializeQuestStep(Quest quest, int stepIndex, string questStepState)
     {
         this.quest = quest;
         this.stepIndex = stepIndex;
+        if (questStepState != null && questStepState != "")
+        {
+            SetQuestStepState(questStepState);
+        }
     }
 
     protected void FinishQuestStep()

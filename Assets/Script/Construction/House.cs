@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class House : MonoBehaviour, IDamageable
 {
+    [SerializeField] public string id;
+    [ContextMenu("Generate id")]
+    private void GenerateGUID()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
     [SerializeField]
     float maxHealth = 100;
     [SerializeField]
@@ -13,6 +19,8 @@ public class House : MonoBehaviour, IDamageable
     Spawner[] spawners;
     GameObject burningEffect;
     bool isDamagebale = true;
+
+    public string ID => id;
     void Awake()
     {
         currentHealth = maxHealth;
@@ -109,5 +117,27 @@ public class House : MonoBehaviour, IDamageable
                 spawner.isSpawning = true;
             }
         }
+    }
+
+    public void LoadData(HouseData houseData)
+    {
+        this.currentHealth = houseData.currentHealth;
+        this.currentTimeRespawn = houseData.currentTimeRespawn;
+        this.currentTimeRespawn = houseData.currentTimeRespawn;
+        this.isDestroyed = houseData.isDestroyed;
+        this.isDamagebale = houseData.isDamagebale;
+        ChangeHealth(0f);
+    }
+    public HouseData SaveData()
+    {
+        return new HouseData(this.id, this.currentHealth, this.currentTimeRespawn, this.isDestroyed, this.isDamagebale);
+    }
+    private void OnEnable()
+    {
+        WorldManager.instance.AddHouse(this);
+    }
+    private void OnDisable()
+    {
+        WorldManager.instance.RemoveHouse(this);
     }
 }

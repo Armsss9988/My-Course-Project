@@ -31,6 +31,13 @@ public class HitCollider : MonoBehaviour
             {
                 targetAtackable.SetTarget(atttacker);
             }
+            if (collision.TryGetComponent<Enemy>(out var enemy))
+            {
+                if (enemy.currentHealth <= 0f)
+                {
+                    InteractionManager.instance.Enemykilled(enemy.GetComponent<Actor>().ActorName);
+                }
+            }
         }
 
     }

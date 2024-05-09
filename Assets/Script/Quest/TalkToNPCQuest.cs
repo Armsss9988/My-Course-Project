@@ -8,7 +8,8 @@ public class TalkToNPCQuest : QuestStep
     private int required = 5;
     protected override void SetQuestStepState(string state)
     {
-        throw new System.NotImplementedException();
+        this.current = System.Int32.Parse(state);
+        UpdateState();
     }
 
     private void Start()

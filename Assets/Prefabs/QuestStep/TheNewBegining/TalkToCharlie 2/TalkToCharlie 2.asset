@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfbd8926e4477046bb8d9445861b0e5, type: 3}
+  m_Name: TalkToCharlie 2
+  m_EditorClassIdentifier: 
+  question: 
+  dialogue:
+  - Oh sorry... I remember, it was true that Sweider came here yesterday. Haha, let
+    me fix the sword for you.
+  - .........
+  - ... Here you go, this world is a bit difficult with the native creatures, this
+    sword will help you.
+  Choices: []

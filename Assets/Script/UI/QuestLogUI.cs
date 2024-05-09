@@ -55,8 +55,15 @@ public class QuestLogUI : MonoBehaviour
                 {
                     if (questUI.questName == currentQuest.questName)
                     {
-                        isAlready = true;
-                        break;
+                        if (currentQuest.questStatus == quest.questStatus)
+                        {
+                            isAlready = true;
+                            break;
+                        }
+                        else
+                        {
+                            Destroy(currentQuest);
+                        }
                     }
                 }
                 if (!isAlready)
@@ -77,8 +84,15 @@ public class QuestLogUI : MonoBehaviour
                 {
                     if (questUI.questName == currentQuest.questName)
                     {
-                        isAlready = true;
-                        break;
+                        if (currentQuest.questStatus == quest.questStatus)
+                        {
+                            isAlready = true;
+                            break;
+                        }
+                        else
+                        {
+                            Destroy(currentQuest);
+                        }
                     }
                 }
                 if (!isAlready)

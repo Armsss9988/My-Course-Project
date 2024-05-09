@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Refined Leather Shoes
   icon: {fileID: 198308716, guid: 2b75229d10880494d9bf3c47f4493220, type: 3}
+  description: Heavy leather boots with reinforced soles and steel toe caps. These
+    boots offer excellent protection for the feet and lower legs, allowing the wearer
+    to take a beating without significant injury. Leather straps provide support
+    for the ankles.
   libraryAsset: {fileID: 7108339969198208228, guid: ed5848d2a7aafb94f8669d7f2d494ce2, type: 3}
   color: {r: 0.3137255, g: 0.15686275, b: 0, a: 1}
   healthBonus: 40

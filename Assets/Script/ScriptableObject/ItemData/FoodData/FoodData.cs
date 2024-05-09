@@ -12,6 +12,6 @@ public class FoodData : ItemData
 
     public override void Use(Character player)
     {
-        throw new System.NotImplementedException();
+        player.ChangeHealth(healingAmount);
     }
 }

@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Coin
   icon: {fileID: 21300000, guid: fb2dd4e1337814744a9f60e323de2c1f, type: 3}
+  description: A gleaming coin, minted from the purest gold in the dwarven kingdom
+    of Understone. Its value is recognized throughout the land, a symbol of wealth
+    and a means of exchange.

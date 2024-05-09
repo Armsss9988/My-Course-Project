@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: BowLight
   icon: {fileID: 1339832992, guid: d607c81d3b01f434eba92f12dbe2c262, type: 3}
+  description: A simple yet effective bow, crafted from the supple branches of the
+    Willow Tree. Its taut string and well-shaped grip make it a reliable companion
+    for hunters and rangers.
   damage: 12
   attackSpeed: 1
   attackSound: {fileID: 8300000, guid: 636aaddb505ba1248ac890a914e63b96, type: 3}

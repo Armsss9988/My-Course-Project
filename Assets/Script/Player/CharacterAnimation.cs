@@ -16,7 +16,9 @@ public class CharacterAnimation : MonoBehaviour
     }
     public Vector3 LookDirection()
     {
-        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var mousePos = Input.mousePosition;
+        mousePos.z = 10;
+        return Camera.main.ScreenToWorldPoint(mousePos);
     }
     // Update is called once per frame
     public void Slash()
@@ -67,7 +69,10 @@ public class CharacterAnimation : MonoBehaviour
             animator.SetFloat("Fight Y", fightDirection.y);
         }
         float animDirection = Mathf.Abs(fightDirection.y / fightDirection.x);
-        hand.transform.localPosition = new Vector3(0, (animDirection >= 1 && fightDirection.y > 0) ? 0.002f : -0.002f);
+        if (GetComponent<CharacterSelectedItem>().GetSelectedItem() != null && GetComponent<CharacterSelectedItem>().GetSelectedItem().data is WeaponData)
+        {
+            hand.transform.localPosition = new Vector3(0, (animDirection >= 1 && fightDirection.y > 0) ? 0.002f : -0.002f);
+        }
     }
     public void MovementAnimation(float horizontal, float vertical)
     {
@@ -90,7 +95,10 @@ public class CharacterAnimation : MonoBehaviour
             {
                 lookDirection.Set(move.x, move.y);
                 lookDirection.Normalize();
-                hand.transform.localPosition = new Vector3(0, (lookDirection.y >= 0) ? 0.002f : -0.002f);
+                if (GetComponent<CharacterSelectedItem>().GetSelectedItem() != null && GetComponent<CharacterSelectedItem>().GetSelectedItem().data is WeaponData)
+                {
+                    hand.transform.localPosition = new Vector3(0, (lookDirection.y >= 0) ? 0.002f : -0.002f);
+                }
 
                 foreach (var item in animators)
                 {

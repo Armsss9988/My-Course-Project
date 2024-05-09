@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Normal Sword
   icon: {fileID: 21300000, guid: 8c94bd3b776155f4c812f544e3d42127, type: 3}
+  description: A straightforward sword, forged from the resilient steel of the Ironforge
+    smithy. Its sharp edge and balanced weight make it a versatile weapon for both
+    close-quarters combat and defense.
   damage: 10
   attackSpeed: 1
   attackSound: {fileID: 8300000, guid: a0bf1c1a062717b488d294dedd74f793, type: 3}

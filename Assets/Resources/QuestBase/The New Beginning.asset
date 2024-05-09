@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 955f43a7fdfb61a41a8dbbb0933feebd, type: 3}
-  m_Name: New Beginning
+  m_Name: The New Beginning
   m_EditorClassIdentifier: 
   actor: {fileID: -4849058311196070564, guid: 339d5f3d9ed79274aad93f13e978cd4a, type: 3}
-  name: The New Beginning
+  questName: The New Beginning
   description: Let start new life in this planet
   startDialogue: {fileID: 11400000, guid: aca83af08caf9ec4bb1225e6d36693db, type: 2}
   inProgressDialogue: {fileID: 11400000, guid: f9e319687e0cb0841b4298b675f8d0be, type: 2}
   completeDialogue: {fileID: 11400000, guid: b4f6e223652488d489203351ea0ee523, type: 2}
   questSteps:
-  - {fileID: 7749737755202534781, guid: c790d22befd5819489109cff50607a0b, type: 3}
-  - {fileID: 4957982862265387064, guid: e33ff26e53a0457479c99800d5c545fa, type: 3}
+  - {fileID: 4957982862265387064, guid: 7c3460f355775f5408ab9b8fbb95603b, type: 3}
+  - {fileID: 4957982862265387064, guid: eaa29c633e96ac84f86825b423eafa9f, type: 3}
+  - {fileID: 4957982862265387064, guid: dfde9ff9778b86c4bb7deecb7745bb11, type: 3}
   requirementQuests: []
   requirementItems: []
+  rewardItem: {fileID: 5335723789841877031, guid: 57a2ef7012536db4b8fd5f52ee334033, type: 3}

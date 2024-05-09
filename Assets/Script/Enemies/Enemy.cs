@@ -107,11 +107,6 @@ public class Enemy : MonoBehaviour, IDamageable, IAttackable
         }
     }
 
-
-    public void OnDestroy()
-    {
-        InteractionManager.instance.Enemykilled();
-    }
     void OnEnable()
     {
         WorldManager.instance.AddEnemy(this);

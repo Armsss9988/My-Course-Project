@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CharacterSound : MonoBehaviour
 {
-    public AudioClip dead, attack, attackHit, getHit, running;
+    public AudioClip dead, attack, attackHit, getHit, running, healing;
     AudioSource audioSource;
     void Start()
     {
@@ -37,5 +37,9 @@ public class CharacterSound : MonoBehaviour
     public void MovingSound()
     {
         PlaySound(running);
+    }
+    public void HealingSound()
+    {
+        PlaySound(healing);
     }
 }

@@ -20,15 +20,6 @@ public class Quest
         this.currentQuestStepIndex = currentQuestStepIndex;
         this.questStepStates = questStepStates;
 
-        // if the quest step states and prefabs are different lengths,
-        // something has changed during development and the saved data is out of sync.
-        if (this.questStepStates.Length != this.questBase.QuestSteps.Count)
-        {
-            Debug.LogWarning("Quest Step Prefabs and Quest Step States are "
-                + "of different lengths. This indicates something changed "
-                + "with the QuestInfo and the saved data is now out of sync. "
-                + "Reset your data - as this might cause issues. Quest: " + questBase.Name);
-        }
     }
     public Quest(QuestBase questBase)
     {
@@ -42,7 +33,16 @@ public class Quest
         }
     }
 
-
+    public QuestData GetQuestData()
+    {
+        return new QuestData(questBase.Name, questStatus, currentQuestStepIndex, questStepStates);
+    }
+    public void SetQuestData(QuestData questData)
+    {
+        this.questStatus = questData.state;
+        this.currentQuestStepIndex = questData.questStepIndex;
+        this.questStepStates = questData.questStepStates;
+    }
     public void MoveToNextStep()
     {
         currentQuestStepIndex++;
@@ -60,7 +60,7 @@ public class Quest
         {
             QuestStep questStep = GameObject.Instantiate(questBase.QuestSteps[currentQuestStepIndex], parentTransform)
                 .GetComponent<QuestStep>();
-            questStep.InitializeQuestStep(this, currentQuestStepIndex);
+            questStep.InitializeQuestStep(this, currentQuestStepIndex, questStepStates[currentQuestStepIndex].state);
         }
     }
 

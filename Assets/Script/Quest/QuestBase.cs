@@ -4,7 +4,7 @@ using UnityEngine;
 public class QuestBase : ScriptableObject
 {
     [SerializeField] Actor actor;
-    [SerializeField] string name;
+    [SerializeField] string questName;
     [SerializeField] string description;
     [SerializeField] DialogueAsset startDialogue;
     [SerializeField] DialogueAsset inProgressDialogue;
@@ -12,8 +12,9 @@ public class QuestBase : ScriptableObject
     [SerializeField] List<QuestStep> questSteps;
     [SerializeField] List<QuestBase> requirementQuests;
     [SerializeField] List<RequirementItem> requirementItems;
+    [SerializeField] Item rewardItem;
 
-    public string Name => name;
+    public string Name => questName;
 
     public Actor Actor => actor;
     public string Description => description;
@@ -25,4 +26,5 @@ public class QuestBase : ScriptableObject
     public List<QuestBase> RequirementQuestBases => requirementQuests;
     public List<RequirementItem> RequirementItems => requirementItems;
 
+    public Item RewardItem => rewardItem;
 }

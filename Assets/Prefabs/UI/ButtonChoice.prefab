@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7421015967382222836}
   - component: {fileID: 2684344574020220542}
   - component: {fileID: 2293253775125723240}
+  - component: {fileID: 7031231223218596150}
   m_Layer: 5
   m_Name: ButtonChoice
   m_TagString: Untagged
@@ -38,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 241.94531, y: 130.409}
+  m_SizeDelta: {x: 376, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3782858434287735885
 CanvasRenderer:
@@ -61,15 +62,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4056604, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8626847, g: 0.8867924, b: 0.29615515, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 44b31f0ae1cb0ac4fb6d07dd5fca1368, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 1997322825, guid: d3010576be9afc34995ad783f7bb5af2, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -90,8 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee354dffa395d6245ae8013904a023a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: 
+  questName: The New Beginning
   questionText: {fileID: 6864622934604446552}
+  state: 0
+  dialogueAsset: {fileID: 11400000, guid: aca83af08caf9ec4bb1225e6d36693db, type: 2}
 --- !u!114 &2293253775125723240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +108,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+--- !u!114 &7031231223218596150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2196242093850977282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 10, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7722633674550651631
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,10 +155,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6284033824044811793}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.936, y: -2.251}
-  m_SizeDelta: {x: -21.871, y: -4.502}
+  m_AnchorMin: {x: 0.07965158, y: 0.112}
+  m_AnchorMax: {x: 0.814, y: 1}
+  m_AnchoredPosition: {x: -1.206192, y: -0.6991997}
+  m_SizeDelta: {x: 1.6819992, y: 1.3983002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1794197293833248207
 CanvasRenderer:
@@ -179,8 +197,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278790407
+  m_fontColor: {r: 0.02632609, g: 0.16037738, b: 0.0370692, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -197,14 +215,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

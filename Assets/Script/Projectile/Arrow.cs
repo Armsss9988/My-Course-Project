@@ -100,7 +100,7 @@ public class Arrow : MonoBehaviour
     IEnumerator DelayedTriggerCoroutine()
     {
         yield return new WaitForSeconds(0.1f);
-        GetComponent<Collider2D>().enabled = true; // Kích hoạt collider
+        GetComponent<Collider2D>().enabled = true;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -125,6 +125,16 @@ public class Arrow : MonoBehaviour
                             targetAttackable.SetTarget(source);
                         }
 
+                    }
+                    if (source.TryGetComponent<Character>(out var character))
+                    {
+                        if (collision.TryGetComponent<Enemy>(out var enemy))
+                        {
+                            if (enemy.currentHealth <= 0f)
+                            {
+                                InteractionManager.instance.Enemykilled(enemy.GetComponent<Actor>().ActorName);
+                            }
+                        }
                     }
                 }
             }

@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Leather Shoes
   icon: {fileID: 295722647, guid: bb6bff923a6b13a4db7b8244c7da6be3, type: 3}
+  description: ' Sturdy leather boots with thick soles, designed for both protection
+    and agility. Steel toe caps shield the feet from crushing blows, while the high
+    tops provide some ankle support.'
   libraryAsset: {fileID: 7108339969198208228, guid: ed5848d2a7aafb94f8669d7f2d494ce2, type: 3}
   color: {r: 0.78431374, g: 0.7058824, b: 0.7058824, a: 1}
   healthBonus: 20

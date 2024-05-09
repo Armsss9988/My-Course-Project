@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 'High Quality Leather Shoes '
   icon: {fileID: -2138241550, guid: a4dc881ca9f1926419c8355d97b2dafd, type: 3}
+  description: Masterfully crafted leather boots, imbued with enchantments for agility
+    and protection. The leather is of the highest quality, offering flexibility and
+    comfort. The soles are specially treated to provide exceptional grip on various
+    terrains. Runes etched into the metal toe caps and greaves offer additional protection
+    for the feet and lower legs.
   libraryAsset: {fileID: 7108339969198208228, guid: ed5848d2a7aafb94f8669d7f2d494ce2, type: 3}
   color: {r: 0.078431375, g: 0.23529412, b: 0.11764706, a: 1}
   healthBonus: 60

@@ -42,6 +42,15 @@ public class Spawner : MonoBehaviour
             }
         }
     }
+    public void LoadData(SpawnerData spawnerData)
+    {
+        this.currentEnemies = spawnerData.currentEnemies;
+        this.currentSpawnTimer = spawnerData.currentSpawnTimer;
+    }
+    public SpawnerData SaveData()
+    {
+        return new SpawnerData(this.id, this.currentSpawnTimer, this.currentEnemies);
+    }
 
     void SpawnEnemy()
     {

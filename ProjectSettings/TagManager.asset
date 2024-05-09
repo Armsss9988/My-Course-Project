@@ -61,3 +61,6 @@ TagManager:
   - name: Floor 3
     uniqueID: 3769214375
     locked: 0
+  - name: Effect
+    uniqueID: 1340548883
+    locked: 0

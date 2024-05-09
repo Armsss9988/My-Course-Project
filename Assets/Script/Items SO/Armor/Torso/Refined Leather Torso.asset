@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Refined Leather Torso
   icon: {fileID: -1031604973, guid: 593e19f92d25d704db92be284db40cc6, type: 3}
+  description: A reinforced leather cuirass, treated with a special oil that hardens
+    the leather and improves its resistance to piercing attacks. Additional metal
+    plates are riveted onto the chest and shoulders, offering significant protection
+    from bladed weapons.
   libraryAsset: {fileID: 7108339969198208228, guid: 5d1d1282e6749654197857202b6677f1, type: 3}
   color: {r: 0.3137255, g: 0.15686275, b: 0, a: 1}
   healthBonus: 90

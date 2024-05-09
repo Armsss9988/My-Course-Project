@@ -189,7 +189,6 @@ MonoBehaviour:
   isInvincible: 0
   target: {fileID: 0}
   targetColliderOffset: 0.5
-  uniqueID: 
   startPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &2485886265072421289
 MonoBehaviour:
@@ -549,10 +548,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5417451273861534725}
     m_Modifications:
-    - target: {fileID: 5179479197770202241, guid: b0df11f2ace780a418ecc25979140e15, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7175460996478618594, guid: b0df11f2ace780a418ecc25979140e15, type: 3}
       propertyPath: m_Name
       value: EnemyUI
@@ -599,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142718594538976581, guid: b0df11f2ace780a418ecc25979140e15, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.0532618
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8142718594538976581, guid: b0df11f2ace780a418ecc25979140e15, type: 3}
       propertyPath: m_LocalRotation.w

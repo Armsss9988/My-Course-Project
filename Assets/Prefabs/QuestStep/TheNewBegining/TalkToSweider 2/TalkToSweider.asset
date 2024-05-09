@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfbd8926e4477046bb8d9445861b0e5, type: 3}
+  m_Name: TalkToSweider
+  m_EditorClassIdentifier: 
+  question: 
+  dialogue:
+  - I know he will help you. Okay, wait until I get some wood for you.
+  - But wait... Just yesterday I left some wood behind his house. Maybe he doesn't
+    know, you can just remind him about that pile of wood.
+  Choices: []

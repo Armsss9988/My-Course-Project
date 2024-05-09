@@ -153,6 +153,10 @@ public class QuestManager : MonoBehaviour
     {
         ChangeQuestStatus(quest, QuestStatus.Completed);
         OnQuestFinished?.Invoke(quest);
+        if (quest.QuestBase.RewardItem != null)
+        {
+            character.inventory.Add(quest.QuestBase.RewardItem);
+        }
         QuestNotification.instance.ToggleNotification(quest.QuestBase.Name, "Finish quest " + quest.QuestBase.Name);
 
     }
@@ -163,6 +167,64 @@ public class QuestManager : MonoBehaviour
         quest.StoreQuestStepState(questStepState, stepIndex);
         OnQuestStepStateChange?.Invoke(quest);
 
+    }
+    private void SaveQuest()
+    {
+        try
+        {
+            List<QuestData> questDatas = new();
+            foreach (Quest quest in listQuests)
+            {
+                QuestData questData = quest.GetQuestData();
+                questDatas.Add(questData);
+            }
+
+            SaveData saveData = GameManager.instance.saveData;
+            saveData.questData = questDatas;
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError(e);
+        }
+    }
+
+    private void LoadQuest()
+    {
+        try
+        {
+            List<Quest> loaddedQuests = new();
+            SaveData saveData = GameManager.instance.saveData;
+            foreach (QuestData questData in saveData.questData)
+            {
+                Debug.Log(questData.questName);
+                Quest loadQuest = FindQuestByName(questData.questName);
+
+                loadQuest.SetQuestData(questData);
+                loaddedQuests.Add(loadQuest);
+            }
+            listQuests = loaddedQuests;
+            foreach (Quest quest in listQuests)
+            {
+                if (quest.questStatus == Quest.QuestStatus.InProgress)
+                {
+                    quest.InstantiateCurrentQuestStep(CurrentActiveStepContent.transform);
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e);
+        }
+    }
+    private void OnEnable()
+    {
+        GameManager.OnSaveGame += SaveQuest;
+        GameManager.OnLoadGame += LoadQuest;
+    }
+    private void OnDisable()
+    {
+        GameManager.OnLoadGame -= LoadQuest;
+        GameManager.OnSaveGame -= SaveQuest;
     }
 
 }
