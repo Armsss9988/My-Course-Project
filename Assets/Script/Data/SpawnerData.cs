@@ -1,6 +1,4 @@
-using UnityEngine;
-
-public class SpawnerData : MonoBehaviour
+public class SpawnerData
 {
     public string SpawnerID;
     public float currentSpawnTimer;

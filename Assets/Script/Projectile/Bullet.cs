@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
         if (((Vector2)this.transform.position - fistPos).magnitude >= distance)
         {
             rb2D.angularVelocity = 0f;
-            this.rb2D.velocity = Vector2.zero;
+            this.rb2D.linearVelocity = Vector2.zero;
         }
     }
     public void SetSource(GameObject gameObject)
@@ -85,7 +85,7 @@ public class Bullet : MonoBehaviour
             if (this.gameObject.IsTargetThisObject(collision.gameObject))
             {
                 DesTroyBullet();
-                if (collision.TryGetComponent<IAttackable>(out var targetAttackable))
+                if (collision.gameObject.TryGetComponent<IAttackable>(out var targetAttackable))
                 {
                     if (source != null)
                     {

@@ -181,8 +181,8 @@ MonoBehaviour:
   attackSpeed: 4
   attackSound: {fileID: 8300000, guid: 28a394032c54836468d288cac6da741c, type: 3}
   weaponAttackSound: {fileID: 8300000, guid: 636aaddb505ba1248ac890a914e63b96, type: 3}
-  weaponHitSound: {fileID: 8300000, guid: 5504e3d68fe03a946a302e7482e37fa3, type: 3}
-  beingHitSound: {fileID: 0}
+  weaponHitSound: {fileID: 8300000, guid: 91bce8af1ed1c74449483949f126d810, type: 3}
+  beingHitSound: {fileID: 8300000, guid: f72a761a5c5857a44ad4d3983552d438, type: 3}
   deadSound: {fileID: 8300000, guid: c4b2138709e6d094286470348a0cb063, type: 3}
   bullet: {fileID: 4806182169897021749, guid: ee49a795ecd762348a5c39889f4a1e58, type: 3}
   timeInvincible: 1

@@ -108,9 +108,17 @@ public class GameManager : MonoBehaviour
     public async Task LoadGame(string filename)
     {
         LoadingScreenUI.instance.OpenLoading();
+        try
+        {
+            await CloudSaveManager.instance.LoadPlayerSave(filename);
+            StartCoroutine(LoadingGame(filename));
+        }
+        catch (Exception e)
+        {
+            LoadingScreenUI.instance.CloseLoading();
 
-        await CloudSaveManager.instance.LoadPlayerSave(filename);
-        StartCoroutine(LoadingGame(filename));
+        }
+
     }
 
     IEnumerator LoadingGame(string filename)

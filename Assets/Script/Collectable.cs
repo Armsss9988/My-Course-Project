@@ -4,6 +4,7 @@ public class Collectable : MonoBehaviour
 {
     public bool isCollectable = false;
     public bool isHasDelaytime = false;
+    public float timeDisappear = 100f;
     public float timeDelay = 1f;
     float delayTimer;
 
@@ -16,6 +17,11 @@ public class Collectable : MonoBehaviour
         if (delayTimer < 0f)
         {
             isHasDelaytime = false;
+        }
+        timeDisappear -= Time.deltaTime;
+        if (timeDisappear < 0f)
+        {
+            Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

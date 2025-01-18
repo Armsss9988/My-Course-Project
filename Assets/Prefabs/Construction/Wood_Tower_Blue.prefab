@@ -205,10 +205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecfea47c13daaf0438305a1404d8ee13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   maxHealth: 100
   currentHealth: 0
-  timeConstruct: 20
-  timeRespawn: 10
+  timeConstruct: 120
+  timeRespawn: 50
 --- !u!114 &-4087475523126521789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +590,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2666563648508154577, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_Name
-      value: Spawner (1)
+      value: Spawner Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 2666563648508154577, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_Layer
@@ -733,7 +734,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2666563648508154577, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_Name
-      value: Spawner
+      value: Spawner Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 2666563648508154577, guid: 25c6acb736933d5489c1a1691d1f480b, type: 3}
       propertyPath: m_Layer

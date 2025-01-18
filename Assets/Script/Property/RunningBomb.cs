@@ -3,7 +3,7 @@ using UnityEngine;
 public class RunningBomb : MonoBehaviour
 {
     Animator animator;
-    EnemyRangeDetect enemyRangeDetect;
+    Detector enemyRangeDetect;
     SpriteRenderer spriteRenderer;
     public GameObject explode;
 
@@ -11,18 +11,18 @@ public class RunningBomb : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        enemyRangeDetect = GetComponent<EnemyRangeDetect>();
+        enemyRangeDetect = GetComponent<Detector>();
     }
     private void Update()
     {
-        if (enemyRangeDetect.IsInDetectRange())
-        {
-            animator.SetBool("Detect", true);
-        }
-        else
-        {
-            animator.SetBool("Detect", false);
-        }
+        /* if (enemyRangeDetect.IsInDetectRange())
+         {
+             animator.SetBool("Detect", true);
+         }
+         else
+         {
+             animator.SetBool("Detect", false);
+         }*/
 
     }
     private void OnCollisionEnter2D(Collision2D collision)

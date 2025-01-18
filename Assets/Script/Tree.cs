@@ -13,6 +13,7 @@ public class Tree : MonoBehaviour, IDamageable
     [SerializeField]
     float currentHealth;
     Animator animator;
+    [SerializeField]
     float timeRespawn = 5f;
     float currentTimeRespawn;
     bool isDestroyed = false;
@@ -35,7 +36,6 @@ public class Tree : MonoBehaviour, IDamageable
     }
     public void ChangeHealth(float amount)
     {
-        Debug.Log("Tree change health: " + amount);
         if (amount < 0)
         {
             animator.SetTrigger("Being Hit");

@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 2368279956955626002}
   - component: {fileID: -5942223409989430121}
   - component: {fileID: -1231109896487017750}
+  - component: {fileID: 3921052567977016190}
   m_Layer: 6
   m_Name: TNT_Blue
   m_TagString: Enemy
@@ -69,6 +70,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -136,7 +140,7 @@ MonoBehaviour:
   m_SpriteHash: 81706276
 --- !u!95 &7255291472455664280
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -150,6 +154,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -157,7 +162,7 @@ Animator:
   m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &5603862657531216007
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -168,8 +173,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 30
-  m_LinearDrag: 10
-  m_AngularDrag: 1
+  m_LinearDamping: 10
+  m_AngularDamping: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -206,10 +211,11 @@ MonoBehaviour:
   speed: 0.5
   attackSpeed: 3
   attackSound: {fileID: 8300000, guid: 5285f5ea5e313b147b91c508d925650c, type: 3}
-  weaponAttackSound: {fileID: 0}
-  weaponHitSound: {fileID: 0}
+  weaponAttackSound: {fileID: 8300000, guid: 28a394032c54836468d288cac6da741c, type: 3}
+  weaponHitSound: {fileID: 8300000, guid: 91bce8af1ed1c74449483949f126d810, type: 3}
   beingHitSound: {fileID: 8300000, guid: 4ebc70afb8ec71348b3b8002a3f978eb, type: 3}
   deadSound: {fileID: 8300000, guid: 71e2095b5a76ab846b979e95a28535d8, type: 3}
+  runningSound: {fileID: 8300000, guid: 27cf06c376642f3498dfa0b25a902991, type: 3}
   bullet: {fileID: 5725479537759045491, guid: 21fb7ba408e3ce447b7b8f58c267a1fd, type: 3}
   timeInvincible: 1
   isInvincible: 0
@@ -241,6 +247,7 @@ CapsuleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5167333180413852748}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -264,7 +271,8 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: -0.0074433093, y: 0.0039199977}
   m_Size: {x: 0.20344561, y: 0.09905855}
   m_Direction: 1
@@ -279,6 +287,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eb25501d3f4760944b36efafc13db565, type: 3}
+  m_Resource: {fileID: 8300000, guid: eb25501d3f4760944b36efafc13db565, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -438,6 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8a591879b586742973d07cdbba58ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackAnimator: Attack
 --- !u!114 &-5216324486370664555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +538,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
+--- !u!114 &3921052567977016190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5167333180413852748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63fdade46d92e1c4c89d51c167c59b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateListData: []
+  target: {fileID: 0}
+  curState: {fileID: 0}
+  defaulState: 0
+  animator: {fileID: 0}
 --- !u!1001 &5112352749738869075
 PrefabInstance:
   m_ObjectHideFlags: 0

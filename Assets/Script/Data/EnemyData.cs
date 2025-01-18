@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 [Serializable]
-public class EnemyData : MonoBehaviour
+public class EnemyData
 {
     public string id;
     public string actorName;

@@ -11,7 +11,7 @@ public class SaveUI : MonoBehaviour
     [SerializeField] GameObject saveElementPrefab;
     [SerializeField] GameObject saveContent;
 
-    private async void Awake()
+    private void Awake()
     {
 
         if (instance != null && instance != this)

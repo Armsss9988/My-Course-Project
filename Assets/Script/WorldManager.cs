@@ -14,7 +14,7 @@ public class WorldManager : MonoBehaviour
 
 
 
-    public List<Enemy> enemyData;
+    public List<NPCData> enemyData;
     public List<Item> itemData;
 
 
@@ -107,11 +107,11 @@ public class WorldManager : MonoBehaviour
             try
             {
                 GameObject ene = FindEnemyPrefabByActorName(enemy.actorName);
-                if (ene != null && ene.TryGetComponent<Spawned>(out var spawned))
+                if (ene != null && ene.TryGetComponent<Spawned>(out var spawned) && !ene.TryGetComponent<NPCDialog>(out var npc))
                 {
 
                     GameObject loadEnemy = Instantiate(ene, enemy.position, Quaternion.identity);
-                    loadEnemy.GetComponent<Enemy>().currentHealth = enemy.currentHealth;
+                    loadEnemy.GetComponent<NPCData>().currentHealth = enemy.currentHealth;
                     spawned.spawner = FindSpawnerbyId(enemy.spawnerID);
                 }
             }
@@ -202,11 +202,11 @@ public class WorldManager : MonoBehaviour
 
         }
     }
-    public void RemoveEnemy(Enemy gameObject)
+    public void RemoveEnemy(NPCData gameObject)
     {
         enemyData.Remove(gameObject);
     }
-    public void AddEnemy(Enemy gameObject)
+    public void AddEnemy(NPCData gameObject)
     {
         enemyData.Add(gameObject);
     }
@@ -253,7 +253,7 @@ public class WorldManager : MonoBehaviour
     List<EnemyData> EnemyData()
     {
         List<EnemyData> enemies = new();
-        foreach (Enemy enemy in enemyData)
+        foreach (NPCData enemy in enemyData)
         {
             if (enemy.TryGetComponent<Spawned>(out var spawned))
             {

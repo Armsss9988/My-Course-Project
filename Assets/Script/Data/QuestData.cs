@@ -1,6 +1,4 @@
-using UnityEngine;
-
-public class QuestData : MonoBehaviour
+public class QuestData
 {
     public string questName;
     public Quest.QuestStatus state;

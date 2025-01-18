@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 7648866183588727831}
   - component: {fileID: 1433471144811036322}
   - component: {fileID: -2141278329746336218}
+  - component: {fileID: 3048121306149924336}
   m_Layer: 6
   m_Name: Torch_Blue
   m_TagString: Enemy
@@ -72,6 +73,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -109,7 +113,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 1
 --- !u!95 &7636596228441810217
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -123,6 +127,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -160,7 +165,7 @@ MonoBehaviour:
   m_SpriteHash: 993954242
 --- !u!50 &557819960758064400
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -171,8 +176,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 40
-  m_LinearDrag: 10
-  m_AngularDrag: 1
+  m_LinearDamping: 10
+  m_AngularDamping: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -210,9 +215,10 @@ MonoBehaviour:
   attackSpeed: 2
   attackSound: {fileID: 8300000, guid: 5285f5ea5e313b147b91c508d925650c, type: 3}
   weaponAttackSound: {fileID: 8300000, guid: a0bf1c1a062717b488d294dedd74f793, type: 3}
-  weaponHitSound: {fileID: 8300000, guid: 5504e3d68fe03a946a302e7482e37fa3, type: 3}
+  weaponHitSound: {fileID: 8300000, guid: 91bce8af1ed1c74449483949f126d810, type: 3}
   beingHitSound: {fileID: 8300000, guid: 4ebc70afb8ec71348b3b8002a3f978eb, type: 3}
   deadSound: {fileID: 8300000, guid: 71e2095b5a76ab846b979e95a28535d8, type: 3}
+  runningSound: {fileID: 8300000, guid: 27cf06c376642f3498dfa0b25a902991, type: 3}
   bullet: {fileID: 0}
   timeInvincible: 1
   isInvincible: 0
@@ -227,6 +233,7 @@ CapsuleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2728544147351117186}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -250,7 +257,8 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: -0.015104354, y: 0.007824427}
   m_Size: {x: 0.293275, y: 0.102421634}
   m_Direction: 1
@@ -346,6 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8a591879b586742973d07cdbba58ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackAnimator: Attack
 --- !u!114 &8468608053282202094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +398,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eb25501d3f4760944b36efafc13db565, type: 3}
+  m_Resource: {fileID: 8300000, guid: eb25501d3f4760944b36efafc13db565, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -558,6 +568,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
+--- !u!114 &3048121306149924336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2728544147351117186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63fdade46d92e1c4c89d51c167c59b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateListData: []
+  target: {fileID: 0}
+  curState: {fileID: 0}
+  defaulState: 0
+  animator: {fileID: 0}
 --- !u!1 &4797157920415519513
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,6 +627,7 @@ PolygonCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4797157920415519513}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -623,7 +651,8 @@ PolygonCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -679,6 +708,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

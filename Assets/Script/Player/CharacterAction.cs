@@ -137,7 +137,7 @@ public class CharacterAction : MonoBehaviour
         GetComponent<SpriteRenderer>().material.SetInt("_Hit", 1);
         characterAnimation.ToogleAnimator(false);
         yield return new WaitForSeconds(0.2f);
-        this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        this.gameObject.GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
         characterMovement.canMove = true;
         StopHitSprite();
         characterAnimation.ToogleAnimator(true);

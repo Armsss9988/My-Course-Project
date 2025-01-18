@@ -181,7 +181,7 @@ MonoBehaviour:
   torqueMagnitude: 2
   distance: 2
   release: {fileID: 8300000, guid: 28a394032c54836468d288cac6da741c, type: 3}
-  hit: {fileID: 8300000, guid: 5504e3d68fe03a946a302e7482e37fa3, type: 3}
+  hit: {fileID: 8300000, guid: 91bce8af1ed1c74449483949f126d810, type: 3}
 --- !u!114 &-4412850847019150542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,5 +351,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6bc30ebfa7c6dfa42957ece4b4797f8a, type: 2}
   - {fileID: 11400000, guid: 74f0e5e70ceabc244aed26c6818621aa, type: 2}
   - {fileID: 11400000, guid: b9ab976a8ed1ece4aa61f452bb6c6b34, type: 2}
-  damageableTypeTag:
-  - {fileID: 11400000, guid: ded5790e23738484ba3b06a2d30335d3, type: 2}
+  damageableTypeTags: []

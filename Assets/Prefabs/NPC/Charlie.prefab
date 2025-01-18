@@ -354,11 +354,12 @@ MonoBehaviour:
   maxAttackZone: 2
   speed: 0.5
   attackSpeed: 1
-  attackSound: {fileID: 0}
-  weaponAttackSound: {fileID: 0}
-  weaponHitSound: {fileID: 0}
-  beingHitSound: {fileID: 0}
-  deadSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: a0bf1c1a062717b488d294dedd74f793, type: 3}
+  weaponAttackSound: {fileID: 8300000, guid: a0bf1c1a062717b488d294dedd74f793, type: 3}
+  weaponHitSound: {fileID: 8300000, guid: 91bce8af1ed1c74449483949f126d810, type: 3}
+  beingHitSound: {fileID: 8300000, guid: c4b2138709e6d094286470348a0cb063, type: 3}
+  deadSound: {fileID: 8300000, guid: c4b2138709e6d094286470348a0cb063, type: 3}
+  runningSound: {fileID: 8300000, guid: 27cf06c376642f3498dfa0b25a902991, type: 3}
   bullet: {fileID: 0}
   timeInvincible: 1
   isInvincible: 0
@@ -390,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8a591879b586742973d07cdbba58ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackAnimator: Slash
 --- !u!114 &4376953446110242872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +450,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f40d6b459ac4e424fafb79de835f5bbd, type: 2}
   damageableTypeTag:
   - {fileID: 11400000, guid: d122fad1748cc3b46abe36da87c10ae4, type: 2}
+  - {fileID: 11400000, guid: ded5790e23738484ba3b06a2d30335d3, type: 2}
+  - {fileID: 11400000, guid: bdad3e530f7281e47bcf85d48dbf1168, type: 2}
 --- !u!114 &1344362587451389085
 MonoBehaviour:
   m_ObjectHideFlags: 0

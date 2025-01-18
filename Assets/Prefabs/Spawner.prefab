@@ -46,12 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSpawning: 1
+  id: 
   defaulEnemy: {fileID: 2728544147351117186, guid: 044c5b002a1c4124fa614ec60bc266b6, type: 3}
   randomEnemies:
   - objects: {fileID: 2728544147351117186, guid: c6b73267c9d5e7c4d8493b53768ba1a5, type: 3}
     spawnChange: 56
   - objects: {fileID: 5167333180413852748, guid: 3268c09606e0c1b41831c55f9c170801, type: 3}
-    spawnChange: 76
+    spawnChange: 1
   delay: 5
   maxEnemies: 10
   currentEnemies: 0

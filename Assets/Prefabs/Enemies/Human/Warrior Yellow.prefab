@@ -339,7 +339,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: a0bf1c1a062717b488d294dedd74f793, type: 3}
   weaponAttackSound: {fileID: 8300000, guid: a0bf1c1a062717b488d294dedd74f793, type: 3}
   weaponHitSound: {fileID: 8300000, guid: 91bce8af1ed1c74449483949f126d810, type: 3}
-  beingHitSound: {fileID: 8300000, guid: c4b2138709e6d094286470348a0cb063, type: 3}
+  beingHitSound: {fileID: 8300000, guid: f72a761a5c5857a44ad4d3983552d438, type: 3}
   deadSound: {fileID: 8300000, guid: c4b2138709e6d094286470348a0cb063, type: 3}
   bullet: {fileID: 0}
   timeInvincible: 1

@@ -127,9 +127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 50
-  fruitTimer: 5
+  fruitTimer: 100
   currentFruitTime: 0
-  growthTimer: 5
+  growthTimer: 250
   currentGrowthTime: 0
   currentState: 1
   fruit: {fileID: 6792451765434646147, guid: 3558fd2c70e878045886223688406903, type: 3}

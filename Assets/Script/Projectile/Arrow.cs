@@ -41,10 +41,10 @@ public class Arrow : MonoBehaviour
         if (((Vector2)this.transform.position - fistPos).magnitude >= distance)
         {
             rb2D.angularVelocity = 0f;
-            this.rb2D.velocity = Vector2.zero;
+            this.rb2D.linearVelocity = Vector2.zero;
             isEnable = false;
         }
-        if (this.rb2D.velocity == Vector2.zero)
+        if (this.rb2D.linearVelocity == Vector2.zero)
         {
             animator.SetTrigger("Disable");
             collectable.isCollectable = true;
@@ -78,7 +78,6 @@ public class Arrow : MonoBehaviour
     }
     public void SetSource(GameObject gameObject)
     {
-        Debug.Log("Source: " + gameObject.name);
         this.source = gameObject;
         if (source != null)
         {
@@ -86,7 +85,7 @@ public class Arrow : MonoBehaviour
             {
                 sourceDamge = player.damage;
             }
-            if (source.TryGetComponent<Enemy>(out var enemy))
+            if (source.TryGetComponent<NPCData>(out var enemy))
             {
                 sourceDamge = enemy.damage;
             }
@@ -108,17 +107,17 @@ public class Arrow : MonoBehaviour
         {
             if (collision != null && source)
             {
-                if (this.gameObject.IsTargetThisObject(collision.gameObject) && (collision.GetComponent<Collider2D>() != source.GetComponent<Collider2D>()))
+                if (this.gameObject.IsTargetThisObject(collision.gameObject) && (collision.gameObject.GetComponent<Collider2D>() != source.GetComponent<Collider2D>()))
                 {
 
-                    if (collision.TryGetComponent<IDamageable>(out var target))
+                    if (collision.gameObject.TryGetComponent<IDamageable>(out var target))
                     {
                         target.SourceAttackSound(hit);
                         target.Force((collision.transform.position - this.transform.position).normalized, 80);
                         target.ChangeHealth(-(arrowData.damage + sourceDamge));
                         Destroy(this.gameObject);
                     }
-                    if (collision.TryGetComponent<IAttackable>(out var targetAttackable))
+                    if (collision.gameObject.TryGetComponent<IAttackable>(out var targetAttackable))
                     {
                         if (source != null)
                         {
@@ -128,7 +127,7 @@ public class Arrow : MonoBehaviour
                     }
                     if (source.TryGetComponent<Character>(out var character))
                     {
-                        if (collision.TryGetComponent<Enemy>(out var enemy))
+                        if (collision.gameObject.TryGetComponent<NPCData>(out var enemy))
                         {
                             if (enemy.currentHealth <= 0f)
                             {

@@ -22,7 +22,7 @@ public class LoadInfoUI : MonoBehaviour, ISelectHandler, IDeselectHandler
         loadPanel.SetActive(true);
     }
 
-    public async void LoadSave()
+    public void LoadSave()
     {
         GameManager.instance.StartNewGame(async () =>
         {

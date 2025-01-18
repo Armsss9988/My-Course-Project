@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393a8cccaedba4d4e8edac05bb5870ff, type: 3}
+  m_Name: NormalAISelector
+  m_EditorClassIdentifier: 
+  children:
+  - {fileID: 11400000, guid: ec989366fa74e364fbaadf83895d43d7, type: 2}
+  - {fileID: 11400000, guid: 8e04a50dd434e5b4181760374c122488, type: 2}
+  - {fileID: 11400000, guid: 54950d4b73dd4e44e99a1985ab171780, type: 2}

@@ -12,7 +12,7 @@ public class Effect : MonoBehaviour
     }
     void SetDamage()
     {
-        damage = source.GetComponent<Enemy>().damage;
+        damage = source.GetComponent<NPCData>().damage;
     }
 
     public void DestroyEffect()

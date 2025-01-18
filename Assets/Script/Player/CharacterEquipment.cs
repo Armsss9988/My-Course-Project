@@ -9,12 +9,12 @@ public class CharacterEquipment : MonoBehaviour
     GameObject characterPant;
     GameObject characterShoes;
     GameObject characterGloves;
-    public Item? torso;
-    public Item? pant;
-    public Item? shoes;
-    public Item? gloves;
-    public Item? arrow;
-    public Item? shield;
+    public Item torso;
+    public Item pant;
+    public Item shoes;
+    public Item gloves;
+    public Item arrow;
+    public Item shield;
     void Start()
     {
         character = GetComponent<Character>();

@@ -24,7 +24,7 @@ public class Bridge : MonoBehaviour
     }
     void ConfigGrandChild()
     {
-        Transform[] allChildren = this.transform.GetComponentsInChildren<Transform>(true); // include inactive
+        Transform[] allChildren = this.transform.GetComponentsInChildren<Transform>(true);
         foreach (Transform child in allChildren)
         {
             if (child.parent != this.transform && child.name == "Collider In")
